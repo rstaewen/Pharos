@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ORGANIZE\PlayerInteraction.cs">
+    <Files>
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" Line="44" Column="26" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLookFail.cs" Line="96" Column="3" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="290" Column="47" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCameraFail.js" Line="266" Column="2" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" Line="125" Column="5" />
+      <File FileName="Assets\ORGANIZE\PlayerInteraction.cs" Line="87" Column="5" />
+      <File FileName="Temp\Compiled-Alpha-VertexLit.shader" Line="33" Column="55" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
