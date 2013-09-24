@@ -13,6 +13,7 @@ using System.Collections.Generic;
 [AddComponentMenu("NGUI/Examples/UI Item Storage")]
 public class UIItemStorage : MonoBehaviour
 {
+	public AudioClip pickupSound;
 	/// <summary>
 	/// Maximum size of the container. Adding more items than this number will not work.
 	/// </summary>
@@ -73,10 +74,64 @@ public class UIItemStorage : MonoBehaviour
 	/// Replace an item in the container with the specified one.
 	/// </summary>
 	/// <returns>An item that was replaced.</returns>
+	public bool PlaceItemInNextAvailableSlot(InvGameItem item)
+	{
+		for (int i = 0; i<maxItemCount; i++)
+		{
+			if (items[i] == null)
+			{
+				Replace (i, item);
+				NGUITools.PlaySound(pickupSound);
+				return true;
+			}
+		}
+		return false;
+	}
 
 	public InvGameItem Replace (int slot, InvGameItem item)
 	{
 		if (slot < maxItemCount)
+		{
+			InvGameItem prev = items[slot];
+			mItems[slot] = item;
+			return prev;
+		}
+		return item;
+	}
+	
+	public InvGameItem ReplaceExisting (int slot, InvGameItem item)
+	{
+		if (items[slot]!=null && (item.baseItem.slot == InvBaseItem.Slot.CombinablePiece && items[slot].baseItem.slot == InvBaseItem.Slot.CombinableBase))
+		{
+			if (item.baseItem.combinableNetwork.Contains(items[slot].baseItemID))
+			{
+				InvGameItem prev = items[slot];
+				prev.partsNeeded --;
+				prev.combineSuccessful = true;
+				Debug.Log("combine... "+prev.partsNeeded+" parts left to combine");
+				if (prev.partsNeeded <=0)
+				{
+					InvBaseItem combinedItem = InvDatabase.FindByID(prev.baseItem.finalItem);
+	
+					if (combinedItem != null)
+					{
+						InvGameItem gi = new InvGameItem(prev.baseItem.finalItem, combinedItem);
+						gi.quality = (InvGameItem.Quality)0;
+						gi.itemLevel = 1;
+						mItems[slot] = gi;
+						prev = mItems[slot];
+						prev.combineSuccessful = true;
+						Debug.Log("combine final");
+					}
+					else
+					{
+						Debug.Log("Can't resolve the item ID of combined target at " + prev.baseItem.finalItem);
+					}
+				}
+				return prev;
+			}
+		}
+		else if (slot < maxItemCount)
 		{
 			InvGameItem prev = items[slot];
 			mItems[slot] = item;

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerInteraction : MonoBehaviour
 {
+	public UIItemStorage storageScript;
 	public float MaxCursorDistance = 50;
 	public Transform cameraTransform;
 	private Transform lookCursor;
@@ -149,17 +150,33 @@ public class PlayerInteraction : MonoBehaviour
 
 		int qualityLevels = (int)InvGameItem.Quality._LastDoNotUse;
 		InvBaseItem item = InvDatabase.FindByID(itemID);
-
+		
+		Debug.Log("attempting to add: "+item.name);
 		if (item != null)
 		{
 			InvGameItem gi = new InvGameItem(itemID, item);
 			gi.quality = (InvGameItem.Quality)Random.Range(0, qualityLevels);
 			gi.itemLevel = NGUITools.RandomRange(item.minItemLevel, item.maxItemLevel);
-			eq.Equip(gi);
+			InvGameItem ri = eq.Equip(gi);
+			if (ri == ri)
+			{
+				if (storageScript.PlaceItemInNextAvailableSlot(gi))
+				{
+					Debug.Log(item.name + " added to inventory");
+				}
+				else
+				{
+					Debug.Log("out of room!");
+				}
+			}
+			else
+			{
+				Debug.Log("equipped "+ri.name+ " maybe");
+			}
 		}
 		else
 		{
-			Debug.LogWarning("Can't resolve the item ID of " + itemID);
+			Debug.Log("Can't resolve the item ID of " + itemID);
 		}
 	}
 }

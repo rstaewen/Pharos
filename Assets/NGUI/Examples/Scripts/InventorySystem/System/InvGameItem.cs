@@ -21,6 +21,9 @@ public class InvGameItem
 
 	// ID of the base item used to create this game item
 	[SerializeField] int mBaseItemID = 0;
+	
+	public int partsNeeded;
+	public bool combineSuccessful = false;
 
 	/// <summary>
 	/// Item quality -- applies a penalty or bonus to all base stats.
@@ -129,7 +132,7 @@ public class InvGameItem
 	/// Create a game item with the specified ID and base item.
 	/// </summary>
 
-	public InvGameItem (int id, InvBaseItem bi) { mBaseItemID = id; mBaseItem = bi; }
+	public InvGameItem (int id, InvBaseItem bi) { mBaseItemID = id; mBaseItem = bi; partsNeeded = bi.combinableNetwork.Count - 1;}
 
 	/// <summary>
 	/// Calculate and return the list of effective stats based on item level and quality.

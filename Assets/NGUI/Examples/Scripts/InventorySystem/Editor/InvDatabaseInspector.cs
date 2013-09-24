@@ -176,6 +176,7 @@ public class InvDatabaseInspector : Editor
 					bi.attachment = item.attachment;
 					bi.minItemLevel = item.minItemLevel;
 					bi.maxItemLevel = item.maxItemLevel;
+					bi._combinations = item._combinations;
 
 					foreach (InvStat stat in item.stats)
 					{
@@ -236,7 +237,7 @@ public class InvDatabaseInspector : Editor
 					}
 				}
 				GUILayout.EndHorizontal();
-
+				
 				string itemDesc = GUILayout.TextArea(item.description, 200, GUILayout.Height(100f));
 				InvBaseItem.Slot slot = (InvBaseItem.Slot)EditorGUILayout.EnumPopup("Slot", item.slot);
 				string iconName = "";
@@ -302,7 +303,6 @@ public class InvDatabaseInspector : Editor
 						}
 					}
 				}
-
 				// Item level range
 				GUILayout.BeginHorizontal();
 				GUILayout.Label("Level Range", GUILayout.Width(77f));
@@ -321,6 +321,16 @@ public class InvDatabaseInspector : Editor
 				GUILayout.BeginHorizontal();
 				Color color = EditorGUILayout.ColorField("Color", item.color);
 				if (drawIcon) GUILayout.Space(iconSize);
+				GUILayout.EndHorizontal();
+				
+				GUILayout.BeginHorizontal();
+				GameObject itemGroup = (GameObject)EditorGUILayout.ObjectField("Combinable Items", item._combinations, typeof(GameObject), false);
+				GUILayout.EndHorizontal();
+				GUILayout.BeginHorizontal();
+				string testStr = "";
+				foreach (int i in item.combinableNetwork)
+					testStr+=(i.ToString()+",");
+				GUILayout.Label(testStr, GUILayout.Width(300));
 				GUILayout.EndHorizontal();
 
 				// Calculate the extra spacing necessary for the icon to show up properly and not overlap anything
@@ -383,6 +393,7 @@ public class InvDatabaseInspector : Editor
 				if (!itemDesc.Equals(item.description) ||
 					slot	!= item.slot ||
 					go		!= item.attachment ||
+					itemGroup	!= item._combinations ||
 					color	!= item.color ||
 					min		!= item.minItemLevel ||
 					max		!= item.maxItemLevel ||
@@ -396,6 +407,7 @@ public class InvDatabaseInspector : Editor
 					item.iconName = iconName;
 					item.minItemLevel = min;
 					item.maxItemLevel = max;
+					item._combinations = itemGroup;
 				}
 			}
 		}

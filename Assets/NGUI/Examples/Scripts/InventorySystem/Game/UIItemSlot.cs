@@ -18,7 +18,8 @@ public abstract class UIItemSlot : MonoBehaviour
 	public UISprite icon;
 	public UIWidget background;
 	public UILabel label;
-
+	
+	public AudioClip combineSound;
 	public AudioClip grabSound;
 	public AudioClip placeSound;
 	public AudioClip errorSound;
@@ -39,6 +40,7 @@ public abstract class UIItemSlot : MonoBehaviour
 	/// </summary>
 
 	abstract protected InvGameItem Replace (InvGameItem item);
+	abstract protected InvGameItem ReplaceExisting (InvGameItem item);
 
 	/// <summary>
 	/// Show a tooltip for the item.
@@ -93,6 +95,7 @@ public abstract class UIItemSlot : MonoBehaviour
 
 	void OnClick ()
 	{
+		Debug.Log("OnClick");
 		if (mDraggedItem != null)
 		{
 			OnDrop(null);
@@ -100,7 +103,11 @@ public abstract class UIItemSlot : MonoBehaviour
 		else if (mItem != null)
 		{
 			mDraggedItem = Replace(null);
-			if (mDraggedItem != null) NGUITools.PlaySound(grabSound);
+			if (mDraggedItem != null)
+			{
+				NGUITools.PlaySound(grabSound);
+				Debug.Log("dragged item: "+mDraggedItem.name);
+			}
 			UpdateCursor();
 		}
 	}
@@ -111,6 +118,7 @@ public abstract class UIItemSlot : MonoBehaviour
 
 	void OnDrag (Vector2 delta)
 	{
+		Debug.Log("OnDrag");
 		if (mDraggedItem == null && mItem != null)
 		{
 			UICamera.currentTouch.clickNotification = UICamera.ClickNotification.BasedOnDelta;
@@ -126,10 +134,24 @@ public abstract class UIItemSlot : MonoBehaviour
 
 	void OnDrop (GameObject go)
 	{
-		InvGameItem item = Replace(mDraggedItem);
-
-		if (mDraggedItem == item) NGUITools.PlaySound(errorSound);
-		else if (item != null) NGUITools.PlaySound(grabSound);
+		Debug.Log("OnDrop");
+		InvGameItem item = ReplaceExisting(mDraggedItem);
+		
+		if (mDraggedItem == item && !item.combineSuccessful) NGUITools.PlaySound(errorSound);
+		else if (item != null) 
+		{
+			if (item.combineSuccessful)
+			{
+				NGUITools.PlaySound(combineSound);
+				item.combineSuccessful = false;
+				mDraggedItem = null;
+				UpdateCursor();
+				Debug.Log("combine cleanup");
+				return;
+			}
+			else
+				NGUITools.PlaySound(grabSound);	
+		}
 		else NGUITools.PlaySound(placeSound);
 
 		mDraggedItem = item;

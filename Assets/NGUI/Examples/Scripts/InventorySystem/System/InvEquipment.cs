@@ -27,47 +27,73 @@ public class InvEquipment : MonoBehaviour
 
 		if (slot != InvBaseItem.Slot.None)
 		{
-			// If the item is not of appropriate type, we shouldn't do anything
-			if (baseItem != null && baseItem.slot != slot) return item;
-
-			if (mItems == null)
+			if (slot == InvBaseItem.Slot.EitherHand)
 			{
-				// Automatically figure out how many item slots we need
-				int count = (int)InvBaseItem.Slot._LastDoNotUse;
-				mItems = new InvGameItem[count];
-			}
-
-			// Equip this item
-			InvGameItem prev = mItems[(int)slot - 1];
-			mItems[(int)slot - 1] = item;
-
-			// Get the list of all attachment points
-			if (mAttachments == null) mAttachments = GetComponentsInChildren<InvAttachmentPoint>();
-
-			// Equip the item visually
-			for (int i = 0, imax = mAttachments.Length; i < imax; ++i)
-			{
-				InvAttachmentPoint ip = mAttachments[i];
-
-				if (ip.slot == slot)
+				InvGameItem newItem = doReplace(InvBaseItem.Slot.LeftHand, item, baseItem);
+				if (newItem == item)
+					return doReplace(InvBaseItem.Slot.RightHand, item, baseItem);	
+				else
 				{
-					GameObject go = ip.Attach(baseItem != null ? baseItem.attachment : null);
-
-					if (baseItem != null && go != null)
-					{
-						GetComponent<PlayerInteraction>().EquipItem(go.GetComponent<EquippableItem>());
-						Renderer ren = go.renderer;
-						if (ren != null) ren.material.color = baseItem.color;
-					}
+					//Debug.Log("returning: "+newItem.name);
+					return newItem;
 				}
 			}
-			return prev;
+			else
+				return doReplace(slot, item, baseItem);
 		}
 		else if (item != null)
 		{
 			Debug.LogWarning("Can't equip \"" + item.name + "\" because it doesn't specify an item slot");
 		}
 		return item;
+	}
+	
+	InvGameItem doReplace(InvBaseItem.Slot slot, InvGameItem item, InvBaseItem baseItem)
+	{
+		Debug.Log("replacing...");
+		// If the item is not of appropriate type, we shouldn't do anything
+		if (baseItem != null && baseItem.slot == InvBaseItem.Slot.EitherHand && (slot == InvBaseItem.Slot.LeftHand || slot == InvBaseItem.Slot.RightHand)){}
+		else if (baseItem != null && baseItem.slot != slot) return item;
+
+		if (mItems == null)
+		{
+			// Automatically figure out how many item slots we need
+			int count = (int)InvBaseItem.Slot._LastDoNotUse;
+			mItems = new InvGameItem[count];
+		}
+
+		// Equip this item
+		InvGameItem prev = mItems[(int)slot - 1];
+		string s = "previous item: ";
+		if(prev == null)
+			s+="null!";
+		else
+			s+=prev.name;
+		Debug.Log(s);
+		mItems[(int)slot - 1] = item;
+		//Debug.Log("previous item at slot number: "+(InvBaseItem.Slot)((int)slot - 1)+": "+prev.name);
+		
+		// Get the list of all attachment points
+		if (mAttachments == null) mAttachments = GetComponentsInChildren<InvAttachmentPoint>();
+
+		// Equip the item visually
+		for (int i = 0, imax = mAttachments.Length; i < imax; ++i)
+		{
+			InvAttachmentPoint ip = mAttachments[i];
+
+			if (ip.slot == slot)
+			{
+				GameObject go = ip.Attach(baseItem != null ? baseItem.attachment : null);
+
+				if (baseItem != null && go != null)
+				{
+					GetComponent<PlayerInteraction>().EquipItem(go.GetComponent<EquippableItem>());
+					Renderer ren = go.renderer;
+					if (ren != null) ren.material.color = baseItem.color;
+				}
+			}
+		}
+		return prev;
 	}
 
 	/// <summary>
@@ -80,8 +106,10 @@ public class InvEquipment : MonoBehaviour
 		{
 			InvBaseItem baseItem = item.baseItem;
 			if (baseItem != null) return Replace(baseItem.slot, item);
-			else Debug.LogWarning("Can't resolve the item ID of " + item.baseItemID);
+			else Debug.Log("Can't resolve the item ID of " + item.baseItemID);
 		}
+		else
+			Debug.Log("cannot find null item...");
 		return item;
 	}
 
@@ -144,6 +172,7 @@ public class InvEquipment : MonoBehaviour
 
 	public InvGameItem GetItem (InvBaseItem.Slot slot)
 	{
+		Debug.Log("Getting item...");
 		if (slot != InvBaseItem.Slot.None)
 		{
 			int index = (int)slot - 1;

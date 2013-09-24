@@ -31,4 +31,8 @@ public class UIEquipmentSlot : UIItemSlot
 	{
 		return (equipment != null) ? equipment.Replace(slot, item) : item;
 	}
+	override protected InvGameItem ReplaceExisting (InvGameItem item)
+	{
+		return (equipment != null) ? equipment.Replace(slot, item) : item;
+	}
 }

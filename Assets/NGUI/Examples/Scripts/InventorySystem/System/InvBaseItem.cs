@@ -14,13 +14,12 @@ public class InvBaseItem
 	public enum Slot
 	{
 		None,			// First element MUST be 'None'
-		Weapon,			// All the following elements are yours to customize -- edit, add or remove as you desire
-		Shield,
-		Body,
-		Shoulders,
-		Bracers,
-		Boots,
-		Trinket,
+		LeftHand,			// All the following elements are yours to customize -- edit, add or remove as you desire
+		RightHand,
+		EitherHand,
+		CombinablePiece,
+		CombinableBase,
+		Junk,
 		_LastDoNotUse,	// Flash export doesn't support Enum.GetNames :(
 	}
 
@@ -71,6 +70,18 @@ public class InvBaseItem
 	/// </summary>
 
 	public GameObject attachment;
+	
+	public GameObject _combinations {get {return _combos;} set 
+		{
+			_combos = value; 
+			networkScript = (value as GameObject).GetComponent<CombineNetwork>(); 
+			combinableNetwork = networkScript.combinableNetwork;
+			finalItem = networkScript.finalItem;
+		}}
+	protected GameObject _combos;
+	protected CombineNetwork networkScript;
+	public List<int> combinableNetwork;
+	public int finalItem;
 
 	/// <summary>
 	/// Object's main material color.

@@ -31,4 +31,9 @@ public class UIStorageSlot : UIItemSlot
 	{
 		return (storage != null) ? storage.Replace(slot, item) : item;
 	}
+	
+	override protected InvGameItem ReplaceExisting (InvGameItem item)
+	{
+		return (storage != null) ? storage.ReplaceExisting(slot, item) : item;
+	}
 }
