@@ -1,19 +1,12 @@
-## Ignore Unity Directories
-
-[Ll]ibrary/
-[Ll]ibrary/*
-[Tt]emp/
-
-## Ignore OS Files
-
-nbproject
-.DS_Store
-Thumbs.db
-Desktop.ini
-
-*.csproj
 *.sln
-*.userprrefs
-Temp
+*.userprefs
+*.csproj
 *.pidb
-Build
+*.unityproj
+.DS_Store
+/Library/FailedAssetImports.txt
+/Library/cache/
+/Library/previews/
+/Library/ScriptAssemblies
+/obj
+/Temp
