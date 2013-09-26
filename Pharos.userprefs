@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomScripts\CustomThirdPersonCamera">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomScripts\CustomThirdPersonCamera.js">
     <Files>
       <File FileName="Assets\CustomScripts\CustomThirdPersonCamera" Line="1" Column="1" />
+      <File FileName="Assets\CustomScripts\CustomMouseLook.cs" Line="18" Column="20" />
+      <File FileName="Assets\CustomScripts\CustomThirdPersonController.js" Line="11" Column="37" />
+      <File FileName="Assets\CustomScripts\CustomThirdPersonCamera.js" Line="30" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
