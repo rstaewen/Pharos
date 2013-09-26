@@ -1,0 +1,272 @@
+fileFormatVersion: 2
+guid: c3efffb4ca9bb5a4584d08468485ae37
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: joint1
+    100004: leftElbow
+    100006: leftFingers
+    100008: leftFoot
+    100010: leftHand
+    100012: leftKnee
+    100014: leftShoulder
+    100016: leftThigh
+    100018: leftToes
+    100020: lowerJaw
+    100022: lowerTeeth
+    100024: //RootNode
+    100026: mouth
+    100028: neck
+    100030: pelvis
+    100032: polySurface1
+    100034: rightElbow
+    100036: rightFingers
+    100038: rightFoot
+    100040: rightHand
+    100042: rightKnee
+    100044: rightShoulder
+    100046: rightThigh
+    100048: rightToes
+    100050: root
+    100052: upperJaw
+    100054: upperTeeth
+    400000: Bip001
+    400002: joint1
+    400004: leftElbow
+    400006: leftFingers
+    400008: leftFoot
+    400010: leftHand
+    400012: leftKnee
+    400014: leftShoulder
+    400016: leftThigh
+    400018: leftToes
+    400020: lowerJaw
+    400022: lowerTeeth
+    400024: //RootNode
+    400026: mouth
+    400028: neck
+    400030: pelvis
+    400032: polySurface1
+    400034: rightElbow
+    400036: rightFingers
+    400038: rightFoot
+    400040: rightHand
+    400042: rightKnee
+    400044: rightShoulder
+    400046: rightThigh
+    400048: rightToes
+    400050: root
+    400052: upperJaw
+    400054: upperTeeth
+    4300000: polySurface1
+    7400000: Walk
+    7400002: Idle
+    9500000: //RootNode
+    13700000: polySurface1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip001
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/leftShoulder
+        weight: 1
+      - path: root/leftShoulder/leftElbow
+        weight: 1
+      - path: root/leftShoulder/leftElbow/leftHand
+        weight: 1
+      - path: root/leftShoulder/leftElbow/leftHand/leftFingers
+        weight: 1
+      - path: root/neck
+        weight: 0
+      - path: root/neck/mouth
+        weight: 0
+      - path: root/neck/mouth/lowerJaw
+        weight: 0
+      - path: root/neck/mouth/lowerJaw/lowerTeeth
+        weight: 0
+      - path: root/neck/mouth/upperJaw
+        weight: 0
+      - path: root/neck/mouth/upperJaw/upperTeeth
+        weight: 0
+      - path: root/pelvis
+        weight: 1
+      - path: root/pelvis/leftThigh
+        weight: 1
+      - path: root/pelvis/leftThigh/leftKnee
+        weight: 1
+      - path: root/pelvis/leftThigh/leftKnee/leftFoot
+        weight: 1
+      - path: root/pelvis/leftThigh/leftKnee/leftFoot/leftToes
+        weight: 1
+      - path: root/pelvis/rightThigh
+        weight: 1
+      - path: root/pelvis/rightThigh/rightKnee
+        weight: 1
+      - path: root/pelvis/rightThigh/rightKnee/rightFoot
+        weight: 1
+      - path: root/pelvis/rightThigh/rightKnee/rightFoot/rightToes
+        weight: 1
+      - path: root/rightShoulder
+        weight: 1
+      - path: root/rightShoulder/rightElbow
+        weight: 1
+      - path: root/rightShoulder/rightElbow/joint1
+        weight: 1
+      - path: root/rightShoulder/rightElbow/joint1/rightHand
+        weight: 1
+      - path: root/rightShoulder/rightElbow/joint1/rightHand/rightFingers
+        weight: 1
+    - name: Walk
+      takeName: Take 001
+      firstFrame: 97
+      lastFrame: 144
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip001
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/leftShoulder
+        weight: 1
+      - path: root/leftShoulder/leftElbow
+        weight: 1
+      - path: root/leftShoulder/leftElbow/leftHand
+        weight: 1
+      - path: root/leftShoulder/leftElbow/leftHand/leftFingers
+        weight: 1
+      - path: root/neck
+        weight: 0
+      - path: root/neck/mouth
+        weight: 0
+      - path: root/neck/mouth/lowerJaw
+        weight: 0
+      - path: root/neck/mouth/lowerJaw/lowerTeeth
+        weight: 0
+      - path: root/neck/mouth/upperJaw
+        weight: 0
+      - path: root/neck/mouth/upperJaw/upperTeeth
+        weight: 0
+      - path: root/pelvis
+        weight: 1
+      - path: root/pelvis/leftThigh
+        weight: 1
+      - path: root/pelvis/leftThigh/leftKnee
+        weight: 1
+      - path: root/pelvis/leftThigh/leftKnee/leftFoot
+        weight: 1
+      - path: root/pelvis/leftThigh/leftKnee/leftFoot/leftToes
+        weight: 1
+      - path: root/pelvis/rightThigh
+        weight: 1
+      - path: root/pelvis/rightThigh/rightKnee
+        weight: 1
+      - path: root/pelvis/rightThigh/rightKnee/rightFoot
+        weight: 1
+      - path: root/pelvis/rightThigh/rightKnee/rightFoot/rightToes
+        weight: 1
+      - path: root/rightShoulder
+        weight: 1
+      - path: root/rightShoulder/rightElbow
+        weight: 1
+      - path: root/rightShoulder/rightElbow/joint1
+        weight: 1
+      - path: root/rightShoulder/rightElbow/joint1/rightHand
+        weight: 1
+      - path: root/rightShoulder/rightElbow/joint1/rightHand/rightFingers
+        weight: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 180
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: root
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

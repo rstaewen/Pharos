@@ -1,0 +1,542 @@
+fileFormatVersion: 2
+guid: 00a1ec91c844d4b4f909489a68c4872e
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: arch49_000-0
+    100002: CWom0017-M3-CS:Bip01 HeadNub
+    100004: CWom0017-M3-CS:Bip01 L Foot
+    100006: CWom0017-M3-CS:Bip01 L Toe0
+    100008: CWom0017-M3-CS:Bip01 L Toe0Nub
+    100010: CWom0017-M3-CS:Bip01 R Finger0
+    100012: CWom0017-M3-CS:Bip01 R Finger01
+    100014: CWom0017-M3-CS:Bip01 R Finger02
+    100016: CWom0017-M3-CS:Bip01 R Finger0Nub
+    100018: CWom0017-M3-CS:Bip01 R Foot
+    100020: CWom0017-M3-CS:Bip01 R Toe0
+    100022: CWom0017-M3-CS:Bip01 R Toe0Nub
+    100024: //RootNode
+    100026: MC_Female:Bip01 R Finger0
+    100028: MC_Female:Bip01 R Finger01
+    100030: MC_Female:Bip01 R Finger02
+    100032: MC_Female:Bip01 R Finger0Nub
+    100034: MC_Female:Head
+    100036: MC_Female:joint1
+    100038: MC_Female:joint2
+    100040: MC_Female:joint3
+    100042: MC_Female:joint4
+    100044: MC_Female:LeftCalf
+    100046: MC_Female:LeftClavicle
+    100048: MC_Female:LeftForearm
+    100050: MC_Female:LeftHand
+    100052: MC_Female:LeftThigh
+    100054: MC_Female:LeftUpperArm
+    100056: MC_Female:Mesh
+    100058: MC_Female:Neck
+    100060: MC_Female:Pelvis
+    100062: MC_Female:RightCalf
+    100064: MC_Female:rightClavicle
+    100066: MC_Female:RightForearm
+    100068: MC_Female:RightHand
+    100070: MC_Female:RightThigh
+    100072: MC_Female:RightUpperArm
+    100074: MC_Female:Spine
+    100076: MC_Female:Spine1
+    100078: MC_Female:Spine2
+    100080: MC_Female:Spine3
+    100082: MC_Female:transform1
+    100084: MC_Female:transform2
+    100086: MC_Female:transform3
+    100088: MC_Female:transform4
+    100090: CWom0017-M3-CS:Bip01
+    100092: MC_Female:MC_Female
+    400000: arch49_000-0
+    400002: CWom0017-M3-CS:Bip01 HeadNub
+    400004: CWom0017-M3-CS:Bip01 L Foot
+    400006: CWom0017-M3-CS:Bip01 L Toe0
+    400008: CWom0017-M3-CS:Bip01 L Toe0Nub
+    400010: CWom0017-M3-CS:Bip01 R Finger0
+    400012: CWom0017-M3-CS:Bip01 R Finger01
+    400014: CWom0017-M3-CS:Bip01 R Finger02
+    400016: CWom0017-M3-CS:Bip01 R Finger0Nub
+    400018: CWom0017-M3-CS:Bip01 R Foot
+    400020: CWom0017-M3-CS:Bip01 R Toe0
+    400022: CWom0017-M3-CS:Bip01 R Toe0Nub
+    400024: //RootNode
+    400026: MC_Female:Bip01 R Finger0
+    400028: MC_Female:Bip01 R Finger01
+    400030: MC_Female:Bip01 R Finger02
+    400032: MC_Female:Bip01 R Finger0Nub
+    400034: MC_Female:Head
+    400036: MC_Female:joint1
+    400038: MC_Female:joint2
+    400040: MC_Female:joint3
+    400042: MC_Female:joint4
+    400044: MC_Female:LeftCalf
+    400046: MC_Female:LeftClavicle
+    400048: MC_Female:LeftForearm
+    400050: MC_Female:LeftHand
+    400052: MC_Female:LeftThigh
+    400054: MC_Female:LeftUpperArm
+    400056: MC_Female:Mesh
+    400058: MC_Female:Neck
+    400060: MC_Female:Pelvis
+    400062: MC_Female:RightCalf
+    400064: MC_Female:rightClavicle
+    400066: MC_Female:RightForearm
+    400068: MC_Female:RightHand
+    400070: MC_Female:RightThigh
+    400072: MC_Female:RightUpperArm
+    400074: MC_Female:Spine
+    400076: MC_Female:Spine1
+    400078: MC_Female:Spine2
+    400080: MC_Female:Spine3
+    400082: MC_Female:transform1
+    400084: MC_Female:transform2
+    400086: MC_Female:transform3
+    400088: MC_Female:transform4
+    400090: CWom0017-M3-CS:Bip01
+    400092: MC_Female:MC_Female
+    2300000: arch49_000-0
+    3300000: arch49_000-0
+    4300000: arch49_000-0
+    4300002: MC_Female:Mesh
+    4300004: MC_Female:MC_Female
+    7400000: Take 001
+    7400002: Walk_test
+    7400004: Idle_test
+    7400006: Walk
+    7400008: Idle
+    9500000: //RootNode
+    13700000: MC_Female:Mesh
+    13700002: MC_Female:MC_Female
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 192
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf/CWom0017-M3-CS:Bip01
+          L Foot
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf/CWom0017-M3-CS:Bip01
+          L Foot/CWom0017-M3-CS:Bip01 L Toe0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf/CWom0017-M3-CS:Bip01
+          L Foot/CWom0017-M3-CS:Bip01 L Toe0/CWom0017-M3-CS:Bip01 L Toe0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf/CWom0017-M3-CS:Bip01
+          R Foot
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf/CWom0017-M3-CS:Bip01
+          R Foot/CWom0017-M3-CS:Bip01 R Toe0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf/CWom0017-M3-CS:Bip01
+          R Foot/CWom0017-M3-CS:Bip01 R Toe0/CWom0017-M3-CS:Bip01 R Toe0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:Head
+        weight: 0
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:Head/CWom0017-M3-CS:Bip01
+          HeadNub
+        weight: 0
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0/MC_Female:Bip01 R Finger01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0/MC_Female:Bip01 R Finger01/MC_Female:Bip01 R Finger02
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0/MC_Female:Bip01 R Finger01/MC_Female:Bip01 R Finger02/MC_Female:Bip01
+          R Finger0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:transform2
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:transform2/MC_Female:joint3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:transform2/MC_Female:joint3/MC_Female:joint4
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01/CWom0017-M3-CS:Bip01 R Finger02
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01/CWom0017-M3-CS:Bip01 R Finger02/CWom0017-M3-CS:Bip01
+          R Finger0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/MC_Female:transform1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/MC_Female:transform1/MC_Female:joint1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/MC_Female:transform1/MC_Female:joint1/MC_Female:joint2
+        weight: 1
+      - path: MC_Female:MC_Female
+        weight: 1
+    - name: Walk
+      takeName: Take 001
+      firstFrame: 145
+      lastFrame: 192
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf/CWom0017-M3-CS:Bip01
+          L Foot
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf/CWom0017-M3-CS:Bip01
+          L Foot/CWom0017-M3-CS:Bip01 L Toe0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf/CWom0017-M3-CS:Bip01
+          L Foot/CWom0017-M3-CS:Bip01 L Toe0/CWom0017-M3-CS:Bip01 L Toe0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf/CWom0017-M3-CS:Bip01
+          R Foot
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf/CWom0017-M3-CS:Bip01
+          R Foot/CWom0017-M3-CS:Bip01 R Toe0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf/CWom0017-M3-CS:Bip01
+          R Foot/CWom0017-M3-CS:Bip01 R Toe0/CWom0017-M3-CS:Bip01 R Toe0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:Head
+        weight: 0
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:Head/CWom0017-M3-CS:Bip01
+          HeadNub
+        weight: 0
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0/MC_Female:Bip01 R Finger01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0/MC_Female:Bip01 R Finger01/MC_Female:Bip01 R Finger02
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0/MC_Female:Bip01 R Finger01/MC_Female:Bip01 R Finger02/MC_Female:Bip01
+          R Finger0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:transform2
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:transform2/MC_Female:joint3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:transform2/MC_Female:joint3/MC_Female:joint4
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01/CWom0017-M3-CS:Bip01 R Finger02
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01/CWom0017-M3-CS:Bip01 R Finger02/CWom0017-M3-CS:Bip01
+          R Finger0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/MC_Female:transform1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/MC_Female:transform1/MC_Female:joint1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/MC_Female:transform1/MC_Female:joint1/MC_Female:joint2
+        weight: 1
+      - path: MC_Female:MC_Female
+        weight: 1
+    - name: Idle
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 46
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf/CWom0017-M3-CS:Bip01
+          L Foot
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf/CWom0017-M3-CS:Bip01
+          L Foot/CWom0017-M3-CS:Bip01 L Toe0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:LeftThigh/MC_Female:LeftCalf/CWom0017-M3-CS:Bip01
+          L Foot/CWom0017-M3-CS:Bip01 L Toe0/CWom0017-M3-CS:Bip01 L Toe0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf/CWom0017-M3-CS:Bip01
+          R Foot
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf/CWom0017-M3-CS:Bip01
+          R Foot/CWom0017-M3-CS:Bip01 R Toe0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:RightThigh/MC_Female:RightCalf/CWom0017-M3-CS:Bip01
+          R Foot/CWom0017-M3-CS:Bip01 R Toe0/CWom0017-M3-CS:Bip01 R Toe0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:Head
+        weight: 0
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:Head/CWom0017-M3-CS:Bip01
+          HeadNub
+        weight: 0
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0/MC_Female:Bip01 R Finger01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0/MC_Female:Bip01 R Finger01/MC_Female:Bip01 R Finger02
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:Bip01
+          R Finger0/MC_Female:Bip01 R Finger01/MC_Female:Bip01 R Finger02/MC_Female:Bip01
+          R Finger0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:transform2
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:transform2/MC_Female:joint3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:LeftClavicle/MC_Female:transform3/MC_Female:LeftUpperArm/MC_Female:LeftForearm/MC_Female:LeftHand/MC_Female:transform2/MC_Female:joint3/MC_Female:joint4
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01/CWom0017-M3-CS:Bip01 R Finger02
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01/CWom0017-M3-CS:Bip01 R Finger02/CWom0017-M3-CS:Bip01
+          R Finger0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/MC_Female:transform1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/MC_Female:transform1/MC_Female:joint1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/MC_Female:Pelvis/MC_Female:Spine/MC_Female:Spine1/MC_Female:Spine2/MC_Female:Spine3/MC_Female:Neck/MC_Female:rightClavicle/MC_Female:RightUpperArm/MC_Female:RightForearm/MC_Female:RightHand/MC_Female:transform1/MC_Female:joint1/MC_Female:joint2
+        weight: 1
+      - path: MC_Female:MC_Female
+        weight: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .349999994
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 180
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: CWom0017-M3-CS:Bip01
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 
