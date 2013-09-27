@@ -17,6 +17,8 @@ Desktop.ini
  
 # All platforms:
 Library
+/Library/
+/Library/*
 Temp
 *.csproj
 *.pidb
