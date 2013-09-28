@@ -525,8 +525,558 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    human: []
-    skeleton: []
+    human:
+    - boneName: CWom0017-M3-CS:Bip01
+      humanName: Hips
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 5.48422289, y: 0, z: 2.74211144}
+        preQ: {x: .495548904, y: .504411817, z: -.495549172, w: -.504411459}
+        postQ: {x: .495549291, y: .504411757, z: .504411399, w: -.495548785}
+        length: 6.85528088
+        modified: 1
+    - boneName: MC_Female:LeftThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: -60.0000038, y: -60.0000038, z: -90}
+        max: {x: 60.0000038, y: 60.0000038, z: 50}
+        value: {x: 10.9304533, y: 0, z: 5.46522665}
+        preQ: {x: .958570182, y: .284854591, z: -.000851848919, w: .000254155661}
+        postQ: {x: 1.49011612e-07, y: .0262023378, z: .999656618, w: -8.94069743e-08}
+        length: 13.6630707
+        modified: 1
+    - boneName: MC_Female:RightThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: -60.0000038, y: -60.0000038, z: -90}
+        max: {x: 60.0000038, y: 60.0000038, z: 50}
+        value: {x: 10.9304514, y: 0, z: 5.4652257}
+        preQ: {x: .958572805, y: .28484565, z: .000998170697, w: -.000295550621}
+        postQ: {x: 4.47034871e-08, y: -.0263599921, z: .999652445, w: -4.47034871e-08}
+        length: 13.6630688
+        modified: 1
+    - boneName: MC_Female:LeftCalf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 9.44160652, y: 0, z: 4.72080326}
+        preQ: {x: -.0160838887, y: -.0191843342, z: -.739724696, w: .672443748}
+        postQ: {x: -5.96046448e-08, y: -.0261902809, z: -.999656916, w: -5.96046448e-08}
+        length: 11.8020124
+        modified: 1
+    - boneName: MC_Female:RightCalf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 9.44160461, y: 0, z: 4.72080231}
+        preQ: {x: .0161808003, y: .0194973852, z: -.739732862, w: .672423303}
+        postQ: {x: -8.94069814e-08, y: .0263595171, z: -.999652505, w: 1.4901163e-08}
+        length: 11.8020105
+        modified: 1
+    - boneName: CWom0017-M3-CS:Bip01 L Foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: -30.0000019, z: -50}
+        max: {x: 0, y: 30.0000019, z: 50}
+        value: {x: 2.6781745, y: 0, z: 1.33908725}
+        preQ: {x: -.000226616874, y: -.0262165088, z: -.998975217, w: -.0368926376}
+        postQ: {x: -.00786459446, y: .0392593145, z: -.999192715, w: -.00327318907}
+        length: 3.34771919
+        modified: 1
+    - boneName: CWom0017-M3-CS:Bip01 R Foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: -30.0000019, z: -50}
+        max: {x: 0, y: 30.0000019, z: 50}
+        value: {x: 2.67815685, y: 0, z: 1.33907843}
+        preQ: {x: 8.10027122e-05, y: .0263803769, z: -.998971581, w: -.036873877}
+        postQ: {x: .00786796212, y: -.0390903056, z: -.999199271, w: -.00327113294}
+        length: 3.34769726
+        modified: 1
+    - boneName: MC_Female:Spine1
+      humanName: Spine
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 3.09999537, y: 0, z: 1.54999769}
+        preQ: {x: 4.47034836e-08, y: 7.74860382e-07, z: .997968316, w: -.0637111515}
+        postQ: {x: -2.23517461e-07, y: 8.04662818e-07, z: .999999881, w: -.000398129283}
+        length: 3.87499523
+        modified: 1
+    - boneName: MC_Female:Spine2
+      humanName: Chest
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 7.48290443, y: 0, z: 3.74145222}
+        preQ: {x: .000211522012, y: -8.67247672e-06, z: -.999297142, w: -.037484739}
+        postQ: {x: .000211551771, y: -9.16421322e-06, z: -.999200821, w: -.0399691276}
+        length: 9.35363293
+        modified: 1
+    - boneName: MC_Female:Head
+      humanName: Head
+      limit:
+        min: {x: -40, y: -40, z: -40}
+        max: {x: 40, y: 40, z: 40}
+        value: {x: 3.74145222, y: 0, z: 1.87072611}
+        preQ: {x: -2.02655792e-06, y: 6.85453415e-07, z: .987762868, w: -.155962944}
+        postQ: {x: -1.93715096e-06, y: 8.64267406e-07, z: .997789204, w: -.0664576888}
+        length: 4.67681646
+        modified: 1
+    - boneName: MC_Female:LeftClavicle
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: -15.000001, z: -15.000001}
+        max: {x: 0, y: 15.000001, z: 30.0000019}
+        value: {x: 3.41968679, y: 0, z: 1.7098434}
+        preQ: {x: .495607167, y: .485963196, z: .328885496, w: -.640349567}
+        postQ: {x: -.167011365, y: -.712523699, z: .658156216, w: -.17676945}
+        length: 4.27460957
+        modified: 1
+    - boneName: MC_Female:rightClavicle
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: -15.000001, z: -15.000001}
+        max: {x: 0, y: 15.000001, z: 30.0000019}
+        value: {x: 3.58948922, y: 0, z: 1.79474461}
+        preQ: {x: -.64060992, y: .32848686, z: .485549629, w: .495940328}
+        postQ: {x: 3.65078449e-07, y: .678967774, z: -.734167993, w: 4.58210707e-07}
+        length: 4.48686266
+        modified: 1
+    - boneName: MC_Female:LeftUpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: -90, y: -100, z: -60.0000038}
+        max: {x: 90, y: 100, z: 100}
+        value: {x: 6.65799904, y: 0, z: 3.32899952}
+        preQ: {x: -.125179932, y: -.620964646, z: .590614676, w: -.499906957}
+        postQ: {x: -.818321764, y: -.00456712861, z: .00118353218, w: .574740946}
+        length: 8.32250118
+        modified: 1
+    - boneName: MC_Female:RightUpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: -90, y: -100, z: -60.0000038}
+        max: {x: 90, y: 100, z: 100}
+        value: {x: 7.57552624, y: 0, z: 3.78776312}
+        preQ: {x: -.336079031, y: .602835894, z: -.723103583, w: .0275836978}
+        postQ: {x: -8.56816698e-08, y: .567168713, z: -.823601544, w: -2.39815535e-07}
+        length: 9.46940994
+        modified: 1
+    - boneName: MC_Female:LeftForearm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 6.20200109, y: 0, z: 3.10100055}
+        preQ: {x: -.169915199, y: .111009568, z: .652050972, w: .730503321}
+        postQ: {x: -.172211394, y: .0336218812, z: -.035753075, w: .983836591}
+        length: 7.7525034
+        modified: 1
+    - boneName: MC_Female:RightForearm
+      humanName: RightLowerArm
+      limit:
+        min: {x: -90, y: 0, z: -80}
+        max: {x: 90, y: 0, z: 80}
+        value: {x: 6.46127081, y: 0, z: 3.2306354}
+        preQ: {x: -.631921351, y: .745985806, z: -.174967617, w: -.116476409}
+        postQ: {x: -1.11758709e-07, y: .983329833, z: -.181830674, w: 1.02445483e-07}
+        length: 8.07659054
+        modified: 1
+    - boneName: MC_Female:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: -40, z: -80}
+        max: {x: 0, y: 40, z: 80}
+        value: {x: 3.10100055, y: 0, z: 1.55050027}
+        preQ: {x: -.816510558, y: .0490529723, z: -.0015871377, w: .575240552}
+        postQ: {x: -.978102744, y: -.00493401522, z: -.00560495863, w: -.207988292}
+        length: 3.8762517
+        modified: 1
+    - boneName: MC_Female:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: -40, z: -80}
+        max: {x: 0, y: 40, z: 80}
+        value: {x: 3.2306354, y: 0, z: 1.6153177}
+        preQ: {x: -3.7252903e-09, y: .567162812, z: -.823605597, w: 1.55065209e-07}
+        postQ: {x: -.0903800204, y: -.114425458, z: -.94778657, w: .283617288}
+        length: 4.03829527
+        modified: 1
+    - boneName: CWom0017-M3-CS:Bip01 L Toe0
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: -50}
+        max: {x: 0, y: 0, z: 50}
+        value: {x: 2.17629981, y: 0, z: 1.08814991}
+        preQ: {x: .0333216824, y: -.0221994538, z: .704221427, w: .708850443}
+        postQ: {x: .0436498225, y: -.0176907368, z: .998889744, w: .000941834471}
+        length: 2.72037578
+        modified: 1
+    - boneName: CWom0017-M3-CS:Bip01 R Toe0
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: -50}
+        max: {x: 0, y: 0, z: 50}
+        value: {x: 2.17629933, y: 0, z: 1.08814967}
+        preQ: {x: -.0332044698, y: .0220775045, z: .704227567, w: .708853662}
+        postQ: {x: -.043480549, y: .0176879577, z: .998897195, w: .000944279251}
+        length: 2.7203753
+        modified: 1
+    - boneName: MC_Female:Bip01 R Finger0
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 1.50218558, y: 0, z: .751092792}
+        preQ: {x: -.933688819, y: .309525967, z: .0329698399, w: -.177008018}
+        postQ: {x: .805389524, y: -.157213196, z: .0178904086, w: -.571237028}
+        length: 1.87773252
+        modified: 1
+    - boneName: MC_Female:Bip01 R Finger01
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: .926597774, y: 0, z: .463298887}
+        preQ: {x: .706784427, y: -.412946612, z: -.121579669, w: -.561381519}
+        postQ: {x: .806281507, y: -.17449747, z: .0718291104, w: -.560625672}
+        length: 1.15824747
+        modified: 1
+    - boneName: MC_Female:Bip01 R Finger02
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: .694948256, y: 0, z: .347474128}
+        preQ: {x: .705095053, y: -.417476177, z: -.105533935, w: -.563397825}
+        postQ: {x: .786071301, y: .0119646443, z: .0339811593, w: -.61708492}
+        length: .868685603
+        modified: 1
+    - boneName: MC_Female:joint3
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 2.33041334, y: 0, z: 1.16520667}
+        preQ: {x: -.924947798, y: .293964595, z: -.166048944, w: -.174596757}
+        postQ: {x: .601331949, y: .795838535, z: -.00987775996, w: .0703087449}
+        length: 2.91301775
+        modified: 1
+    - boneName: MC_Female:joint4
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 1.74781024, y: 0, z: .873905122}
+        preQ: {x: .820738614, y: .567281961, z: .00895959605, w: .067073442}
+        postQ: {x: .60133189, y: .795838535, z: -.00987768639, w: .0703087077}
+        length: 2.18476343
+        modified: 1
+    - boneName: None
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 1.1359055, y: 0, z: .567952752}
+        preQ: {x: .152645797, y: .157240704, z: .975066364, w: .0349297822}
+        postQ: {x: -1.70990825e-06, y: .521107972, z: -.85349071, w: 1.30943954e-06}
+        length: 1.41988242
+        modified: 1
+    - boneName: None
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: .840580642, y: 0, z: .420290321}
+        preQ: {x: .1627931, y: -.516002953, z: .797588348, w: .266630858}
+        postQ: {x: -7.26431665e-07, y: .521108329, z: -.853490472, w: -3.29129421e-06}
+        length: 1.05072606
+        modified: 1
+    - boneName: None
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: .630435407, y: 0, z: .315217704}
+        preQ: {x: .16279313, y: -.516003013, z: .797588348, w: .266630769}
+        postQ: {x: -7.41332826e-07, y: .521108329, z: -.853490412, w: -3.45520698e-06}
+        length: .788044572
+        modified: 1
+    - boneName: None
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: -20, z: -50}
+        max: {x: 0, y: 20, z: 50}
+        value: {x: 2.33040047, y: 0, z: 1.16520023}
+        preQ: {x: -.0375506729, y: .103937134, z: .993694544, w: .0189231746}
+        postQ: {x: -.0792732164, y: -.0175769497, z: -.605169773, w: .791944623}
+        length: 2.91300178
+        modified: 1
+    - boneName: None
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 1.74780059, y: 0, z: .873900294}
+        preQ: {x: .064988181, y: .0451856852, z: .822711766, w: -.562920928}
+        postQ: {x: -.0792733505, y: -.0175769087, z: -.605169713, w: .791944623}
+        length: 2.18475127
+        modified: 1
+    - boneName: MC_Female:joint1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 1.74780059, y: 0, z: .873900294}
+        preQ: {x: .064988181, y: .0451856852, z: .822711766, w: -.562920928}
+        postQ: {x: -.0792733505, y: -.0175769087, z: -.605169713, w: .791944623}
+        length: 2.18475127
+        modified: 1
+    - boneName: MC_Female:joint2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 1.74780059, y: 0, z: .873900294}
+        preQ: {x: .064988181, y: .0451856852, z: .822711766, w: -.562920928}
+        postQ: {x: -.0792733505, y: -.0175769087, z: -.605169713, w: .791944623}
+        length: 2.18475127
+        modified: 1
+    - boneName: CWom0017-M3-CS:Bip01 R Finger0
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 1.74780059, y: 0, z: .873900294}
+        preQ: {x: .064988181, y: .0451856852, z: .822711766, w: -.562920928}
+        postQ: {x: -.0792733505, y: -.0175769087, z: -.605169713, w: .791944623}
+        length: 2.18475127
+        modified: 1
+    - boneName: CWom0017-M3-CS:Bip01 R Finger01
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 1.74780059, y: 0, z: .873900294}
+        preQ: {x: .064988181, y: .0451856852, z: .822711766, w: -.562920928}
+        postQ: {x: -.0792733505, y: -.0175769087, z: -.605169713, w: .791944623}
+        length: 2.18475127
+        modified: 1
+    - boneName: CWom0017-M3-CS:Bip01 R Finger02
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: -45}
+        max: {x: 0, y: 0, z: 45}
+        value: {x: 1.74780059, y: 0, z: .873900294}
+        preQ: {x: .064988181, y: .0451856852, z: .822711766, w: -.562920928}
+        postQ: {x: -.0792733505, y: -.0175769087, z: -.605169713, w: .791944623}
+        length: 2.18475127
+        modified: 1
+    skeleton:
+    - name: MC_Female
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: .99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01
+      position: {x: .000167140475, y: 28.7804623, z: -.302080452}
+      rotation: {x: -.499999911, y: .50000006, z: .499999911, w: .5}
+      scale: {x: 2.53999972, y: 2.53999972, z: 2.53999996}
+      transformModified: 1
+    - name: MC_Female:Pelvis
+      position: {x: -.000102524697, y: 3.63821723e-10, z: -1.35166565e-05}
+      rotation: {x: -.499998748, y: .500001132, z: .499998778, w: .500001192}
+      scale: {x: .999999881, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: MC_Female:Spine
+      position: {x: -1.28190422, y: -.0196786132, z: 3.8606359e-08}
+      rotation: {x: 1.74669958e-06, y: -9.40275754e-07, z: .0241983663, w: -.999707162}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: MC_Female:LeftThigh
+      position: {x: 1.27944529, y: .0816748366, z: 1.24128222}
+      rotation: {x: -.0270188916, y: .999291003, z: -.0262174308, w: -.000180105126}
+      scale: {x: .999999881, y: 1, z: .999999881}
+      transformModified: 1
+    - name: MC_Female:LeftCalf
+      position: {x: -5.37916422, y: -5.33645277e-07, z: -2.92552755e-07}
+      rotation: {x: 4.16969144e-08, y: -8.58599023e-08, z: .0397340208, w: .999210238}
+      scale: {x: 1, y: .999999881, z: 1.00000024}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 L Foot
+      position: {x: -4.64646339, y: 3.92626589e-07, z: -1.28454161e-07}
+      rotation: {x: -.0657038093, y: -.00609592581, z: -.0333779901, w: .997262061}
+      scale: {x: .999999821, y: .99999994, z: .999999821}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 L Toe0
+      position: {x: -1.29964542, y: 1.70270681, z: 1.99582484e-09}
+      rotation: {x: -.0211931579, y: .0150647471, z: -.707779646, w: .705954373}
+      scale: {x: 1.00000024, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 L Toe0Nub
+      position: {x: -.946806312, y: -5.0547402e-07, z: 2.04770227e-08}
+      rotation: {x: -1.77026571e-08, y: -4.50628512e-08, z: 6.46221494e-08, w: .99999994}
+      scale: {x: -.999999881, y: -.999999821, z: -.999999762}
+      transformModified: 1
+    - name: MC_Female:RightThigh
+      position: {x: 1.27944815, y: .0816804096, z: -1.24127722}
+      rotation: {x: -.027013585, y: .99928683, z: .0263777692, w: .000329206639}
+      scale: {x: .999999464, y: .99999994, z: .999999642}
+      transformModified: 1
+    - name: MC_Female:RightCalf
+      position: {x: -5.37916517, y: -8.57905036e-08, z: -5.56188809e-07}
+      rotation: {x: -5.51078507e-08, y: -2.27174102e-08, z: .0397102274, w: .999211133}
+      scale: {x: .999999821, y: 1, z: .999999821}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 R Foot
+      position: {x: -4.64646578, y: 3.35824353e-07, z: -2.45006191e-07}
+      rotation: {x: .0656992197, y: .00625125458, z: -.0333658457, w: .997261763}
+      scale: {x: 1.00000024, y: .999999702, z: 1}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 R Toe0
+      position: {x: -1.29964733, y: 1.70270562, z: -1.55945699e-07}
+      rotation: {x: .021193184, y: -.01506502, z: -.707779586, w: .705954552}
+      scale: {x: 1.00000012, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 R Toe0Nub
+      position: {x: -.946806788, y: 2.99187548e-07, z: 7.17178494e-08}
+      rotation: {x: -6.19737861e-08, y: -2.99875218e-08, z: -4.60562788e-08, w: .99999994}
+      scale: {x: .99999994, y: .99999994, z: 1.00000024}
+      transformModified: 1
+    - name: MC_Female:Spine1
+      position: {x: -1.41821766, y: -.00120513432, z: -1.66957097e-08}
+      rotation: {x: -1.30362805e-08, y: 2.97190866e-07, z: .0633138716, w: .997993529}
+      scale: {x: .99999994, y: .999999881, z: .999999702}
+      transformModified: 1
+    - name: MC_Female:Spine2
+      position: {x: -1.5255897, y: -.00121479121, z: -1.13237888e-07}
+      rotation: {x: -4.41625332e-08, y: 7.80387381e-08, z: .00248627365, w: .999996841}
+      scale: {x: 1.00000024, y: .999999881, z: 1}
+      transformModified: 1
+    - name: MC_Female:Spine3
+      position: {x: -1.52564025, y: -.00113805989, z: -1.71957268e-07}
+      rotation: {x: 7.94738e-08, y: -1.49005182e-08, z: -.0179384351, w: .999839067}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: MC_Female:Neck
+      position: {x: -1.5750711, y: -.000703179569, z: -5.64115737e-07}
+      rotation: {x: 1.43119522e-07, y: 7.51178561e-07, z: -.179329261, w: .983788967}
+      scale: {x: .99999994, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: MC_Female:Head
+      position: {x: -.61922735, y: .000376572338, z: -.00155939616}
+      rotation: {x: 1.14071659e-08, y: -5.23824539e-08, z: .0899737328, w: .995944083}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 HeadNub
+      position: {x: -2.43701935, y: 1.2873079e-07, z: -6.12320434e-07}
+      rotation: {x: -1.18972387e-08, y: -4.55948133e-08, z: -1.98196837e-08, w: .99999994}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: MC_Female:LeftClavicle
+      position: {x: .276526064, y: -.156099871, z: .456398994}
+      rotation: {x: -.748732328, y: -.161053136, z: .635283589, w: -.099380061}
+      scale: {x: .999999762, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: MC_Female:LeftUpperArm
+      position: {x: -1.48386133, y: .00894531421, z: -.793906212}
+      rotation: {x: -.12277507, y: .141184077, z: .982289374, w: -.0100357039}
+      scale: {x: .99999994, y: .999999762, z: .999999762}
+      transformModified: 1
+    - name: MC_Female:LeftForearm
+      position: {x: 3.27643013, y: .0289493799, z: .0108550377}
+      rotation: {x: -.000629720511, y: -.0217267517, z: .0671363696, w: .997506976}
+      scale: {x: .99999994, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: MC_Female:LeftHand
+      position: {x: 3.03746462, y: -.250065893, z: -.164337143}
+      rotation: {x: .732751846, y: -.00434007356, z: -.0484532192, w: .678754747}
+      scale: {x: .99999994, y: .999999881, z: .999999762}
+      transformModified: 1
+    - name: MC_Female:Bip01 R Finger0
+      position: {x: .236727089, y: -.160339028, z: -.32446146}
+      rotation: {x: .722048521, y: -.0735578835, z: -.148905665, w: -.671611547}
+      scale: {x: .999999762, y: 1, z: 1.00000143}
+      transformModified: 1
+    - name: MC_Female:Bip01 R Finger01
+      position: {x: .702248394, y: -.202318624, z: -.11147771}
+      rotation: {x: .00480323797, y: .0094252592, z: .0131520098, w: .999857545}
+      scale: {x: .999999881, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: MC_Female:Bip01 R Finger02
+      position: {x: .423527807, y: -.165039688, z: -.0364010185}
+      rotation: {x: -.0500634722, y: .0853230655, z: -.17208828, w: .980101526}
+      scale: {x: .999999702, y: 1.00000012, z: 1.00000012}
+      transformModified: 1
+    - name: MC_Female:Bip01 R Finger0Nub
+      position: {x: .354662567, y: -9.95440701e-07, z: 3.22872688e-06}
+      rotation: {x: 6.62093171e-08, y: 3.30643729e-07, z: -.99999994, w: 7.42549711e-09}
+      scale: {x: -.999999881, y: -1, z: -1}
+      transformModified: 1
+    - name: MC_Female:joint3
+      position: {x: .654075503, y: -.012176875, z: .121764407}
+      rotation: {x: .0282359924, y: .196384877, z: .792464018, w: -.576746345}
+      scale: {x: .393701106, y: .39370051, z: .393700719}
+      transformModified: 1
+    - name: MC_Female:joint4
+      position: {x: -.777523935, y: 2.78408408, z: -.360598475}
+      rotation: {x: -8.08919793e-08, y: 1.06436833e-08, z: -3.69868296e-08, w: .99999994}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: MC_Female:rightClavicle
+      position: {x: .276532143, y: -.156096071, z: -.456397653}
+      rotation: {x: .570836604, y: .133587718, z: .799057364, w: -.133442998}
+      scale: {x: .999999762, y: 1.00000012, z: .999999642}
+      transformModified: 1
+    - name: MC_Female:RightUpperArm
+      position: {x: -1.76648188, y: -2.6733133e-07, z: -1.55806811e-06}
+      rotation: {x: .142988876, y: -.12289042, z: .0552501529, w: .980509698}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: MC_Female:RightForearm
+      position: {x: -3.72811532, y: 9.14771533e-07, z: 1.0750623e-06}
+      rotation: {x: 1.88553386e-08, y: 9.20501648e-08, z: .0011959807, w: .999999225}
+      scale: {x: 1, y: .999999881, z: .999999881}
+      transformModified: 1
+    - name: MC_Female:RightHand
+      position: {x: -3.17976069, y: -1.03513958e-06, z: -1.04456672e-06}
+      rotation: {x: .631790817, y: .0864196941, z: -.284848839, w: .71570462}
+      scale: {x: .999999642, y: 1.00000072, z: 1.00000012}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 R Finger0
+      position: {x: -.236730814, y: .160333365, z: .324463427}
+      rotation: {x: -.60106039, y: -.035472028, z: .282952279, w: .746596277}
+      scale: {x: .999999464, y: 1, z: 1.0000006}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 R Finger01
+      position: {x: -.559009254, y: -2.42762076e-06, z: 5.93658683e-07}
+      rotation: {x: -1.18324174e-07, y: 6.58668e-08, z: -1.03714186e-07, w: .99999994}
+      scale: {x: .99999994, y: .999999642, z: 1}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 R Finger02
+      position: {x: -.413672149, y: 1.8485274e-06, z: 1.64902804e-06}
+      rotation: {x: -1.99157424e-09, y: -9.79027348e-08, z: 1.31945782e-07, w: .99999994}
+      scale: {x: 1, y: .99999994, z: .999999821}
+      transformModified: 1
+    - name: CWom0017-M3-CS:Bip01 R Finger0Nub
+      position: {x: -.35466373, y: -3.08541053e-06, z: -6.64987567e-07}
+      rotation: {x: -1.74331785e-08, y: -4.33492637e-08, z: -.99999994, w: 1.27307533e-08}
+      scale: {x: -.999999821, y: -1.00000024, z: -1.00000012}
+      transformModified: 1
+    - name: MC_Female:joint1
+      position: {x: -.654073775, y: .0121736098, z: -.121763326}
+      rotation: {x: -.0852181166, y: -.117723815, z: -.593648672, w: .791492343}
+      scale: {x: .393700689, y: .3937006, z: .393700808}
+      transformModified: 1
+    - name: MC_Female:joint2
+      position: {x: .777540207, y: -2.78406048, z: .360594004}
+      rotation: {x: 8.27170155e-08, y: -1.1546738e-07, z: -3.28560965e-08, w: .99999994}
+      scale: {x: .999999881, y: 1, z: 1}
+      transformModified: 1
     handles: []
     armTwist: .5
     foreArmTwist: .5
@@ -538,5 +1088,5 @@ ModelImporter:
     rootMotionBoneName: CWom0017-M3-CS:Bip01
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   additionalBone: 1
-  animationType: 2
+  animationType: 3
   userData: 

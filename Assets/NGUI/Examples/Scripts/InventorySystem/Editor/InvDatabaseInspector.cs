@@ -324,12 +324,14 @@ public class InvDatabaseInspector : Editor
 				GUILayout.EndHorizontal();
 				
 				GUILayout.BeginHorizontal();
-				GameObject itemGroup = (GameObject)EditorGUILayout.ObjectField("Combinable Items", item._combinations, typeof(GameObject), false);
+				GUILayout.Label("Combo Network", GUILayout.Width(120));
+				GameObject itemGroup = (GameObject)EditorGUILayout.ObjectField(item._combinations, typeof(GameObject), false);
 				GUILayout.EndHorizontal();
 				GUILayout.BeginHorizontal();
-				string testStr = "";
+				string testStr = "Item IDs in network: ";
 				foreach (int i in item.combinableNetwork)
 					testStr+=(i.ToString()+",");
+				testStr+=("Final item target: "+item.finalItem.ToString());
 				GUILayout.Label(testStr, GUILayout.Width(300));
 				GUILayout.EndHorizontal();
 

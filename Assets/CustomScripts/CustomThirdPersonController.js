@@ -12,10 +12,9 @@ public var trotMaxAnimationSpeed : float = 1.0;
 public var runMaxAnimationSpeed : float = 1.0;
 public var jumpAnimationSpeed : float = 1.15;
 public var landAnimationSpeed : float = 1.0;
-public var IsGroundedOnSlope = false;
 
-private var _animation : Animation;
 private var _animator : Animator;
+private var _controller : CharacterController;
 
 enum CharacterState {
 	Idle = 0,
@@ -48,9 +47,6 @@ var trotAfterSeconds = 3.0;
 
 var canJump = true;
 
-var grounded = false;
-
-
 private var jumpRepeatTime = 0.05;
 private var jumpTimeout = 0.15;
 private var groundedTimeout = 0.25;
@@ -66,14 +62,11 @@ private var verticalSpeed = 0.0;
 private var moveSpeed = 0.0;
 
 // The last collision flags returned from controller.Move
-private var collisionFlags : CollisionFlags;
-private var _controller : CharacterController;
+private var collisionFlags : CollisionFlags; 
 
 // Are we jumping? (Initiated with jump button and not grounded yet)
 private var jumping = false;
 private var jumpingReachedApex = false;
-
-public var cameraTransform : Transform;
 
 // Are we moving backwards (This locks the camera to not do a 180 degree spin)
 private var movingBack = false;
@@ -86,6 +79,8 @@ private var lastJumpButtonTime = -10.0;
 // Last time we performed a jump
 private var lastJumpTime = -1.0;
 
+public var cameraTransform : Transform;
+
 
 // the height we jumped from (Used to determine for how long to apply extra jump power after jumping.)
 private var lastJumpStartHeight = 0.0;
@@ -94,46 +89,22 @@ private var lastJumpStartHeight = 0.0;
 private var inAirVelocity = Vector3.zero;
 
 private var lastGroundedTime = 0.0;
+
+
 private var isControllable = true;
+private var isMobile = true;
 
 function Awake ()
 {
 	moveDirection = transform.TransformDirection(Vector3.forward);
 	_animator = GetComponent(Animator);
 	_controller = GetComponent(CharacterController);
-	
-//	_animation = GetComponent(Animation);
-//	if(!_animation)
-//		Debug.Log("The character you would like to control doesn't have animations. Moving her might look weird.");
-	
-	/*
-public var idleAnimation : AnimationClip;
-public var walkAnimation : AnimationClip;
-public var runAnimation : AnimationClip;
-public var jumpPoseAnimation : AnimationClip;	
-	*/
-//	if(!idleAnimation) {
-//		_animation = null;
-//		Debug.Log("No idle animation found. Turning off animations.");
-//	}
-//	if(!walkAnimation) {
-//		_animation = null;
-//		Debug.Log("No walk animation found. Turning off animations.");
-//	}
-//	if(!runAnimation) {
-//		_animation = null;
-//		Debug.Log("No run animation found. Turning off animations.");
-//	}
-//	if(!jumpPoseAnimation && canJump) {
-//		_animation = null;
-//		Debug.Log("No jump animation found and the character has canJump enabled. Turning off animations.");
-//	}
-			
 }
+
 
 function UpdateSmoothedMovementDirection ()
 {
-	grounded = IsGrounded();
+	var grounded = IsGrounded();
 	
 	// Forward vector relative to the camera along the x-z plane	
 	var forward = cameraTransform.TransformDirection(Vector3.forward);
@@ -172,19 +143,33 @@ function UpdateSmoothedMovementDirection ()
 		// moveDirection is always normalized, and we only update it if there is user input.
 		if (targetDirection != Vector3.zero)
 		{
+			var oldDirection = moveDirection;
 			// If we are really slow, just snap to the target direction
-			if (moveSpeed < walkSpeed * 0.1 && grounded)
+			if (moveSpeed < walkSpeed * 0.9 && grounded)
 			{
-				moveDirection = targetDirection.normalized;
+				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed * Mathf.Deg2Rad * Time.deltaTime, 1000);
+				moveDirection = moveDirection.normalized;
 			}
 			// Otherwise smoothly turn towards it
 			else
 			{
 				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed * Mathf.Deg2Rad * Time.deltaTime, 1000);
-				
 				moveDirection = moveDirection.normalized;
 			}
+			 
+			// get a numeric angle for each vector, on the X-Z plane (relative to world forward)
+			var angleA = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
+			var angleB = Mathf.Atan2(oldDirection.x, oldDirection.z) * Mathf.Rad2Deg;
+			 
+			// get the signed difference in these angles
+			var angleDiff = Mathf.DeltaAngle( angleA, angleB );
+
+			_animator.SetFloat("AngularSpeed", -angleDiff);
+			_animator.SetLayerWeight(4, Mathf.Clamp(Mathf.Abs(angleDiff),0f,1f));
 		}
+		else
+			_animator.SetLayerWeight(4, 0f);
+		
 		
 		// Smooth the speed based on the current target direction
 		var curSmooth = speedSmoothing * Time.deltaTime;
@@ -223,11 +208,9 @@ function UpdateSmoothedMovementDirection ()
 	{
 		// Lock camera while in air
 		if (jumping)
-			lockCameraTimer = 0.0;
-		else
 		{
-			targetSpeed*=0.95;
-			moveSpeed = Mathf.Lerp(moveSpeed, targetSpeed, curSmooth);
+			lockCameraTimer = 0.0;
+			_animator.SetLayerWeight(4, 0f);
 		}
 
 		if (isMoving)
@@ -255,13 +238,18 @@ function ApplyJumping ()
 		}
 	}
 }
-var controlHeight : float;
+
+
 function ApplyGravity ()
 {
 	if (isControllable)	// don't move player at all if not controllable.
 	{
 		// Apply gravity
-		var jumpButton = Input.GetButton("Jump");
+		var jumpButton;
+		if(isMobile)
+			jumpButton = Input.GetButton("Jump");
+		else
+			jumpButton = false;
 		
 		
 		// When we reach the apex of the jump we send out a message
@@ -270,27 +258,22 @@ function ApplyGravity ()
 			jumpingReachedApex = true;
 			SendMessage("DidJumpReachApex", SendMessageOptions.DontRequireReceiver);
 		}
-			
+	
 		if (IsGrounded ())
 			verticalSpeed = 0.0;
 		else
-		{
-			var hit : RaycastHit;
-			controlHeight = (_controller.height*transform.localScale.y);
-			if (Physics.Raycast (transform.position, -Vector3.up, hit))
-			{
-				if (hit.distance < (controlHeight) && !jumping)
-				{
-					Debug.DrawLine(hit.point, transform.position, Color.red);
-					verticalSpeed = -(hit.distance+1);
-				}
-				else
-					verticalSpeed -= gravity * Time.deltaTime;
-			}
-			else
-				verticalSpeed -= gravity * Time.deltaTime;
-		}
+			verticalSpeed -= gravity * Time.deltaTime;
 	}
+}
+
+function SetMobile()
+{
+	isMobile = true;
+}
+
+function SetImmobile()
+{
+	isMobile = false;
 }
 
 function CalculateJumpVerticalSpeed (targetJumpHeight : float)
@@ -310,7 +293,7 @@ function DidJump ()
 	
 	_characterState = CharacterState.Jumping;
 }
-
+var controller : CharacterController;
 function Update() {
 	
 	if (!isControllable)
@@ -339,57 +322,45 @@ function Update() {
 	movement *= Time.deltaTime;
 	
 	// Move the controller
-	var controller : CharacterController = GetComponent(CharacterController);
-	collisionFlags = controller.Move(movement);
+	if (isMobile)
+		collisionFlags = _controller.Move(movement);
+	else
+		moveSpeed = 0;
+	//"glue" the player to the terrain.
+	if(!jumping)
+		_controller.Move(Vector3(0f, Terrain.activeTerrain.SampleHeight(transform.position) - transform.position.y, 0f));
 	
 	// ANIMATION sector
-	if(_animator)
-		_animator.SetFloat("Speed", controller.velocity.magnitude);
-	else if(_animation) {
-		if(_characterState == CharacterState.Jumping) 
-		{
-			if(!jumpingReachedApex) {
-				_animation[jumpPoseAnimation.name].speed = jumpAnimationSpeed;
-				_animation[jumpPoseAnimation.name].wrapMode = WrapMode.ClampForever;
-				_animation.CrossFade(jumpPoseAnimation.name);
-			} else {
-				_animation[jumpPoseAnimation.name].speed = -landAnimationSpeed;
-				_animation[jumpPoseAnimation.name].wrapMode = WrapMode.ClampForever;
-				_animation.CrossFade(jumpPoseAnimation.name);				
-			}
-		} 
-		else 
-		{
-		}
-	}
-	// ANIMATION sector
+	_animator.SetFloat("Speed", moveSpeed);
+	_animator.SetFloat("VerticalSpeed", verticalSpeed);
 	
 	// Set rotation to the move direction
-	if (IsGrounded())
+	if (isMobile)
 	{
+		if (IsGrounded())
+		{
+			transform.rotation = Quaternion.LookRotation(moveDirection);
+		}	
+		else
+		{
+			var xzMove = movement;
+			xzMove.y = 0;
+			if (xzMove.sqrMagnitude > 0.001)
+			{
+				transform.rotation = Quaternion.LookRotation(xzMove);
+			}
+		}	
 		
-		transform.rotation = Quaternion.LookRotation(moveDirection);
-			
-	}	
-	else
-	{
-		var xzMove = movement;
-		xzMove.y = 0;
-		if (xzMove.sqrMagnitude > 0.001)
+		// We are in jump mode but just became grounded
+		if (IsGrounded())
 		{
-			transform.rotation = Quaternion.LookRotation(xzMove);
-		}
-	}	
-	
-	// We are in jump mode but just became grounded
-	if (IsGrounded())
-	{
-		lastGroundedTime = Time.time;
-		inAirVelocity = Vector3.zero;
-		if (jumping)
-		{
-			jumping = false;
-			SendMessage("DidLand", SendMessageOptions.DontRequireReceiver);
+			lastGroundedTime = Time.time;
+			inAirVelocity = Vector3.zero;
+			if (jumping)
+			{
+				jumping = false;
+				SendMessage("DidLand", SendMessageOptions.DontRequireReceiver);
+			}
 		}
 	}
 }
@@ -410,7 +381,7 @@ function IsJumping () {
 }
 
 function IsGrounded () {
-	return (collisionFlags & CollisionFlags.CollidedBelow ) != 0 || IsGroundedOnSlope;
+	return (collisionFlags & CollisionFlags.CollidedBelow) != 0;
 }
 
 function GetDirection () {

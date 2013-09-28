@@ -45,6 +45,7 @@ public class CustomMouseLook : MonoBehaviour
 	Quaternion baseNeckRotation;
 
 	private MonoBehaviour interactionScript;
+	private MonoBehaviour tpController;
 	
 	public void SetNeckTransform(Transform neckTransform)
 	{
@@ -56,6 +57,7 @@ public class CustomMouseLook : MonoBehaviour
 		playerTransform = shoulderPos.parent;
 		this.shoulderTransform = shoulderPos;
 		interactionScript = (playerTransform.GetComponent("PlayerInteraction") as MonoBehaviour);
+		tpController = (playerTransform.GetComponent("CustomThirdPersonController") as MonoBehaviour);
 	}
 	public void StartZoom()
 	{
@@ -68,6 +70,7 @@ public class CustomMouseLook : MonoBehaviour
 	{
 		zooming = false;
 		interactionScript.enabled = true;
+		tpController.Invoke("SetImmobile",0);
 		transform.parent = shoulderTransform;
 		transform.localRotation = Quaternion.identity;
 		transform.localPosition = Vector3.zero;
@@ -111,6 +114,7 @@ public class CustomMouseLook : MonoBehaviour
 	public void Reset()
 	{
 		neckTransform.localRotation = baseNeckRotation;
+		tpController.Invoke("SetMobile",0);
 	}
 	
 	void Start ()

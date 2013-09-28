@@ -1,17 +1,14 @@
 
-private var mouseLookScript : MonoBehaviour;
-var overShoulder : Transform;
+
 var cameraTransform : Transform;
 private var _target : Transform;
 
 // The distance in the x-z plane to the target
+
 var distance = 7.0;
 
 // the height we want the camera to be above the target
 var height = 3.0;
-
-private var playDistance;
-private var playHeight;
 
 var angularSmoothLag = 0.3;
 var angularMaxSpeed = 15.0;
@@ -19,49 +16,30 @@ var angularMaxSpeed = 15.0;
 var heightSmoothLag = 0.3;
 
 var snapSmoothLag = 0.2;
-var snapMaxAngleSpeed = 720.0;
-var snapMaxMoveSpeed = 0.1;
+var snapMaxSpeed = 720.0;
 
 var clampHeadPositionScreenSpace = 0.75;
-private var IsAwake = false;
+
 var lockCameraTimeout = 0.2;
 
 private var headOffset = Vector3.zero;
 private var centerOffset = Vector3.zero;
 
-private var distanceVelocity = 0.0;
 private var heightVelocity = 0.0;
 private var angleVelocity = 0.0;
-
 private var snap = false;
-private var lookActive = false;
 private var controller : ThirdPersonController;
 private var targetHeight = 100000.0; 
 
-private var interactionScript : MonoBehaviour;
-
-public var neckTransform : Transform;
-
-function Start()
-{
-	playDistance = distance;
-	playHeight = height;
-	mouseLookScript.enabled = false;
-}
 function Awake ()
 {
 	if(!cameraTransform && Camera.main)
 		cameraTransform = Camera.main.transform;
-	if(!cameraTransform) 
-	{
+	if(!cameraTransform) {
 		Debug.Log("Please assign a camera to the ThirdPersonCamera script.");
 		enabled = false;	
 	}
-	mouseLookScript = cameraTransform.GetComponent("MouseLook");
-	overShoulder = transform.FindChild("OverShoulder");
-	mouseLookScript.SendMessage("SetNeckTransform", neckTransform);
-	mouseLookScript.SendMessage("SetShoulderPos", overShoulder);
-	interactionScript = GetComponent("PlayerInteraction");
+			
 		
 	_target = transform;
 	if (_target)
@@ -78,14 +56,15 @@ function Awake ()
 	}
 	else
 		Debug.Log("Please assign a target to the camera that has a ThirdPersonController script attached.");
+
 	
 	Cut(_target, centerOffset);
-	IsAwake = true;
 }
 
 function DebugDrawStuff ()
 {
 	Debug.DrawLine(_target.position, _target.position + headOffset);
+
 }
 
 function AngleDistance (a : float, b : float)
@@ -105,7 +84,7 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 	var targetCenter = _target.position + centerOffset;
 	var targetHead = _target.position + headOffset;
 
-	//	DebugDrawStuff();
+//	DebugDrawStuff();
 
 	// Calculate the current & target rotation angles
 	var originalTargetAngle = _target.eulerAngles.y;
@@ -113,50 +92,27 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 
 	// Adjust real target angle when camera is locked
 	var targetAngle = originalTargetAngle; 
-	var currentRotation;
+	
 	// When pressing Fire2 (alt) the camera will snap to the target direction real quick.
 	// It will stop snapping when it reaches the target
-	if (Input.GetButtonDown("Fire2"))
+	if (Input.GetButton("Fire2"))
 		snap = true;
 	
 	if (snap)
 	{
 		// We are close to the target, so we can stop snapping now!
 		if (AngleDistance (currentAngle, originalTargetAngle) < 3.0)
-		{
-			if (Input.GetButton("Fire2"))
-			{
-				mouseLookScript.enabled = true;
-				mouseLookScript.Invoke("StartZoom", 0);
-			}
 			snap = false;
-		}
-		currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, angleVelocity, snapSmoothLag, snapMaxAngleSpeed);
-		//distance = Mathf.SmoothDamp(distance, snapDistance, distanceVelocity, snapSmoothLag, snapMaxMoveSpeed);
-		// Convert the angle into a rotation, by which we then reposition the camera
-		currentRotation = Quaternion.Euler (0, currentAngle, 0);
+		
+		currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, angleVelocity, snapSmoothLag, snapMaxSpeed);
 	}
 	// Normal camera motion
-	else if (mouseLookScript.enabled && IsAwake)
-	{
-		if (!Input.GetButton("Fire2"))
-		{
-			interactionScript.enabled = false;
-			cameraTransform.parent = null;
-			mouseLookScript.Invoke("Reset", 0);
-			mouseLookScript.enabled = false;
-			currentRotation = transform.rotation;
-			return;
-		}
-		else
-			return;
-	}
 	else
 	{
-		distance = playDistance;
-		height = playHeight;
 		if (controller.GetLockCameraTimer () < lockCameraTimeout)
+		{
 			targetAngle = currentAngle;
+		}
 
 		// Lock the camera when moving backwards!
 		// * It is really confusing to do 180 degree spins when turning around.
@@ -164,9 +120,6 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 			targetAngle += 180;
 
 		currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, angleVelocity, angularSmoothLag, angularMaxSpeed);
-			
-		// Convert the angle into a rotation, by which we then reposition the camera
-		currentRotation = Quaternion.Euler (0, currentAngle, 0);
 	}
 
 
@@ -183,16 +136,23 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 	{
 		targetHeight = targetCenter.y + height;
 	}
+
 	// Damp the height
 	var currentHeight = cameraTransform.position.y;
 	currentHeight = Mathf.SmoothDamp (currentHeight, targetHeight, heightVelocity, heightSmoothLag);
+
+	// Convert the angle into a rotation, by which we then reposition the camera
+	var currentRotation = Quaternion.Euler (0, currentAngle, 0);
 	
 	// Set the position of the camera on the x-z plane to:
 	// distance meters behind the target
 	cameraTransform.position = targetCenter;
 	cameraTransform.position += currentRotation * Vector3.back * distance;
+
 	// Set the height of the camera
 	cameraTransform.position.y = currentHeight;
+	
+	// Always look at the target	
 	SetUpRotation(targetCenter, targetHead);
 }
 
@@ -203,7 +163,7 @@ function LateUpdate () {
 function Cut (dummyTarget : Transform, dummyCenter : Vector3)
 {
 	var oldHeightSmooth = heightSmoothLag;
-	var oldSnapMaxSpeed = snapMaxAngleSpeed;
+	var oldSnapMaxSpeed = snapMaxSpeed;
 	var oldSnapSmooth = snapSmoothLag;
 	
 	snapMaxSpeed = 10000;

@@ -12,10 +12,8 @@ public var trotMaxAnimationSpeed : float = 1.0;
 public var runMaxAnimationSpeed : float = 1.0;
 public var jumpAnimationSpeed : float = 1.15;
 public var landAnimationSpeed : float = 1.0;
-public var IsGroundedOnSlope = false;
 
 private var _animation : Animation;
-private var _animator : Animator;
 
 enum CharacterState {
 	Idle = 0,
@@ -48,9 +46,6 @@ var trotAfterSeconds = 3.0;
 
 var canJump = true;
 
-var grounded = false;
-
-
 private var jumpRepeatTime = 0.05;
 private var jumpTimeout = 0.15;
 private var groundedTimeout = 0.25;
@@ -66,14 +61,11 @@ private var verticalSpeed = 0.0;
 private var moveSpeed = 0.0;
 
 // The last collision flags returned from controller.Move
-private var collisionFlags : CollisionFlags;
-private var _controller : CharacterController;
+private var collisionFlags : CollisionFlags; 
 
 // Are we jumping? (Initiated with jump button and not grounded yet)
 private var jumping = false;
 private var jumpingReachedApex = false;
-
-public var cameraTransform : Transform;
 
 // Are we moving backwards (This locks the camera to not do a 180 degree spin)
 private var movingBack = false;
@@ -94,17 +86,17 @@ private var lastJumpStartHeight = 0.0;
 private var inAirVelocity = Vector3.zero;
 
 private var lastGroundedTime = 0.0;
+
+
 private var isControllable = true;
 
 function Awake ()
 {
 	moveDirection = transform.TransformDirection(Vector3.forward);
-	_animator = GetComponent(Animator);
-	_controller = GetComponent(CharacterController);
 	
-//	_animation = GetComponent(Animation);
-//	if(!_animation)
-//		Debug.Log("The character you would like to control doesn't have animations. Moving her might look weird.");
+	_animation = GetComponent(Animation);
+	if(!_animation)
+		Debug.Log("The character you would like to control doesn't have animations. Moving her might look weird.");
 	
 	/*
 public var idleAnimation : AnimationClip;
@@ -112,28 +104,30 @@ public var walkAnimation : AnimationClip;
 public var runAnimation : AnimationClip;
 public var jumpPoseAnimation : AnimationClip;	
 	*/
-//	if(!idleAnimation) {
-//		_animation = null;
-//		Debug.Log("No idle animation found. Turning off animations.");
-//	}
-//	if(!walkAnimation) {
-//		_animation = null;
-//		Debug.Log("No walk animation found. Turning off animations.");
-//	}
-//	if(!runAnimation) {
-//		_animation = null;
-//		Debug.Log("No run animation found. Turning off animations.");
-//	}
-//	if(!jumpPoseAnimation && canJump) {
-//		_animation = null;
-//		Debug.Log("No jump animation found and the character has canJump enabled. Turning off animations.");
-//	}
+	if(!idleAnimation) {
+		_animation = null;
+		Debug.Log("No idle animation found. Turning off animations.");
+	}
+	if(!walkAnimation) {
+		_animation = null;
+		Debug.Log("No walk animation found. Turning off animations.");
+	}
+	if(!runAnimation) {
+		_animation = null;
+		Debug.Log("No run animation found. Turning off animations.");
+	}
+	if(!jumpPoseAnimation && canJump) {
+		_animation = null;
+		Debug.Log("No jump animation found and the character has canJump enabled. Turning off animations.");
+	}
 			
 }
 
+
 function UpdateSmoothedMovementDirection ()
 {
-	grounded = IsGrounded();
+	var cameraTransform = Camera.main.transform;
+	var grounded = IsGrounded();
 	
 	// Forward vector relative to the camera along the x-z plane	
 	var forward = cameraTransform.TransformDirection(Vector3.forward);
@@ -173,7 +167,7 @@ function UpdateSmoothedMovementDirection ()
 		if (targetDirection != Vector3.zero)
 		{
 			// If we are really slow, just snap to the target direction
-			if (moveSpeed < walkSpeed * 0.1 && grounded)
+			if (moveSpeed < walkSpeed * 0.9 && grounded)
 			{
 				moveDirection = targetDirection.normalized;
 			}
@@ -224,11 +218,6 @@ function UpdateSmoothedMovementDirection ()
 		// Lock camera while in air
 		if (jumping)
 			lockCameraTimer = 0.0;
-		else
-		{
-			targetSpeed*=0.95;
-			moveSpeed = Mathf.Lerp(moveSpeed, targetSpeed, curSmooth);
-		}
 
 		if (isMoving)
 			inAirVelocity += targetDirection.normalized * Time.deltaTime * inAirControlAcceleration;
@@ -255,7 +244,8 @@ function ApplyJumping ()
 		}
 	}
 }
-var controlHeight : float;
+
+
 function ApplyGravity ()
 {
 	if (isControllable)	// don't move player at all if not controllable.
@@ -270,26 +260,11 @@ function ApplyGravity ()
 			jumpingReachedApex = true;
 			SendMessage("DidJumpReachApex", SendMessageOptions.DontRequireReceiver);
 		}
-			
+	
 		if (IsGrounded ())
 			verticalSpeed = 0.0;
 		else
-		{
-			var hit : RaycastHit;
-			controlHeight = (_controller.height*transform.localScale.y);
-			if (Physics.Raycast (transform.position, -Vector3.up, hit))
-			{
-				if (hit.distance < (controlHeight) && !jumping)
-				{
-					Debug.DrawLine(hit.point, transform.position, Color.red);
-					verticalSpeed = -(hit.distance+1);
-				}
-				else
-					verticalSpeed -= gravity * Time.deltaTime;
-			}
-			else
-				verticalSpeed -= gravity * Time.deltaTime;
-		}
+			verticalSpeed -= gravity * Time.deltaTime;
 	}
 }
 
@@ -343,9 +318,7 @@ function Update() {
 	collisionFlags = controller.Move(movement);
 	
 	// ANIMATION sector
-	if(_animator)
-		_animator.SetFloat("Speed", controller.velocity.magnitude);
-	else if(_animation) {
+	if(_animation) {
 		if(_characterState == CharacterState.Jumping) 
 		{
 			if(!jumpingReachedApex) {
@@ -360,6 +333,25 @@ function Update() {
 		} 
 		else 
 		{
+			if(controller.velocity.sqrMagnitude < 0.1) {
+				_animation.CrossFade(idleAnimation.name);
+			}
+			else 
+			{
+				if(_characterState == CharacterState.Running) {
+					_animation[runAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, runMaxAnimationSpeed);
+					_animation.CrossFade(runAnimation.name);	
+				}
+				else if(_characterState == CharacterState.Trotting) {
+					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, trotMaxAnimationSpeed);
+					_animation.CrossFade(walkAnimation.name);	
+				}
+				else if(_characterState == CharacterState.Walking) {
+					_animation[walkAnimation.name].speed = Mathf.Clamp(controller.velocity.magnitude, 0.0, walkMaxAnimationSpeed);
+					_animation.CrossFade(walkAnimation.name);	
+				}
+				
+			}
 		}
 	}
 	// ANIMATION sector
@@ -410,7 +402,7 @@ function IsJumping () {
 }
 
 function IsGrounded () {
-	return (collisionFlags & CollisionFlags.CollidedBelow ) != 0 || IsGroundedOnSlope;
+	return (collisionFlags & CollisionFlags.CollidedBelow) != 0;
 }
 
 function GetDirection () {
