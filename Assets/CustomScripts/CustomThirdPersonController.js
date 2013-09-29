@@ -69,7 +69,7 @@ private var jumping = false;
 private var jumpingReachedApex = false;
 
 // Are we moving backwards (This locks the camera to not do a 180 degree spin)
-private var movingBack = false;
+public var movingBack : boolean = false;
 // Is the user pressing any keys?
 private var isMoving = false;
 // When did the user start walking (Used for going into trot after a while)
@@ -120,7 +120,9 @@ function UpdateSmoothedMovementDirection ()
 
 	// Are we moving backwards or looking backwards
 	if (v < -0.2)
+	{
 		movingBack = true;
+	}
 	else
 		movingBack = false;
 	
@@ -147,13 +149,19 @@ function UpdateSmoothedMovementDirection ()
 			// If we are really slow, just snap to the target direction
 			if (moveSpeed < walkSpeed * 0.9 && grounded)
 			{
-				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed * Mathf.Deg2Rad * Time.deltaTime, 1000);
+				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed*3 * Mathf.Deg2Rad * Time.deltaTime, 1000);
 				moveDirection = moveDirection.normalized;
 			}
 			// Otherwise smoothly turn towards it
 			else
 			{
-				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed * Mathf.Deg2Rad * Time.deltaTime, 1000);
+				var angle = Quaternion.Angle(Quaternion.LookRotation(targetDirection), Quaternion.LookRotation(moveDirection));
+				var powAngle = 	Mathf.Pow(	angle,		0.2);
+				var angleTurnSpeed = rotateSpeed*(4/moveSpeed);
+				var calcSpeed = angleTurnSpeed*	powAngle;
+				var adjusted = calcSpeed * Mathf.Deg2Rad * Time.deltaTime;
+				Debug.Log("angle: "+angle+" powAngle: "+powAngle+" turnSpeed: "+angleTurnSpeed+" total CalcSpeed: "+calcSpeed+" adjusted: "+adjusted);
+				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection,  adjusted, 1000);
 				moveDirection = moveDirection.normalized;
 			}
 			 
@@ -163,12 +171,16 @@ function UpdateSmoothedMovementDirection ()
 			 
 			// get the signed difference in these angles
 			var angleDiff = Mathf.DeltaAngle( angleA, angleB );
+			
+			if(angleDiff < 1)
+				angleDiff = 0;
 
 			_animator.SetFloat("AngularSpeed", -angleDiff);
-			_animator.SetLayerWeight(4, Mathf.Clamp(Mathf.Abs(angleDiff),0f,1f));
 		}
 		else
-			_animator.SetLayerWeight(4, 0f);
+		{
+			_animator.SetFloat("AngularSpeed", 0f);
+		}
 		
 		
 		// Smooth the speed based on the current target direction
