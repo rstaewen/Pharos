@@ -128,8 +128,11 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 			{
 				mouseLookScript.enabled = true;
 				mouseLookScript.Invoke("StartZoom", 0);
+				snap = false;
+				return;
 			}
-			snap = false;
+			else
+				snap = false;
 		}
 		currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, angleVelocity, snapSmoothLag, snapMaxAngleSpeed);
 		//distance = Mathf.SmoothDamp(distance, snapDistance, distanceVelocity, snapSmoothLag, snapMaxMoveSpeed);

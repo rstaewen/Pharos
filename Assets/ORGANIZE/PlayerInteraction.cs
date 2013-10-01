@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerInteraction : MonoBehaviour
 {
 	public UIItemStorage storageScript;
-	public float MaxCursorDistance = 50;
+	public float MaxCursorDistance = 10;
 	public Transform cameraTransform;
 	private Transform lookCursor;
 	private LayerMask LSObjectsMask;
@@ -19,6 +19,11 @@ public class PlayerInteraction : MonoBehaviour
 	private Color cursorBaseColor;
 	private Color cursorSelectedColor;
 	private Collider itemCollider;
+	
+	public Material selectedCursorMaterial;
+	public Material activeCursorMaterial;
+	public Material inactiveCursorMaterial;
+	private MeshRenderer cursorRenderer;
 	
 	public Transform rightHandTransform;
 	public Transform leftHandTransform;
@@ -41,13 +46,13 @@ public class PlayerInteraction : MonoBehaviour
 		PlayerMask = 1<<11;
 		InteractibleMask = 1<<12;
 		enabled = false;
-		cursorMaterial = lookCursor.GetComponent<MeshRenderer>().materials[0];
-		cursorBaseColor = cursorMaterial.color;
-		cursorSelectedColor = cursorBaseColor;
-		cursorSelectedColor.g = 1;
-		cursorSelectedColor.b*=0.5f;
-		cursorSelectedColor.r*=0.5f;
 		cursorParticles = lookCursor.GetComponent<ParticleSystem>();
+		cursorRenderer = lookCursor.GetComponent<MeshRenderer>();
+	}
+	public void SetCursor()
+	{
+		lookCursor.position = (cameraTransform.forward*MaxCursorDistance)+cameraTransform.position;
+		cursorRenderer.material = inactiveCursorMaterial;
 	}
 	public void EquipItem(EquippableItem itemToEquip)
 	{
@@ -75,10 +80,13 @@ public class PlayerInteraction : MonoBehaviour
 			)
 		{
 			lookCursor.position = hit.point;
+			cursorRenderer.material = activeCursorMaterial;
 			return hit.collider.transform;
 		}
 		else
 		{
+			cursorRenderer.material = inactiveCursorMaterial;
+			lookCursor.position = _ray.direction.normalized*MaxCursorDistance+cameraTransform.position;
 			return null;
 		}
 	}
@@ -94,19 +102,17 @@ public class PlayerInteraction : MonoBehaviour
 			if (item)
 			{
 				SelectedItem = item;
-				cursorMaterial.color = cursorSelectedColor;
-				cursorMaterial.SetColor("_Emission", cursorSelectedColor);
+				cursorRenderer.material = selectedCursorMaterial;
 				cursorParticles.Emit(1);
 			}
 			else if (interactibleObject)
 			{
+				cursorRenderer.material = selectedCursorMaterial;
 				////// popup for action? I.e. switch, door...
 			}
 			else
 			{
 				SelectedItem = null;
-				cursorMaterial.color = cursorBaseColor;
-				cursorMaterial.SetColor("_Emission", cursorBaseColor);
 			}
 		}
 		if (playerLightScript)
@@ -127,6 +133,7 @@ public class PlayerInteraction : MonoBehaviour
 	void OnEnable()
 	{
 		Screen.showCursor = false;
+		Screen.lockCursor = true;
 		if (lookCursor)
 			lookCursor.gameObject.SetActive(true);
 	}
@@ -134,6 +141,7 @@ public class PlayerInteraction : MonoBehaviour
 	void OnDisable()
 	{
 		Screen.showCursor = true;
+		Screen.lockCursor = false;
 		SelectedItem = null;
 		cursorOver = null;
 		lookCursor.gameObject.SetActive(false);

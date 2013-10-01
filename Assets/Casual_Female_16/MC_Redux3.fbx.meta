@@ -182,9 +182,369 @@ ModelImporter:
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      bodyMask: 01000000010000000000000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      transformMask: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Footsteps
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 L Thigh
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 L Thigh/CWom0017-M3-CS:Bip01 L Calf
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 L Thigh/CWom0017-M3-CS:Bip01 L Calf/CWom0017-M3-CS:Bip01
+          L Foot
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 L Thigh/CWom0017-M3-CS:Bip01 L Calf/CWom0017-M3-CS:Bip01
+          L Foot/CWom0017-M3-CS:Bip01 L Toe0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 L Thigh/CWom0017-M3-CS:Bip01 L Calf/CWom0017-M3-CS:Bip01
+          L Foot/CWom0017-M3-CS:Bip01 L Toe0/CWom0017-M3-CS:Bip01 L Toe0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 R Thigh
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 R Thigh/CWom0017-M3-CS:Bip01 R Calf
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 R Thigh/CWom0017-M3-CS:Bip01 R Calf/CWom0017-M3-CS:Bip01
+          R Foot
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 R Thigh/CWom0017-M3-CS:Bip01 R Calf/CWom0017-M3-CS:Bip01
+          R Foot/CWom0017-M3-CS:Bip01 R Toe0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 R Thigh/CWom0017-M3-CS:Bip01 R Calf/CWom0017-M3-CS:Bip01
+          R Foot/CWom0017-M3-CS:Bip01 R Toe0/CWom0017-M3-CS:Bip01 R Toe0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 Head
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 Head/CWom0017-M3-CS:Bip01
+          HeadNub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger0/CWom0017-M3-CS:Bip01 L Finger01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger0/CWom0017-M3-CS:Bip01 L Finger01/CWom0017-M3-CS:Bip01 L Finger02
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger0/CWom0017-M3-CS:Bip01 L Finger01/CWom0017-M3-CS:Bip01 L Finger02/CWom0017-M3-CS:Bip01
+          L Finger0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger1/CWom0017-M3-CS:Bip01 L Finger11
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger1/CWom0017-M3-CS:Bip01 L Finger11/CWom0017-M3-CS:Bip01 L Finger12
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger1/CWom0017-M3-CS:Bip01 L Finger11/CWom0017-M3-CS:Bip01 L Finger12/CWom0017-M3-CS:Bip01
+          L Finger1Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger2
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger2/CWom0017-M3-CS:Bip01 L Finger21
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger2/CWom0017-M3-CS:Bip01 L Finger21/CWom0017-M3-CS:Bip01 L Finger22
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger2/CWom0017-M3-CS:Bip01 L Finger21/CWom0017-M3-CS:Bip01 L Finger22/CWom0017-M3-CS:Bip01
+          L Finger2Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger3/CWom0017-M3-CS:Bip01 L Finger31
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger3/CWom0017-M3-CS:Bip01 L Finger31/CWom0017-M3-CS:Bip01 L Finger32
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger3/CWom0017-M3-CS:Bip01 L Finger31/CWom0017-M3-CS:Bip01 L Finger32/CWom0017-M3-CS:Bip01
+          L Finger3Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger4
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger4/CWom0017-M3-CS:Bip01 L Finger41
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger4/CWom0017-M3-CS:Bip01 L Finger41/CWom0017-M3-CS:Bip01 L Finger42
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 L Clavicle/CWom0017-M3-CS:Bip01
+          L UpperArm/CWom0017-M3-CS:Bip01 L Forearm/CWom0017-M3-CS:Bip01 L Hand/CWom0017-M3-CS:Bip01
+          L Finger4/CWom0017-M3-CS:Bip01 L Finger41/CWom0017-M3-CS:Bip01 L Finger42/CWom0017-M3-CS:Bip01
+          L Finger4Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger0
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01/CWom0017-M3-CS:Bip01 R Finger02
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger0/CWom0017-M3-CS:Bip01 R Finger01/CWom0017-M3-CS:Bip01 R Finger02/CWom0017-M3-CS:Bip01
+          R Finger0Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger1
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger1/CWom0017-M3-CS:Bip01 R Finger11
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger1/CWom0017-M3-CS:Bip01 R Finger11/CWom0017-M3-CS:Bip01 R Finger12
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger1/CWom0017-M3-CS:Bip01 R Finger11/CWom0017-M3-CS:Bip01 R Finger12/CWom0017-M3-CS:Bip01
+          R Finger1Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger2
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger2/CWom0017-M3-CS:Bip01 R Finger21
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger2/CWom0017-M3-CS:Bip01 R Finger21/CWom0017-M3-CS:Bip01 R Finger22
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger2/CWom0017-M3-CS:Bip01 R Finger21/CWom0017-M3-CS:Bip01 R Finger22/CWom0017-M3-CS:Bip01
+          R Finger2Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger3
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger3/CWom0017-M3-CS:Bip01 R Finger31
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger3/CWom0017-M3-CS:Bip01 R Finger31/CWom0017-M3-CS:Bip01 R Finger32
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger3/CWom0017-M3-CS:Bip01 R Finger31/CWom0017-M3-CS:Bip01 R Finger32/CWom0017-M3-CS:Bip01
+          R Finger3Nub
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger4
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger4/CWom0017-M3-CS:Bip01 R Finger41
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger4/CWom0017-M3-CS:Bip01 R Finger41/CWom0017-M3-CS:Bip01 R Finger42
+        weight: 1
+      - path: CWom0017-M3-CS:Bip01/CWom0017-M3-CS:Bip01 Pelvis/CWom0017-M3-CS:Bip01
+          Spine/CWom0017-M3-CS:Bip01 Spine1/CWom0017-M3-CS:Bip01 Spine2/CWom0017-M3-CS:Bip01
+          Spine3/CWom0017-M3-CS:Bip01 Neck/CWom0017-M3-CS:Bip01 R Clavicle/CWom0017-M3-CS:Bip01
+          R UpperArm/CWom0017-M3-CS:Bip01 R Forearm/CWom0017-M3-CS:Bip01 R Hand/CWom0017-M3-CS:Bip01
+          R Finger4/CWom0017-M3-CS:Bip01 R Finger41/CWom0017-M3-CS:Bip01 R Finger42/CWom0017-M3-CS:Bip01
+          R Finger4Nub
+        weight: 1
+      - path: CWom0017-M3-CS_Mesh
+        weight: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -301,24 +661,14 @@ ModelImporter:
         length: .224986538
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 Neck
-      humanName: Neck
-      limit:
-        min: {x: 0, y: 0, z: -45}
-        max: {x: 0, y: 0, z: 45}
-        value: {x: .0359505601, y: 0, z: .0179752801}
-        preQ: {x: -.00123780966, y: .000226333752, z: .983733594, w: .179628819}
-        postQ: {x: -.0012590884, y: 6.10947552e-07, z: .999999106, w: .000304624409}
-        length: .0449382178
-        modified: 1
-    - boneName: CWom0017-M3-CS:Bip01 Head
       humanName: Head
       limit:
         min: {x: -40, y: -40, z: -40}
         max: {x: 40, y: 40, z: 40}
-        value: {x: .0359505601, y: 0, z: .0179752801}
-        preQ: {x: -2.05636024e-06, y: 6.2584877e-07, z: .987762868, w: -.155962974}
-        postQ: {x: -1.84774422e-06, y: 8.34465141e-07, z: .997789204, w: -.0664576516}
-        length: .0449382178
+        value: {x: .089994587, y: 0, z: .0449972935}
+        preQ: {x: -1.14738953e-06, y: 7.89761657e-07, z: .999719083, w: .0237001665}
+        postQ: {x: -2.05636024e-06, y: 6.2584877e-07, z: .987762868, w: -.155962974}
+        length: .112493269
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 L Clavicle
       humanName: LeftShoulder
@@ -337,7 +687,7 @@ ModelImporter:
         max: {x: 0, y: 15.000001, z: 30.0000019}
         value: {x: .102557033, y: 0, z: .0512785167}
         preQ: {x: -.604749262, y: .42402932, z: .536863267, w: .407743961}
-        postQ: {x: 9.31322575e-07, y: .688673615, z: -.72507143, w: 5.06639481e-07}
+        postQ: {x: 9.38773155e-07, y: .688673615, z: -.72507143, w: 5.06639481e-07}
         length: .128196329
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 L UpperArm
@@ -357,7 +707,7 @@ ModelImporter:
         max: {x: 90, y: 100, z: 100}
         value: {x: .216443345, y: 0, z: .108221672}
         preQ: {x: -.423116833, y: .60959959, z: -.669619083, w: -.0311533958}
-        postQ: {x: -7.4977288e-07, y: .584450126, z: -.81142962, w: -6.54952601e-07}
+        postQ: {x: -7.423223e-07, y: .584450126, z: -.81142962, w: -6.54952601e-07}
         length: .270554245
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 L Forearm
@@ -376,8 +726,8 @@ ModelImporter:
         min: {x: -90, y: 0, z: -80}
         max: {x: 90, y: 0, z: 80}
         value: {x: .184607834, y: 0, z: .0923039168}
-        preQ: {x: .635314405, y: -.755434513, z: .122811511, w: .103012137}
-        postQ: {x: 1.80210918e-07, y: -.98703599, z: .160498753, w: -4.18367563e-07}
+        preQ: {x: .635314405, y: -.755434573, z: .122811519, w: .103012122}
+        postQ: {x: 1.82917574e-07, y: -.98703599, z: .160498753, w: -4.22325684e-07}
         length: .230759859
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 L Hand
@@ -396,8 +746,8 @@ ModelImporter:
         min: {x: 0, y: -40, z: -80}
         max: {x: 0, y: 40, z: 80}
         value: {x: .0923039168, y: 0, z: .0461519584}
-        preQ: {x: 1.6848206e-07, y: .584449887, z: -.811429739, w: 4.23256978e-07}
-        postQ: {x: -.0211490709, y: .0642324239, z: -.996748447, w: .0438100733}
+        preQ: {x: 1.69355175e-07, y: .584449887, z: -.811429739, w: 4.28000902e-07}
+        postQ: {x: -.0211490728, y: .0642324239, z: -.996748447, w: .043810077}
         length: .11537993
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 L Toe0
@@ -576,8 +926,8 @@ ModelImporter:
         min: {x: 0, y: -25, z: -20}
         max: {x: 0, y: 25, z: 20}
         value: {x: .0324545652, y: 0, z: .0162272826}
-        preQ: {x: .273514897, y: -.642570853, z: .578698158, w: .421189547}
-        postQ: {x: 2.23517441e-06, y: -.998767614, z: .0496307686, w: 3.81469772e-06}
+        preQ: {x: .273514897, y: -.642570913, z: .578698218, w: .421189576}
+        postQ: {x: 2.22027325e-06, y: -.998767614, z: .0496307686, w: 3.79979656e-06}
         length: .0405682251
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger01
@@ -586,8 +936,8 @@ ModelImporter:
         min: {x: 0, y: 0, z: -40}
         max: {x: 0, y: 0, z: 35}
         value: {x: .0240165163, y: 0, z: .0120082581}
-        preQ: {x: .194205791, y: .980640113, z: -.0231507216, w: .00965139642}
-        postQ: {x: -2.83122034e-07, y: -.998767614, z: .0496302322, w: -9.68575364e-07}
+        preQ: {x: .194205821, y: .980640113, z: -.0231507216, w: .00965142529}
+        postQ: {x: -3.12924357e-07, y: -.998767614, z: .0496302471, w: -9.98377686e-07}
         length: .0300206542
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger02
@@ -596,8 +946,8 @@ ModelImporter:
         min: {x: 0, y: 0, z: -40}
         max: {x: 0, y: 0, z: 35}
         value: {x: .0180123858, y: 0, z: .00900619291}
-        preQ: {x: .194205701, y: .980640113, z: -.0231505372, w: .00965134613}
-        postQ: {x: -3.27825518e-07, y: -.998767614, z: .0496302396, w: -9.98377686e-07}
+        preQ: {x: .194205731, y: .980640113, z: -.0231505372, w: .00965137593}
+        postQ: {x: -3.7252903e-07, y: -.998767614, z: .0496302471, w: -1.01327896e-06}
         length: .0225154907
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger1
@@ -607,7 +957,7 @@ ModelImporter:
         max: {x: 0, y: 20, z: 50}
         value: {x: .0301165804, y: 0, z: .0150582902}
         preQ: {x: .114773177, y: -.0523604862, z: .962829769, w: .238839313}
-        postQ: {x: -8.66129994e-08, y: .214401677, z: -.976745546, w: -9.25341737e-07}
+        postQ: {x: -7.72997737e-08, y: .214401677, z: -.976745546, w: -9.25341737e-07}
         length: .0376457348
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger11
@@ -616,8 +966,8 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0161541551, y: 0, z: .00807707757}
-        preQ: {x: .0671867505, y: -.204021692, z: .927455187, w: .306084722}
-        postQ: {x: 1.93243591e-06, y: .214401767, z: -.976745546, w: 5.25831956e-06}
+        preQ: {x: .067186743, y: -.204021692, z: .927455187, w: .306084722}
+        postQ: {x: 1.94174913e-06, y: .214401767, z: -.976745546, w: 5.25831956e-06}
         length: .0201927032
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger12
@@ -626,8 +976,8 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0121156182, y: 0, z: .00605780911}
-        preQ: {x: .0671867803, y: -.204021797, z: .927455187, w: .306084722}
-        postQ: {x: 1.93342544e-06, y: .214401722, z: -.976745486, w: 5.30538045e-06}
+        preQ: {x: .0671867654, y: -.204021797, z: .927455187, w: .306084722}
+        postQ: {x: 1.94273866e-06, y: .214401722, z: -.976745486, w: 5.30538045e-06}
         length: .015144527
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger2
@@ -636,8 +986,8 @@ ModelImporter:
         min: {x: 0, y: -7.50000048, z: -50}
         max: {x: 0, y: 7.50000048, z: 50}
         value: {x: .0344952792, y: 0, z: .0172476396}
-        preQ: {x: .0768638328, y: -.0541364066, z: .96575439, w: .24182561}
-        postQ: {x: -8.84756375e-08, y: .0934999362, z: -.995619237, w: -4.53745406e-06}
+        preQ: {x: .0768638253, y: -.0541364066, z: .96575439, w: .24182561}
+        postQ: {x: -8.10250569e-08, y: .0934999362, z: -.995619237, w: -4.53372877e-06}
         length: .0431191176
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger21
@@ -646,8 +996,8 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0221398026, y: 0, z: .0110699013}
-        preQ: {x: .0293009188, y: -.0892177522, z: .945427954, w: .312005818}
-        postQ: {x: -2.32248553e-07, y: .0934999287, z: -.995619297, w: -1.69924158e-06}
+        preQ: {x: .0293009132, y: -.0892177597, z: .945427954, w: .312005818}
+        postQ: {x: -2.24797972e-07, y: .0934999287, z: -.995619297, w: -1.69551629e-06}
         length: .0276747625
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger22
@@ -656,8 +1006,8 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0166048501, y: 0, z: .00830242503}
-        preQ: {x: .0293009561, y: -.089217715, z: .945427775, w: .312005937}
-        postQ: {x: -.00104512123, y: .0934940651, z: -.995557129, w: .0111245429}
+        preQ: {x: .0293009486, y: -.0892177224, z: .945427775, w: .312005937}
+        postQ: {x: -.00104511378, y: .0934940651, z: -.995557129, w: .0111245466}
         length: .0207560714
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger3
@@ -666,8 +1016,8 @@ ModelImporter:
         min: {x: 0, y: -7.50000048, z: -50}
         max: {x: 0, y: 7.50000048, z: 50}
         value: {x: .0323330574, y: 0, z: .0161665287}
-        preQ: {x: .00054120284, y: -.0574592128, z: .967378139, w: .246734187}
-        postQ: {x: 3.12225865e-07, y: .0123462565, z: -.999923766, w: 4.95622362e-06}
+        preQ: {x: .000541195681, y: -.0574592166, z: .967378139, w: .246734187}
+        postQ: {x: 3.19676445e-07, y: .0123462565, z: -.999923766, w: 4.95994891e-06}
         length: .0404163413
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger31
@@ -676,8 +1026,8 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0200519692, y: 0, z: .0100259846}
-        preQ: {x: .00386921619, y: -.0121538974, z: .949548244, w: .313361049}
-        postQ: {x: -3.9144652e-07, y: .0123462081, z: -.999923766, w: -8.06921526e-06}
+        preQ: {x: .00386920897, y: -.0121539002, z: .949548244, w: .313361049}
+        postQ: {x: -3.83995939e-07, y: .0123462081, z: -.999923766, w: -8.06548996e-06}
         length: .0250649713
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger32
@@ -686,8 +1036,8 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0150389783, y: 0, z: .00751948915}
-        preQ: {x: .00386938802, y: -.0121537736, z: .949548423, w: .313360929}
-        postQ: {x: -3.54717457e-07, y: .0123463226, z: -.999923766, w: -8.15276599e-06}
+        preQ: {x: .0038693808, y: -.0121537754, z: .949548423, w: .313360929}
+        postQ: {x: -3.47266877e-07, y: .0123463226, z: -.999923766, w: -8.1490407e-06}
         length: .0187987275
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger4
@@ -696,8 +1046,8 @@ ModelImporter:
         min: {x: 0, y: -20, z: -50}
         max: {x: 0, y: 20, z: 50}
         value: {x: .0193869229, y: 0, z: .00969346147}
-        preQ: {x: -.0375374295, y: -.0589906126, z: .966068029, w: .248643458}
-        postQ: {x: -2.81142974e-07, y: -.0203866325, z: -.999792099, w: 8.96494294e-06}
+        preQ: {x: -.0375374332, y: -.0589906089, z: .96606791, w: .248643428}
+        postQ: {x: -2.73692393e-07, y: -.0203866325, z: -.999792099, w: 8.97239352e-06}
         length: .0242336635
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger41
@@ -706,8 +1056,8 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0152919423, y: 0, z: .00764597114}
-        preQ: {x: -.00638890499, y: .0189303979, z: .949441612, w: .313307047}
-        postQ: {x: 1.14203424e-07, y: -.0203865618, z: -.999792159, w: 5.23718654e-06}
+        preQ: {x: -.00638891244, y: .0189303961, z: .949441612, w: .313307047}
+        postQ: {x: 1.21653997e-07, y: -.0203865618, z: -.999792159, w: 5.24463712e-06}
         length: .019114932
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger42
@@ -716,8 +1066,8 @@ ModelImporter:
         min: {x: 0, y: 0, z: -45}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0114689553, y: 0, z: .00573447766}
-        preQ: {x: -.00638879044, y: .01893037, z: .949441731, w: .313307077}
-        postQ: {x: 1.33062699e-07, y: -.0203865524, z: -.999792099, w: 5.24525376e-06}
+        preQ: {x: -.00638879742, y: .0189303663, z: .949441731, w: .313307077}
+        postQ: {x: 1.40513279e-07, y: -.0203865524, z: -.999792099, w: 5.25270434e-06}
         length: .0143361986
         modified: 1
     skeleton:
@@ -948,7 +1298,7 @@ ModelImporter:
       transformModified: 1
     - name: CWom0017-M3-CS:Bip01 R Clavicle
       position: {x: .00790101849, y: -.00445986446, z: -.0130399689}
-      rotation: {x: .677174449, y: .157683626, z: .712119043, w: -.0972467661}
+      rotation: {x: .677174449, y: .157683626, z: .712119043, w: -.097246781}
       scale: {x: .999999881, y: 1.00000024, z: 1.00000012}
       transformModified: 1
     - name: CWom0017-M3-CS:Bip01 R UpperArm

@@ -27,19 +27,7 @@ public class InvEquipment : MonoBehaviour
 
 		if (slot != InvBaseItem.Slot.None)
 		{
-			if (slot == InvBaseItem.Slot.EitherHand)
-			{
-				InvGameItem newItem = doReplace(InvBaseItem.Slot.LeftHand, item, baseItem);
-				if (newItem == item)
-					return doReplace(InvBaseItem.Slot.RightHand, item, baseItem);	
-				else
-				{
-					//Debug.Log("returning: "+newItem.name);
-					return newItem;
-				}
-			}
-			else
-				return doReplace(slot, item, baseItem);
+			return doReplace(slot, item, baseItem);
 		}
 		else if (item != null)
 		{
@@ -172,7 +160,6 @@ public class InvEquipment : MonoBehaviour
 
 	public InvGameItem GetItem (InvBaseItem.Slot slot)
 	{
-		Debug.Log("Getting item...");
 		if (slot != InvBaseItem.Slot.None)
 		{
 			int index = (int)slot - 1;

@@ -1,10 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomScripts\CustomThirdPersonController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomScripts\CustomMouseLook.cs">
     <Files>
-      <File FileName="Assets\CustomScripts\CustomMouseLook.cs" Line="1" Column="1" />
-      <File FileName="Assets\CustomScripts\CustomThirdPersonController.js" Line="347" Column="53" />
-      <File FileName="Assets\CustomScripts\CustomThirdPersonCamera.js" Line="165" Column="1" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\System\InvDatabase.cs" Line="82" Column="9" />
+      <File FileName="Assets\CustomScripts\CustomMouseLook.cs" Line="47" Column="30" />
+      <File FileName="Assets\CustomScripts\CustomThirdPersonController.js" Line="100" Column="26" />
+      <File FileName="Assets\CustomScripts\CustomThirdPersonCamera.js" Line="34" Column="33" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\System\InvBaseItem.cs" Line="12" Column="14" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" Line="31" Column="18" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\System\InvEquipment.cs" Line="167" Column="35" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIItemStorage.cs" Line="166" Column="12" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIItemSlot.cs" Line="138" Column="32" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIEquipmentSlot.cs" Line="15" Column="28" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIStorageSlot.cs" Line="15" Column="25" />
+      <File FileName="Assets\ORGANIZE\PlayerInteraction.cs" Line="8" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

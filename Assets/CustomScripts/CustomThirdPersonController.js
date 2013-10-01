@@ -156,11 +156,10 @@ function UpdateSmoothedMovementDirection ()
 			else
 			{
 				var angle = Quaternion.Angle(Quaternion.LookRotation(targetDirection), Quaternion.LookRotation(moveDirection));
-				var powAngle = 	Mathf.Pow(	angle,		0.2);
+				var powAngle = 	Mathf.Pow(angle,0.2);
 				var angleTurnSpeed = rotateSpeed*(4/moveSpeed);
 				var calcSpeed = angleTurnSpeed*	powAngle;
 				var adjusted = calcSpeed * Mathf.Deg2Rad * Time.deltaTime;
-				Debug.Log("angle: "+angle+" powAngle: "+powAngle+" turnSpeed: "+angleTurnSpeed+" total CalcSpeed: "+calcSpeed+" adjusted: "+adjusted);
 				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection,  adjusted, 1000);
 				moveDirection = moveDirection.normalized;
 			}
@@ -222,7 +221,6 @@ function UpdateSmoothedMovementDirection ()
 		if (jumping)
 		{
 			lockCameraTimer = 0.0;
-			_animator.SetLayerWeight(4, 0f);
 		}
 
 		if (isMoving)
@@ -281,6 +279,8 @@ function ApplyGravity ()
 function SetMobile()
 {
 	isMobile = true;
+	targetDirection = (transform.TransformDirection(Vector3.forward));
+	moveDirection = targetDirection;
 }
 
 function SetImmobile()
@@ -318,8 +318,9 @@ function Update() {
 	{
 		lastJumpButtonTime = Time.time;
 	}
-
-	UpdateSmoothedMovementDirection();
+	
+	if(isMobile)
+		UpdateSmoothedMovementDirection();
 	
 	// Apply gravity
 	// - extra power jump modifies gravity
@@ -335,16 +336,25 @@ function Update() {
 	
 	// Move the controller
 	if (isMobile)
+	{
+		Debug.Log("mobile");
+		// ANIMATION sector
+		_animator.SetFloat("Speed", moveSpeed);
+		_animator.SetFloat("VerticalSpeed", verticalSpeed);
 		collisionFlags = _controller.Move(movement);
+		if(!jumping)
+			_controller.Move(Vector3(0f, Terrain.activeTerrain.SampleHeight(transform.position) - transform.position.y, 0f));
+	}
 	else
+	{
+		Debug.Log("immobile");
 		moveSpeed = 0;
+		_animator.SetFloat("Speed", moveSpeed);
+		_animator.SetFloat("VerticalSpeed", 0f);
+		collisionFlags = _controller.Move(Vector3(0f, Terrain.activeTerrain.SampleHeight(transform.position) - transform.position.y - 0.1f, 0f));
+	}
 	//"glue" the player to the terrain.
-	if(!jumping)
-		_controller.Move(Vector3(0f, Terrain.activeTerrain.SampleHeight(transform.position) - transform.position.y, 0f));
 	
-	// ANIMATION sector
-	_animator.SetFloat("Speed", moveSpeed);
-	_animator.SetFloat("VerticalSpeed", verticalSpeed);
 	
 	// Set rotation to the move direction
 	if (isMobile)
