@@ -337,7 +337,6 @@ function Update() {
 	// Move the controller
 	if (isMobile)
 	{
-		Debug.Log("mobile");
 		// ANIMATION sector
 		_animator.SetFloat("Speed", moveSpeed);
 		_animator.SetFloat("VerticalSpeed", verticalSpeed);
@@ -347,7 +346,6 @@ function Update() {
 	}
 	else
 	{
-		Debug.Log("immobile");
 		moveSpeed = 0;
 		_animator.SetFloat("Speed", moveSpeed);
 		_animator.SetFloat("VerticalSpeed", 0f);

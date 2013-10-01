@@ -112,7 +112,6 @@ public class CustomMouseLook : MonoBehaviour
 				extraRotation = -(Mathf.Pow(-extraRotation, 0.5f));
 				playerTransform.RotateAround(Vector3.up, (extraRotation*0.05f));
 				rotationX -= extraRotation;
-				Debug.Log("rotating amount: "+extraRotation);
 			}
 			
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
