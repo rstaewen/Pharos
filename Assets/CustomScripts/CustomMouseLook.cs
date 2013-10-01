@@ -101,16 +101,19 @@ public class CustomMouseLook : MonoBehaviour
 			if (rotationX > maximumX)
 			{
 				float extraRotation = rotationX - maximumX;
-				playerTransform.RotateAround(Vector3.up, (extraRotation*0.03f));
+				extraRotation = (Mathf.Pow(extraRotation, 0.5f));
+				playerTransform.RotateAround(Vector3.up, (extraRotation*0.05f));
+				rotationX -= extraRotation;
 				Debug.Log("rotating amount: "+extraRotation);
 			}
 			else if (rotationX < minimumX)
 			{
 				float extraRotation = rotationX - minimumX;
-				playerTransform.RotateAround(Vector3.up, (extraRotation*0.03f));
+				extraRotation = -(Mathf.Pow(-extraRotation, 0.5f));
+				playerTransform.RotateAround(Vector3.up, (extraRotation*0.05f));
+				rotationX -= extraRotation;
 				Debug.Log("rotating amount: "+extraRotation);
 			}
-			rotationX = Mathf.Clamp(rotationX, minimumX, maximumX);
 			
 			rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
