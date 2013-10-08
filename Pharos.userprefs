@@ -1,6 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomScripts\CustomThirdPersonController.js">
+    <Files>
+      <File FileName="Assets\FogController.cs" Line="23" Column="27" />
+      <File FileName="Assets\AreaBounded.cs" Line="27" Column="7" />
+      <File FileName="Assets\ORGANIZE\PlayerInteraction.cs" Line="37" Column="2" />
+      <File FileName="Assets\CustomScripts\CustomThirdPersonController.js" Line="29" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -34,6 +34,7 @@ public class PlayerInteraction : MonoBehaviour
 	private Quaternion lightRotationOffset;
 	
 	private ParticleSystem cursorParticles;
+	
 	// Use this for initialization
 	void Start ()
 	{
