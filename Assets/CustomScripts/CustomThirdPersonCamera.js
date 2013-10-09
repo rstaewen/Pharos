@@ -2,16 +2,15 @@
 private var mouseLookScript : MonoBehaviour;
 var overShoulder : Transform;
 var cameraTransform : Transform;
-private var _target : Transform;
+var _target : Transform;
 
 // The distance in the x-z plane to the target
 var distance = 7.0;
+private var targetDistance : float;
+private var originalDistance : float;
 
 // the height we want the camera to be above the target
 var height = 3.0;
-
-private var playDistance;
-private var playHeight;
 
 var angularSmoothLag = 0.3;
 var angularMaxSpeed = 15.0;
@@ -36,17 +35,26 @@ private var angleVelocity = 0.0;
 private var snap = false;
 private var lookActive = false;
 private var controller : CustomThirdPersonController;
-private var targetHeight = 100000.0; 
+public var targetHeight = 30f; 
+public var currentHeight : float = 30f;
 
 private var interactionScript : MonoBehaviour;
 
 public var neckTransform : Transform;
+private var retracted = false;
+private var lastTarget;
 
 function Start()
 {
-	playDistance = distance;
-	playHeight = height;
+	targetDistance = distance;
 	mouseLookScript.enabled = false;
+	originalDistance = distance;
+}
+function RetractDistance()
+{
+	retracted = true;
+	distance -= 0.01f;
+	targetDistance = Mathf.Clamp(targetDistance-0.05f, 0.4f,originalDistance);
 }
 function Awake ()
 {
@@ -62,15 +70,14 @@ function Awake ()
 	mouseLookScript.SendMessage("SetShoulderPos", overShoulder);
 	interactionScript = GetComponent("PlayerInteraction");
 		
-	_target = transform;
 	if (_target)
 	{
-		controller = _target.GetComponent(CustomThirdPersonController);
+		controller = GetComponent(CustomThirdPersonController);
 	}
 	
 	if (controller)
 	{
-		var characterController : CharacterController = _target.collider;
+		var characterController : CharacterController = transform.collider;
 		centerOffset = characterController.bounds.center - _target.position;
 		headOffset = centerOffset;
 		headOffset.y = characterController.bounds.max.y - _target.position.y;
@@ -100,8 +107,7 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 	// Early out if we don't have a target
 	if (!controller)
 		return;
-	
-	var targetCenter = _target.position + centerOffset;
+	var targetCenter = _target.position;
 	var targetHead = _target.position + headOffset;
 
 	//	DebugDrawStuff();
@@ -120,6 +126,7 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 	
 	if (snap)
 	{
+		distance = Mathf.SmoothDamp(distance, targetDistance, distanceVelocity, 0.3f);
 		// We are close to the target, so we can stop snapping now!
 		if (AngleDistance (currentAngle, originalTargetAngle) < 3.0)
 		{
@@ -155,8 +162,7 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 	}
 	else
 	{
-		distance = playDistance;
-		height = playHeight;
+		distance = Mathf.SmoothDamp(distance, targetDistance, distanceVelocity, 0.3f);
 		if (controller.GetLockCameraTimer () < lockCameraTimeout)
 			targetAngle = currentAngle;
 
@@ -186,7 +192,6 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 		targetHeight = targetCenter.y + height;
 	}
 	// Damp the height
-	var currentHeight = cameraTransform.position.y;
 	currentHeight = Mathf.SmoothDamp (currentHeight, targetHeight, heightVelocity, heightSmoothLag);
 	
 	// Set the position of the camera on the x-z plane to:
@@ -196,6 +201,18 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 	// Set the height of the camera
 	cameraTransform.position.y = currentHeight;
 	SetUpRotation(targetCenter, targetHead);
+	
+	if (transform.localRotation.y!=lastTarget && retracted)
+	{
+		CancelInvoke("resetDistance");
+		Invoke("resetDistance",2f);
+	}
+	lastTarget = transform.localRotation.y;
+}
+
+function resetDistance()
+{
+	targetDistance = originalDistance;
 }
 
 function LateUpdate () {

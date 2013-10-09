@@ -64,6 +64,7 @@ public class CustomMouseLook : MonoBehaviour
 		interactionScript = playerTransform.GetComponent<PlayerInteraction>();
 		tpController = (playerTransform.GetComponent("CustomThirdPersonController") as MonoBehaviour);
 		baseShoulderRotation = shoulderTransform.localRotation;
+		GetComponent<CameraPhysics>().SetCameraController(playerTransform.GetComponent("CustomThirdPersonCamera") as MonoBehaviour);
 	}
 	public void StartZoom()
 	{

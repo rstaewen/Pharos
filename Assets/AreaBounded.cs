@@ -16,12 +16,10 @@ public class AreaBounded : MonoBehaviour {
 	{
 		playerCollider = _collider;
 		PlayerPhysics testPlayer = playerCollider.gameObject.GetComponent<PlayerPhysics>();
-			Debug.Log("testTriggerStay");
 		if (testPlayer)
 		{
 			playerInteraction = testPlayer;
 			playerInteraction.pushPosition = Vector3.zero;
-			Debug.Log("test");
 			CancelInvoke("pushIn");
 			Invoke("pushIn", 0.2f);
 		}
