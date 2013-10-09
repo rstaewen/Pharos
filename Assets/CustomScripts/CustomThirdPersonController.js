@@ -2,17 +2,6 @@
 // Require a character controller to be attached to the same game object
 @script RequireComponent(CharacterController)
 
-public var idleAnimation : AnimationClip;
-public var walkAnimation : AnimationClip;
-public var runAnimation : AnimationClip;
-public var jumpPoseAnimation : AnimationClip;
-
-public var walkMaxAnimationSpeed : float = 0.75;
-public var trotMaxAnimationSpeed : float = 1.0;
-public var runMaxAnimationSpeed : float = 1.0;
-public var jumpAnimationSpeed : float = 1.15;
-public var landAnimationSpeed : float = 1.0;
-
 private var _animator : Animator;
 private var _controller : CharacterController;
 
@@ -97,7 +86,7 @@ private var isMobile = true;
 function Awake ()
 {
 	moveDirection = transform.TransformDirection(Vector3.forward);
-	_animator = GetComponent(Animator);
+	_animator = GetComponentInChildren(Animator);
 	_controller = GetComponent(CharacterController);
 }
 

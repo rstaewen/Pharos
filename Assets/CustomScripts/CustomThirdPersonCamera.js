@@ -58,7 +58,6 @@ function Awake ()
 		enabled = false;	
 	}
 	mouseLookScript = cameraTransform.GetComponent("CustomMouseLook");
-	overShoulder = transform.FindChild("OverShoulder");
 	mouseLookScript.SendMessage("SetNeckTransform", neckTransform);
 	mouseLookScript.SendMessage("SetShoulderPos", overShoulder);
 	interactionScript = GetComponent("PlayerInteraction");

@@ -1,11 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomScripts\CustomThirdPersonController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FogWallController.cs">
     <Files>
-      <File FileName="Assets\FogController.cs" Line="23" Column="27" />
-      <File FileName="Assets\AreaBounded.cs" Line="27" Column="7" />
-      <File FileName="Assets\ORGANIZE\PlayerInteraction.cs" Line="37" Column="2" />
-      <File FileName="Assets\CustomScripts\CustomThirdPersonController.js" Line="29" Column="1" />
+      <File FileName="Assets\FogBank.cs" Line="22" Column="3" />
+      <File FileName="Assets\CameraPhysics.cs" Line="7" Column="100" />
+      <File FileName="Assets\ORGANIZE\PlayerInteraction.cs" Line="1" Column="1" />
+      <File FileName="Assets\CustomScripts\CustomMouseLook.cs" Line="1" Column="1" />
+      <File FileName="Assets\ORGANIZE\SetLights.cs" Line="1" Column="1" />
+      <File FileName="Assets\FogWallController.cs" Line="63" Column="54" />
+      <File FileName="Assets\ORGANIZE\LitObjectController.cs" Line="1" Column="1" />
+      <File FileName="Assets\ORGANIZE\ShadowController.cs" Line="1" Column="1" />
+      <File FileName="Assets\CustomScripts\CustomThirdPersonController.js" Line="1" Column="1" />
+      <File FileName="Assets\FogCollider.cs" Line="19" Column="1" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIItemStorage.cs" Line="121" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

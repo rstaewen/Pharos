@@ -33,8 +33,8 @@ public class AreaBounded : MonoBehaviour {
 			Debug.Log("test2");
 		playerInteraction.pushPosition = transform.position;
 	}
-	// Update is called once per frame
-	void Update ()
+	void OnDisable()
 	{
+		playerInteraction.pushPosition = Vector3.zero;
 	}
 }

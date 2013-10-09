@@ -21,9 +21,8 @@ public class SetLights : MonoBehaviour
 		fixedUpdateFunction+=UpdateWithRotation;
 	}
 	
-	void UpdateStub()
-	{
-	}
+	void UpdateStub(){}
+	
 	void UpdateWithRotation()
 	{
 		lightSet.rotation = Quaternion.LookRotation(directionalTargetTransform.position - lightSet.position);
