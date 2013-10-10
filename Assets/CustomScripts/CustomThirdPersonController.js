@@ -298,6 +298,11 @@ function SetImmobile()
 	isMobile = false;
 }
 
+function SetUncontrollable()
+{
+	isControllable = false;
+}
+
 function CalculateJumpVerticalSpeed (targetJumpHeight : float)
 {
 	// From the jump height and gravity we deduce the upwards speed 

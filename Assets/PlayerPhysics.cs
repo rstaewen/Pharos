@@ -18,4 +18,9 @@ public class PlayerPhysics : MonoBehaviour {
 			transform.position = (pushPosition - transform.position)*0.005f + transform.position;
 		}
 	}
+	
+	public void Freeze()
+	{
+		(transform.GetComponent("CustomThirdPersonController") as MonoBehaviour).Invoke("SetUncontrollable", 0f);
+	}
 }
