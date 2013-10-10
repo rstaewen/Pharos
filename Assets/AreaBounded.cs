@@ -5,7 +5,7 @@ public class AreaBounded : MonoBehaviour {
 	
 	private SphereCollider _sphereCollider;
 	private Collider playerCollider;
-	private PlayerPhysics playerInteraction;
+	private PlayerPhysics playerPhysics;
 	// Use this for initialization
 	void Start ()
 	{
@@ -18,8 +18,8 @@ public class AreaBounded : MonoBehaviour {
 		PlayerPhysics testPlayer = playerCollider.gameObject.GetComponent<PlayerPhysics>();
 		if (testPlayer)
 		{
-			playerInteraction = testPlayer;
-			playerInteraction.pushPosition = Vector3.zero;
+			playerPhysics = testPlayer;
+			playerPhysics.pushPosition = Vector3.zero;
 			CancelInvoke("pushIn");
 			Invoke("pushIn", 0.2f);
 		}
@@ -28,11 +28,12 @@ public class AreaBounded : MonoBehaviour {
 	}
 	void pushIn()
 	{
-			Debug.Log("test2");
-		playerInteraction.pushPosition = transform.position;
+		if(playerPhysics)
+			playerPhysics.pushPosition = transform.position;
 	}
 	void OnDisable()
 	{
-		playerInteraction.pushPosition = Vector3.zero;
+		if(playerPhysics)
+			playerPhysics.pushPosition = Vector3.zero;
 	}
 }

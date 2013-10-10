@@ -13,6 +13,7 @@ public class CameraPhysics : MonoBehaviour {
 	//This script prevents the camera's collider/rigidbody pair from
 	//causing problems. collider/rigidbody pair will prevent camera from running into terrain or buildings.
 	//testing is required to see if further changes are needed to make sure camera doesn't get caught.
+	void OnCollisionEnter(Collision _collision){ OnCollisionStay(_collision);}
 	void OnCollisionStay(Collision _collision)
 	{
 		Collider other = _collision.collider;
@@ -21,10 +22,13 @@ public class CameraPhysics : MonoBehaviour {
 		//and if it collides with movable objects it will move the objects! Camera should not have any effect
 		//on the world itself.
 		if(other.GetComponent<Rigidbody>() || other.GetComponent<CharacterController>())
+		{
+			rigidbody.velocity = Vector3.zero;
 			Physics.IgnoreCollision(collider, other);
+		}
 		else if (cameraController)
 		{
-			Debug.Log("Retract");
+			rigidbody.velocity = Vector3.zero;
 			cameraController.Invoke("RetractDistance",0f);
 		}
 	}

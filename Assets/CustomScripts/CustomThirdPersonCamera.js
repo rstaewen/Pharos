@@ -155,6 +155,9 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 			mouseLookScript.Invoke("Reset", 0);
 			mouseLookScript.enabled = false;
 			currentRotation = transform.rotation;
+			targetDistance = originalDistance;
+			distance = targetDistance/3;
+			retracted = true;
 			return;
 		}
 		else

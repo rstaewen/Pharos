@@ -69,6 +69,7 @@ public class CustomMouseLook : MonoBehaviour
 	public void StartZoom()
 	{
 		motionBlur.enabled = true;
+		collider.enabled = false;
 		timeLeft = zoomTime;
 		zooming = true;
 		CancelInvoke("StopZoom");
@@ -139,6 +140,7 @@ public class CustomMouseLook : MonoBehaviour
 	
 	public void Reset()
 	{
+		collider.enabled = true;
 		zooming = false;
 		motionBlur.enabled = false;
 		CancelInvoke("StopZoom");
