@@ -10,6 +10,7 @@ public abstract class ObjectController : MonoBehaviour
 	{
 		lit = false;
 	}
+	public GlobalStuff.OnEvent OnCompletion;
 }
 
 public class ShadowController : ObjectController

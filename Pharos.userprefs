@@ -1,19 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TriggerArea.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIItemSlot.cs">
     <Files>
-      <File FileName="Assets\ORGANIZE\SetLights.cs" Line="8" Column="46" />
-      <File FileName="Assets\FogWallController.cs" Line="1" Column="1" />
-      <File FileName="Assets\FogBank.cs" Line="1" Column="1" />
-      <File FileName="Assets\CameraPhysics.cs" Line="1" Column="1" />
-      <File FileName="Assets\ORGANIZE\PlayerInteraction.cs" Line="1" Column="1" />
-      <File FileName="Assets\CustomScripts\CustomMouseLook.cs" Line="1" Column="1" />
-      <File FileName="Assets\ORGANIZE\LitObjectController.cs" Line="1" Column="1" />
       <File FileName="Assets\AreaBounded.cs" Line="1" Column="1" />
-      <File FileName="Assets\Level1Door.cs" Line="87" Column="13" />
-      <File FileName="Assets\TriggerArea.cs" Line="11" Column="3" />
-      <File FileName="Assets\CustomScripts\CustomThirdPersonController.js" Line="1" Column="1" />
-      <File FileName="Assets\CustomScripts\CustomThirdPersonCamera.js" Line="1" Column="1" />
+      <File FileName="Assets\GlobalStuff.cs" Line="16" Column="1" />
+      <File FileName="Assets\FogWallController.cs" Line="5" Column="42" />
+      <File FileName="Assets\ORGANIZE\LitObjectController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Level1Door.cs" Line="4" Column="48" />
+      <File FileName="Assets\TriggerArea.cs" Line="1" Column="1" />
+      <File FileName="Assets\SoundControl.cs" Line="43" Column="1" />
+      <File FileName="Assets\ORGANIZE\ShadowController.cs" Line="12" Column="3" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIEquipmentSlot.cs" Line="13" Column="38" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIItemSlot.cs" Line="149" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

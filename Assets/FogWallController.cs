@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class FogWallController : MonoBehaviour
+public class FogWallController : ObjectController
 {
 	private Color baseColor;
 	private Vector3 currentRGB = Vector3.zero;
@@ -12,7 +12,7 @@ public class FogWallController : MonoBehaviour
 	private List<Material> fogWallMaterialCollection = new List<Material>();
 	private List<FogCollider> lightColliderCtlCollection = new List<FogCollider>();
 	private bool isLit = false;
-	public bool IsLit {get {return isLit;} set{if(!isLit) {colorVelocity = Vector3.zero;} isLit = value;}}
+	public override bool IsLit {get {return isLit;} set{if(!isLit) {colorVelocity = Vector3.zero;} isLit = value;}}
 	
 	// Use this for initialization
 	void Start ()
@@ -60,8 +60,11 @@ public class FogWallController : MonoBehaviour
 		}
 		else
 		{
-			if(Vector3.Distance(currentRGB, Vector3.zero)<0.05f)
+			if(Vector3.Distance(currentRGB, Vector3.zero)<0.01f)
+			{
+				OnCompletion(true, "fog wall escaped");
 				Destroy(gameObject);
+			}
 			else
 				foreach(Material m in fogWallMaterialCollection)
 				{
