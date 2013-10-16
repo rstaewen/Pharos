@@ -83,11 +83,21 @@ private var lastGroundedTime = 0.0;
 private var isControllable = true;
 private var isMobile = true;
 
+public var WorldCenter : Transform;
+
 function Awake ()
 {
 	moveDirection = transform.TransformDirection(Vector3.forward);
 	_animator = GetComponentInChildren(Animator);
 	_controller = GetComponent(CharacterController);
+}
+
+function Drown()
+{
+	var cameraOffset = cameraTransform.position - transform.position;
+	transform.position = (WorldCenter.position - transform.position).normalized*10f + transform.position;
+	cameraTransform.position = transform.position + cameraOffset + new Vector3(0f,2f,0f);
+	transform.position.y = Terrain.activeTerrain.SampleHeight(transform.position)+2f;
 }
 
 var pushPower = 2.0;
@@ -320,7 +330,6 @@ function DidJump ()
 	
 	_characterState = CharacterState.Jumping;
 }
-var controller : CharacterController;
 function Update() {
 	
 	if (!isControllable)

@@ -42,6 +42,7 @@ private var interactionScript : MonoBehaviour;
 
 public var neckTransform : Transform;
 private var retracted = false;
+private var resettingDistance = false;
 private var lastTarget;
 
 function Start()
@@ -53,8 +54,9 @@ function Start()
 function RetractDistance()
 {
 	retracted = true;
-	distance -= 0.01f;
-	targetDistance = Mathf.Clamp(targetDistance-0.05f, 0.4f,originalDistance);
+	resettingDistance = false;
+	distance -= 0.08f;
+	targetDistance = Mathf.Clamp(targetDistance-0.2f, 0.4f,originalDistance);
 }
 function Awake ()
 {
@@ -205,10 +207,10 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 	cameraTransform.position.y = currentHeight;
 	SetUpRotation(targetCenter, targetHead);
 	
-	if (transform.localRotation.y!=lastTarget && retracted)
+	if (transform.localRotation.y!=lastTarget && retracted && !resettingDistance)
 	{
-		CancelInvoke("resetDistance");
 		Invoke("resetDistance",2f);
+		resettingDistance = true;
 	}
 	lastTarget = transform.localRotation.y;
 }
@@ -216,6 +218,7 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 function resetDistance()
 {
 	targetDistance = originalDistance;
+	resettingDistance = false;
 }
 
 function LateUpdate () {
