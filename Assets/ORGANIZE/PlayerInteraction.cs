@@ -92,14 +92,17 @@ public class PlayerInteraction : MonoBehaviour
 		}
 	}
 	// Update is called once per frame
+	private ObjectController interactibleObject;
 	void FixedUpdate ()
 	{
 		Ray _ray = new Ray(cameraTransform.position, cameraTransform.forward);
 		cursorOver = getSelectedObject(_ray);
+		interactibleObject = null;
+		SelectedItem = null;
 		if(cursorOver)
 		{
 			EquippableItem item = cursorOver.gameObject.GetComponent<EquippableItem>();
-			ObjectController interactibleObject = cursorOver.gameObject.GetComponent<ObjectController>();
+			interactibleObject = cursorOver.gameObject.GetComponent<ObjectController>();
 			if (item)
 			{
 				SelectedItem = item;
@@ -128,6 +131,10 @@ public class PlayerInteraction : MonoBehaviour
 			cursorParticles.Emit(40);
 			AddToInventory(SelectedItem.ItemID);
 			Destroy(SelectedItem.gameObject);
+		}
+		else if(interactibleObject && Input.GetButtonDown("Fire1"))
+		{
+			interactibleObject.OnClickAction1();
 		}
 	}
 	

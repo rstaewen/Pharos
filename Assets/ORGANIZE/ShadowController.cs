@@ -11,6 +11,10 @@ public abstract class ObjectController : MonoBehaviour
 		lit = false;
 	}
 	public GlobalStuff.OnEvent OnCompletion;
+	
+	public virtual void OnClickAction1(){}
+	public virtual void OnClickAction2(){}
+	public virtual void OnHoldAction1(){}
 }
 
 public class ShadowController : ObjectController
