@@ -18,17 +18,20 @@ public class RotatablePillar : ObjectController
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
 	{
+		rotation = Vector3.SmoothDamp(rotation, targetRotation, ref rotationVelocity, rotationTime);
+		transform.localRotation = Quaternion.Euler(rotation);
 	}
 	
 	public override void OnClickAction1()
 	{
 		targetRotation.y+=angleToRotateOnClick;
-		
-		rotation = Vector3.SmoothDamp(rotation, targetRotation, ref rotationVelocity, rotationTime);
-		transform.localRotation = Quaternion.Euler(rotation);
-		
+		Invoke("setPillarState", rotationTime);
+	}
+	
+	private void setPillarState()
+	{
 		pillarState = pillarState +1;
 		if(pillarState == PillarStateTypes.COUNT)
 			pillarState = PillarStateTypes.A;
