@@ -68,7 +68,8 @@ public class CustomMouseLook : MonoBehaviour
 	}
 	public void StartZoom()
 	{
-		motionBlur.enabled = true;
+		if(motionBlur)
+			motionBlur.enabled = true;
 		collider.enabled = false;
 		timeLeft = zoomTime;
 		zooming = true;
@@ -77,7 +78,8 @@ public class CustomMouseLook : MonoBehaviour
 	}
 	void StopZoom()
 	{
-		motionBlur.enabled = false;
+		if(motionBlur)
+			motionBlur.enabled = false;
 		zooming = false;
 		interactionScript.enabled = true;
 		interactionScript.SetCursor();
@@ -142,7 +144,8 @@ public class CustomMouseLook : MonoBehaviour
 	{
 		collider.enabled = true;
 		zooming = false;
-		motionBlur.enabled = false;
+		if(motionBlur)
+			motionBlur.enabled = false;
 		CancelInvoke("StopZoom");
 		rotationX = 0;
 		rotationY = 0;
@@ -155,6 +158,7 @@ public class CustomMouseLook : MonoBehaviour
 	void Start ()
 	{
 		motionBlur = GetComponent<CameraMotionBlur>();
-		motionBlur.enabled = false;
+		if(motionBlur)
+			motionBlur.enabled = false;
 	}
 }
