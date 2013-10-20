@@ -85,15 +85,11 @@ private var isMobile = true;
 
 public var WorldCenter : Transform;
 
-function Start()
-{
-	_controller = GetComponent(CharacterController);
-}
-
 function Awake ()
 {
 	moveDirection = transform.TransformDirection(Vector3.forward);
 	_animator = GetComponentInChildren(Animator);
+	_controller = GetComponent(CharacterController);
 }
 
 function Drown()
