@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class JournalPages : MonoBehaviour
 {
-	[HideInInspector] public bool MakeAddedPageActive = false;
 	[HideInInspector] public int activePageIndex;
 	[HideInInspector] public List<JournalPage> acquiredPageCollection = new List<JournalPage>();
 	[HideInInspector] public List<JournalPage> pageCollection = new List<JournalPage>();
@@ -26,7 +25,7 @@ public class JournalPages : MonoBehaviour
 		Activate (activePageIndex);
 	}
 	
-	public void AddPage(int addedPageID)
+	public void AddPage(int addedPageID, bool MakeAddedPageActive)
 	{
 		foreach(JournalPage page in pageCollection)
 		{
@@ -46,6 +45,8 @@ public class JournalPages : MonoBehaviour
 					i++;
 				}
 				acquiredPageCollection.Add(page);
+				if(MakeAddedPageActive)
+					Activate(acquiredPageCollection.Count-1);
 				return;
 			}
 		}

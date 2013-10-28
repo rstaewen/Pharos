@@ -1,14 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Journal.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CustomScripts\CustomThirdPersonController.js">
     <Files>
+      <File FileName="Assets\JournalPage.cs" Line="1" Column="1" />
       <File FileName="Assets\Levels\michael_level\CatchPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets\RainFX\RainCreator.cs" Line="1" Column="1" />
       <File FileName="Assets\Levels\michael_level\AI_Pather.cs" Line="1" Column="1" />
       <File FileName="Assets\Levels\michael_level\BotAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Journal.cs" Line="38" Column="27" />
-      <File FileName="Assets\JournalPages.cs" Line="49" Column="6" />
-      <File FileName="Assets\JournalPage.cs" Line="7" Column="15" />
+      <File FileName="Assets\Journal.cs" Line="44" Column="20" />
+      <File FileName="Assets\JournalPages.cs" Line="25" Column="30" />
+      <File FileName="Assets\CustomScripts\CustomThirdPersonController.js" Line="382" Column="17" />
+      <File FileName="Assets\ORGANIZE\PlayerInteraction.cs" Line="11" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

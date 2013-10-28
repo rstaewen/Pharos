@@ -78,7 +78,7 @@ private var lastJumpStartHeight = 0.0;
 private var inAirVelocity = Vector3.zero;
 
 private var lastGroundedTime = 0.0;
-
+private var TerrainMask : LayerMask;
 
 private var isControllable = true;
 private var isMobile = true;
@@ -90,6 +90,7 @@ function Awake ()
 	moveDirection = transform.TransformDirection(Vector3.forward);
 	_animator = GetComponentInChildren(Animator);
 	_controller = GetComponent(CharacterController);
+	TerrainMask = 1<<8;
 }
 
 function Drown()
@@ -290,7 +291,7 @@ function ApplyGravity ()
 		}
 	
 		if (IsGrounded ())
-			verticalSpeed = 0.0;
+			verticalSpeed *= 0.95f;
 		else
 			verticalSpeed -= gravity * Time.deltaTime;
 	}
@@ -363,10 +364,18 @@ function Update() {
 	{
 		// ANIMATION sector
 		_animator.SetFloat("Speed", moveSpeed);
-		_animator.SetFloat("VerticalSpeed", verticalSpeed);
+		if(!IsGrounded())
+			_animator.SetFloat("VerticalSpeed", verticalSpeed);
+		else
+			_animator.SetFloat("VerticalSpeed", 0f);
 		collisionFlags = _controller.Move(movement);
-		if(!jumping)
-			_controller.Move(Vector3(0f, Terrain.activeTerrain.SampleHeight(transform.position) - transform.position.y, 0f));
+		var downRay : Ray = new Ray();
+		downRay.direction = Vector3.down;
+		downRay.origin = transform.position;
+		var hit : RaycastHit;
+		var hitGround = Physics.Raycast(downRay, hit, 1f, TerrainMask);
+		if(!jumping&&hitGround)
+			_controller.Move(Vector3(0f, 0.5f*(Terrain.activeTerrain.SampleHeight(transform.position) - transform.position.y), 0f));
 	}
 	else
 	{
