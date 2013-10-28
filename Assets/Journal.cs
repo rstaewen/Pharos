@@ -4,6 +4,7 @@ using System.Collections;
 public class Journal : MonoBehaviour
 {
 	private Transform rootTransform;
+	public JournalPages journalPages;
 	// Use this for initialization
 	void Start ()
 	{
@@ -19,6 +20,21 @@ public class Journal : MonoBehaviour
 	
 	public void Toggle()
 	{
-			rootTransform.gameObject.SetActive(!rootTransform.gameObject.activeSelf);
-	} 
+		rootTransform.gameObject.SetActive(!rootTransform.gameObject.activeSelf);
+	}
+	
+	public void AddPage(int ID)
+	{
+		journalPages.AddPage(ID);
+	}
+	
+	public void NextPage()
+	{
+		journalPages.NextPage();
+	}
+	
+	public void PrevPage()
+	{
+		journalPages.LastPage();
+	}
 }
