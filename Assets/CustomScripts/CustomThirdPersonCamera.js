@@ -25,6 +25,7 @@ var clampHeadPositionScreenSpace = 0.75;
 private var IsAwake = false;
 var lockCameraTimeout = 0.2;
 
+private var wasMovingBackwards = false;
 private var headOffset = Vector3.zero;
 private var centerOffset = Vector3.zero;
 
@@ -55,8 +56,8 @@ function RetractDistance()
 {
 	retracted = true;
 	resettingDistance = false;
-	distance -= 0.08f;
-	targetDistance = Mathf.Clamp(targetDistance-0.2f, 0.4f,originalDistance);
+	distance -= 0.05f;
+	targetDistance = Mathf.Clamp(targetDistance-0.2f, 0.6f,originalDistance);
 }
 function Awake ()
 {
@@ -173,11 +174,21 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 
 		// Lock the camera when moving backwards!
 		// * It is really confusing to do 180 degree spins when turning around.
-		if (AngleDistance (currentAngle, targetAngle) > 160 && controller.IsMovingBackwards ())
+		if(AngleDistance (currentAngle, targetAngle) > 160)
+		{
+			if(controller.IsMovingBackwards ()) 
+				wasMovingBackwards = true;
+		}
+		else if (controller.MoveInputActive())
+			wasMovingBackwards = false;
+		
+		if (wasMovingBackwards)
+		{
 			targetAngle += 180;
+		}
 
 		currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, angleVelocity, angularSmoothLag, angularMaxSpeed);
-			
+		
 		// Convert the angle into a rotation, by which we then reposition the camera
 		currentRotation = Quaternion.Euler (0, currentAngle, 0);
 	}

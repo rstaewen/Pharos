@@ -158,6 +158,7 @@ ModelImporter:
     400150: TongueBack
     400152: TongueTip
     7400000: Idle_JumpUpLow_NoHands_Idle
+    7400002: _205_Idle_JumpUpLow_NoHands_Idle
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -176,6 +177,27 @@ ModelImporter:
       takeName: _205_Idle_JumpUpLow_NoHands_Idle
       firstFrame: 142
       lastFrame: 385
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    - name: _205_Idle_JumpUpLow_NoHands_Idle
+      takeName: _205_Idle_JumpUpLow_NoHands_Idle
+      firstFrame: 224
+      lastFrame: 259
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

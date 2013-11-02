@@ -19,6 +19,7 @@ public class PlayerInteraction : MonoBehaviour
 	private Color cursorBaseColor;
 	private Color cursorSelectedColor;
 	private Collider itemCollider;
+	public Animator playerAnimator;
 	
 	public Material selectedCursorMaterial;
 	public Material activeCursorMaterial;
@@ -173,22 +174,10 @@ public class PlayerInteraction : MonoBehaviour
 			InvGameItem gi = new InvGameItem(itemID, item);
 			gi.quality = (InvGameItem.Quality)Random.Range(0, qualityLevels);
 			gi.itemLevel = NGUITools.RandomRange(item.minItemLevel, item.maxItemLevel);
-			InvGameItem ri = eq.Equip(gi);
-			if (ri == ri)
-			{
-				if (storageScript.PlaceItemInNextAvailableSlot(gi))
-				{
-					Debug.Log(item.name + " added to inventory");
-				}
-				else
-				{
-					Debug.Log("out of room!");
-				}
-			}
+			if (storageScript.PlaceItemInNextAvailableSlot(gi))
+				Debug.Log(item.name + " added to inventory");
 			else
-			{
-				Debug.Log("equipped "+ri.name+ " maybe");
-			}
+				Debug.Log("out of room!");
 		}
 		else
 		{

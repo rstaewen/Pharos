@@ -443,6 +443,11 @@ function GetLockCameraTimer ()
 	return lockCameraTimer;
 }
 
+function MoveInputActive ()  : boolean
+{
+	return Mathf.Abs(Input.GetAxisRaw("Vertical")) + Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0f;
+}
+
 function IsMoving ()  : boolean
 {
 	return Mathf.Abs(Input.GetAxisRaw("Vertical")) + Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5;

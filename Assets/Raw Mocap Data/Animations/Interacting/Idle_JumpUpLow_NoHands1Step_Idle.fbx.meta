@@ -174,8 +174,8 @@ ModelImporter:
     clipAnimations:
     - name: Idle_JumpUpLow_NoHands1Step_Idle
       takeName: _206_Idle_JumpUpLow_NoHands1Step_Idle
-      firstFrame: 55
-      lastFrame: 275
+      firstFrame: 146
+      lastFrame: 212
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
