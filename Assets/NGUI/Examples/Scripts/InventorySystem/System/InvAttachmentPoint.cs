@@ -30,19 +30,22 @@ public class InvAttachmentPoint : MonoBehaviour
 			{
 				// Create a new instance of the game object
 				Transform t = transform;
+				Vector3 tempPosition = mPrefab.transform.localPosition;
+				Vector3 tempScale = mPrefab.transform.localScale;
+				Quaternion tempRotation = mPrefab.transform.localRotation;
 				mChild = Instantiate(mPrefab, t.position, t.rotation) as GameObject;
 				// Parent the child to this object
 				Transform ct = mChild.transform;
 				
-				Vector3 tempPosition = ct.localPosition;
-				Vector3 tempScale = ct.localScale;
-				Quaternion tempRotation = ct.localRotation;
 				ct.parent = t;
 
 				// Reset the pos/rot/scale, just in case
 				ct.localPosition = tempPosition;
 				ct.localRotation = tempRotation;
 				ct.localScale = tempScale;
+				
+				Debug.Log("ctpos: "+ct.localPosition.ToString()+"ctrot: "+ct.localRotation.ToString()+
+					"ctscl: "+ct.localScale.ToString());
 			}
 		}
 		return mChild;

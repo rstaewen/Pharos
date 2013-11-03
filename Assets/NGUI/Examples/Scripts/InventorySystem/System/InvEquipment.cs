@@ -75,9 +75,15 @@ public class InvEquipment : MonoBehaviour
 
 				if (baseItem != null && go != null)
 				{
-					GetComponent<PlayerInteraction>().EquipItem(go.GetComponent<EquippableItem>());
+					InvBaseItem.Slot send = (InvBaseItem.Slot)((int)slot);
+					GetComponent<PlayerInteraction>().EquipItem(go.GetComponent<EquippableItem>(), send);
 					Renderer ren = go.renderer;
 					if (ren != null) ren.material.color = baseItem.color;
+				}
+				else
+				{
+					InvBaseItem.Slot send = (InvBaseItem.Slot)((int)slot);
+					GetComponent<PlayerInteraction>().UnEquipItem(send);
 				}
 			}
 		}

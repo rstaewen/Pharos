@@ -36,9 +36,13 @@ public class PlayerInteraction : MonoBehaviour
 	
 	private ParticleSystem cursorParticles;
 	
+	private enum HandEquipStates {none, left, right, both}
+	private HandEquipStates handEquip;
+	
 	// Use this for initialization
 	void Start ()
 	{
+		handEquip = HandEquipStates.none;
 		lookCursor = transform.FindChild("Cursor");
 		OnDisable();
 		LSObjectsMask = 1<<9;
@@ -50,13 +54,14 @@ public class PlayerInteraction : MonoBehaviour
 		enabled = false;
 		cursorParticles = lookCursor.GetComponent<ParticleSystem>();
 		cursorRenderer = lookCursor.GetComponent<MeshRenderer>();
+		SetArmLayerWeight(0f, 0f);
 	}
 	public void SetCursor()
 	{
 		lookCursor.position = (cameraTransform.forward*MaxCursorDistance)+cameraTransform.position;
 		cursorRenderer.material = inactiveCursorMaterial;
 	}
-	public void EquipItem(EquippableItem itemToEquip)
+	public void EquipItem(EquippableItem itemToEquip, InvBaseItem.Slot slotPlaced)
 	{
 		Debug.Log("Adding Item...");
 		playerLightScript = itemToEquip.GetComponentInChildren<Light>();
@@ -69,7 +74,69 @@ public class PlayerInteraction : MonoBehaviour
 			playerLightScript = playerLightTransform.GetComponentInChildren<Light>();
 			itemCollider = itemToEquip.interactionZone;
 		}
+		switch(handEquip)
+		{
+		case HandEquipStates.left:
+			if(slotPlaced == InvBaseItem.Slot.RightHand)
+				handEquip = HandEquipStates.both;
+			break;
+		case HandEquipStates.right:
+			if(slotPlaced == InvBaseItem.Slot.LeftHand)
+				handEquip = HandEquipStates.both;
+			break;
+		case HandEquipStates.none:
+			if(slotPlaced == InvBaseItem.Slot.LeftHand)
+				handEquip = HandEquipStates.left;
+			if(slotPlaced == InvBaseItem.Slot.RightHand)
+				handEquip = HandEquipStates.right;
+			break;
+		}
+		SetArmLayerWeight(0f, 0f);
 	}
+
+	public void UnEquipItem (InvBaseItem.Slot slotRemoved)
+	{
+		switch(slotRemoved)
+		{
+		case InvBaseItem.Slot.LeftHand:
+			if(handEquip == HandEquipStates.both)
+				handEquip = HandEquipStates.right;
+			if(handEquip == HandEquipStates.left)
+				handEquip = HandEquipStates.none;
+			break;
+		case InvBaseItem.Slot.RightHand:
+			if(handEquip == HandEquipStates.both)
+				handEquip = HandEquipStates.left;
+			if(handEquip == HandEquipStates.right)
+				handEquip = HandEquipStates.none;
+			break;
+		}
+		SetArmLayerWeight(0f, 0f);
+	}
+	
+	public void SetArmLayerWeight (float speed, float itemWeight)
+	{
+		switch(handEquip)
+		{
+		case HandEquipStates.none:
+			playerAnimator.SetLayerWeight(1, 0f);
+			playerAnimator.SetLayerWeight(2, 0f);
+			break;
+		case HandEquipStates.left:
+			playerAnimator.SetLayerWeight(1, 1f);
+			playerAnimator.SetLayerWeight(2, 0f);
+			break;
+		case HandEquipStates.right:
+			playerAnimator.SetLayerWeight(1, 0f);
+			playerAnimator.SetLayerWeight(2, 1f);
+			break;
+		case HandEquipStates.both:
+			playerAnimator.SetLayerWeight(1, 1f);
+			playerAnimator.SetLayerWeight(2, 1f);
+			break;
+		}
+	}
+	
 	Transform getSelectedObject(Ray _ray)
 	{
 		RaycastHit hit = new RaycastHit();
