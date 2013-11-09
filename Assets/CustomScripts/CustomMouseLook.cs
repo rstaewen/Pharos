@@ -94,6 +94,7 @@ public class CustomMouseLook : MonoBehaviour
 	{
 		if (zooming)
 		{
+			Screen.lockCursor = true;
 			transform.position = Vector3.SmoothDamp(transform.position, (shoulderTransform.position + shoulderTransform.TransformDirection(Vector3.back * distanceOffset)), ref cameraVelocity, timeLeft);
 			transform.rotation = Quaternion.RotateTowards(transform.rotation, shoulderTransform.rotation, 1);
 			timeLeft -= Time.fixedDeltaTime;
@@ -101,6 +102,7 @@ public class CustomMouseLook : MonoBehaviour
 		}
 		if (axes == RotationAxes.MouseXAndY)
 		{
+			Screen.lockCursor = true;
 			rotationX += Input.GetAxis("Mouse X") * sensitivityX;
 			if (rotationX > maximumX)
 			{
@@ -142,6 +144,7 @@ public class CustomMouseLook : MonoBehaviour
 	
 	public void Reset()
 	{
+		Screen.lockCursor = false;
 		collider.enabled = true;
 		zooming = false;
 		if(motionBlur)
