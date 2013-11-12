@@ -11,12 +11,19 @@ public class RotatablePillar : ObjectController
 	private Vector3 rotation = Vector3.zero;
 	private Vector3 targetRotation = Vector3.zero;
 	private Vector3 rotationVelocity = Vector3.zero;
+	private int numberRotations = 0;
 	// Use this for initialization
 	void Start ()
 	{
 	
 	}
 	
+	//return number of rotations.  0= start, 1=90 
+	
+	public int rotationCount()
+	{
+		return numberRotations%4;
+	}
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
@@ -28,6 +35,8 @@ public class RotatablePillar : ObjectController
 	{
 		targetRotation.y+=angleToRotateOnClick;
 		Invoke("setPillarState", rotationTime);
+		numberRotations++;
+		Debug.Log(numberRotations);
 	}
 	
 	private void setPillarState()
