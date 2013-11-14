@@ -3,7 +3,8 @@ using System.Collections;
 
 public class GlobalStuff : MonoBehaviour
 {
-	public delegate void OnEvent(bool startEvent, string text);
+
+	public delegate void OnEvent(bool startEvent, bool playSound, string text);
 	public OnEvent OnPuzzleCompletion;
 	
 	// Use this for initialization
@@ -13,15 +14,18 @@ public class GlobalStuff : MonoBehaviour
 		GameObject[] puzzleObjects = GameObject.FindGameObjectsWithTag("puzzle");
 		foreach(GameObject puzzle in puzzleObjects)
 		{
-			puzzle.GetComponent<ObjectController>().OnCompletion += OnPuzzleCompletion;
+			puzzle.GetComponent<ObjectController>().OnCompletion += CompletePuzzle;
 		}
 	}
 	
-	void CompletePuzzle(bool startMusic, string text)
+	void CompletePuzzle(bool startMusic, bool playSound, string text)
 	{
 		print (text);
 		if(startMusic)
 			GetComponent<SoundControl>().StartMusic();
+		if(playSound)
+			GetComponent<SoundControl>().PlayOnPuzzleCompletion();
+			
 	}
 	
 	// Update is called once per frame
