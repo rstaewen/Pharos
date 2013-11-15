@@ -188,12 +188,13 @@ public class PlayerInteraction : MonoBehaviour
 			}
 		}
 		if (playerLightScript)
-		{
-			if (Input.GetButtonDown("Fire3"))
-				playerLightScript.gameObject.SetActive(!playerLightScript.gameObject.activeSelf);
-			else
 				playerLightTransform.rotation = Quaternion.LookRotation(_ray.direction);
-		}
+	}
+	
+	void Update()
+	{
+		if (playerLightScript && Input.GetButtonDown("Fire3"))
+				playerLightScript.gameObject.SetActive(!playerLightScript.gameObject.activeSelf);
 		if (SelectedItem && Input.GetButtonDown("Fire1"))
 		{
 			cursorParticles.Emit(40);
