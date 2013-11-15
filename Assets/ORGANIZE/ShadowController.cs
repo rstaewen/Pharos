@@ -11,6 +11,7 @@ public abstract class ObjectController : MonoBehaviour
 		lit = false;
 	}
 	public GlobalStuff.OnEvent OnCompletion;
+	public GlobalStuff.OnEvent TriggerEvent;
 	
 	public virtual void OnClickAction1(){}
 	public virtual void OnClickAction2(){}

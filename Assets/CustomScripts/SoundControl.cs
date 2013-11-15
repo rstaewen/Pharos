@@ -15,12 +15,14 @@ public class SoundControl : MonoBehaviour
 	public float ambienceVolume = 1.0f;
 	AudioSource musicSrc;
 	AudioSource ambienceSrc;
+	AudioSource onPuzzleCompletionSrc;
 	
 	// Use this for initialization
 	void Start ()
 	{
 		musicSrc = transform.FindChild("Music").GetComponent<AudioSource>();
 		ambienceSrc = transform.FindChild("Ambience").GetComponent<AudioSource>();
+		onPuzzleCompletionSrc = transform.FindChild("OnPuzzleCompletion").GetComponent<AudioSource>();
 		if(playMusicDelay != 0f)
 			musicSrc.PlayDelayed(playMusicDelay);
 	}
@@ -33,6 +35,11 @@ public class SoundControl : MonoBehaviour
 	public void StopMusic()
 	{
 			musicSrc.SetScheduledEndTime(2f);
+	}
+	
+	public void PlayOnPuzzleCompletion()
+	{
+		onPuzzleCompletionSrc.Play ();
 	}
 	
 	// Update is called once per frame

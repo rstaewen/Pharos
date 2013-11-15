@@ -198,6 +198,8 @@ public class PlayerInteraction : MonoBehaviour
 		{
 			cursorParticles.Emit(40);
 			AddToInventory(SelectedItem.ItemID);
+			if(SelectedItem.GetComponent<FireEventOnPickup>())
+				SelectedItem.GetComponent<FireEventOnPickup>().OnPickup();
 			Destroy(SelectedItem.gameObject);
 		}
 		else if(interactibleObject && Input.GetButtonDown("Fire1"))

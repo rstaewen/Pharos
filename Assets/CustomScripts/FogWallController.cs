@@ -62,7 +62,7 @@ public class FogWallController : ObjectController
 		{
 			if(Vector3.Distance(currentRGB, Vector3.zero)<0.01f)
 			{
-				OnCompletion(true, "fog wall escaped");
+				OnCompletion(true, false, "fog wall escaped");
 				Destroy(gameObject);
 			}
 			else

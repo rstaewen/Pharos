@@ -18,13 +18,23 @@ public abstract class TriggeredDoor : ObjectController {
 	// Use this for initialization
 	protected virtual void Start ()
 	{
-		OpenTrigger.OnTrigger += openDoor;
-		OpenTrigger.OnTriggerLeave += closeDoor;
-		CloseTrigger.OnTrigger += closeDoorOverride;
-		CloseTrigger.OnTriggerLeave += closeDoorStub;
+		if(OpenTrigger && CloseTrigger)
+		{
+			OpenTrigger.OnTrigger += openDoor;
+			OpenTrigger.OnTriggerLeave += closeDoor;
+			CloseTrigger.OnTrigger += closeDoorOverride;
+			CloseTrigger.OnTriggerLeave += closeDoorStub;
+		}
 		startingDoorRotation = doorHinge.localRotation.eulerAngles.y;
 		currentDoorRotation = startingDoorRotation;
 		finalDoorRotation = currentDoorRotation-90;
+		TriggerEvent+=openDoorByTrigger;
+	}
+	
+	protected virtual void openDoorByTrigger (bool musicTrigger, bool soundTrigger, string message)
+	{
+		rotationVelocity = 0f;
+		state = doorState.opening;
 	}
 	
 	protected virtual void openDoor(Collider _collider)
