@@ -45,6 +45,7 @@ public class CustomMouseLook : MonoBehaviour
 	Transform playerTransform;
 	Transform neckTransform;
 	Quaternion baseNeckRotation;
+	public Transform detachTransform;
 	public float lookAtSmoothTime = 0.5f;
 	private Vector3 neckDampVelocity = Vector3.zero;
 
@@ -59,11 +60,14 @@ public class CustomMouseLook : MonoBehaviour
 	}
 	public void SetShoulderPos(Transform shoulderPos)
 	{
-		playerTransform = shoulderPos.parent;
 		this.shoulderTransform = shoulderPos;
+		baseShoulderRotation = shoulderTransform.localRotation;
+	}
+	public void SetPlayerTransform(Transform playerXform)
+	{
+		playerTransform = playerXform;
 		interactionScript = playerTransform.GetComponent<PlayerInteraction>();
 		tpController = (playerTransform.GetComponent("CustomThirdPersonController") as MonoBehaviour);
-		baseShoulderRotation = shoulderTransform.localRotation;
 		GetComponent<CameraPhysics>().SetCameraController(playerTransform.GetComponent("CustomThirdPersonCamera") as MonoBehaviour);
 	}
 	public void StartZoom()
@@ -109,6 +113,7 @@ public class CustomMouseLook : MonoBehaviour
 				float extraRotation = rotationX - maximumX;
 				extraRotation = (Mathf.Pow(extraRotation, 0.5f));
 				playerTransform.RotateAround(Vector3.up, (extraRotation*0.05f));
+				detachTransform.RotateAround(Vector3.up, (extraRotation*0.05f));
 				rotationX -= extraRotation;
 			}
 			else if (rotationX < minimumX)
@@ -116,6 +121,7 @@ public class CustomMouseLook : MonoBehaviour
 				float extraRotation = rotationX - minimumX;
 				extraRotation = -(Mathf.Pow(-extraRotation, 0.5f));
 				playerTransform.RotateAround(Vector3.up, (extraRotation*0.05f));
+				detachTransform.RotateAround(Vector3.up, (extraRotation*0.05f));
 				rotationX -= extraRotation;
 			}
 			

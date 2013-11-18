@@ -768,7 +768,7 @@ static public class NGUITools
 			if (t.GetComponent<UIAnchor>() == null && t.GetComponent<UIRoot>() == null)
 			{
 #if UNITY_EDITOR
-#if UNITY_3_5 || UNITY_4_0 || UNITY_4_1 || UNITY_4_2
+#if UNITY_3_5 || UNITY_4_0 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3
 				UnityEditor.Undo.RegisterUndo(t, "Make Pixel-Perfect");
 #else
 				UnityEditor.Undo.RecordObjects(t, "Make Pixel-Perfect");

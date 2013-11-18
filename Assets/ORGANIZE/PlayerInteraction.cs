@@ -6,7 +6,7 @@ public class PlayerInteraction : MonoBehaviour
 	public UIItemStorage storageScript;
 	public float MaxCursorDistance = 10;
 	public Transform cameraTransform;
-	private Transform lookCursor;
+	public Transform lookCursor;
 	private LayerMask LSObjectsMask;
 	private LayerMask TerrainMask;
 	private LayerMask DefaultMask;
@@ -20,6 +20,8 @@ public class PlayerInteraction : MonoBehaviour
 	private Color cursorSelectedColor;
 	private Collider itemCollider;
 	public Animator playerAnimator;
+	public DetachableObject detachableInteractionXforms;
+	public CharacterController charController;
 	
 	public Material selectedCursorMaterial;
 	public Material activeCursorMaterial;
@@ -43,7 +45,6 @@ public class PlayerInteraction : MonoBehaviour
 	void Start ()
 	{
 		handEquip = HandEquipStates.none;
-		lookCursor = transform.FindChild("Cursor");
 		OnDisable();
 		LSObjectsMask = 1<<9;
 		TerrainMask = 1<<8;
@@ -55,6 +56,7 @@ public class PlayerInteraction : MonoBehaviour
 		cursorParticles = lookCursor.GetComponent<ParticleSystem>();
 		cursorRenderer = lookCursor.GetComponent<MeshRenderer>();
 		SetArmLayerWeight(0f, 0f);
+		charController = GetComponent<CharacterController>();
 	}
 	public void SetCursor()
 	{
@@ -163,6 +165,8 @@ public class PlayerInteraction : MonoBehaviour
 	private ObjectController interactibleObject;
 	void FixedUpdate ()
 	{
+		if(charController.velocity.magnitude < 0.1f)
+			detachableInteractionXforms.enabled = true;
 		Ray _ray = new Ray(cameraTransform.position, cameraTransform.forward);
 		cursorOver = getSelectedObject(_ray);
 		interactibleObject = null;
@@ -188,7 +192,7 @@ public class PlayerInteraction : MonoBehaviour
 			}
 		}
 		if (playerLightScript)
-				playerLightTransform.rotation = Quaternion.LookRotation(_ray.direction);
+			playerLightTransform.rotation = Quaternion.LookRotation(_ray.direction);
 	}
 	
 	void Update()
@@ -221,6 +225,7 @@ public class PlayerInteraction : MonoBehaviour
 	{
 		Screen.showCursor = true;
 		Screen.lockCursor = false;
+		detachableInteractionXforms.enabled = false;
 		SelectedItem = null;
 		cursorOver = null;
 		lookCursor.gameObject.SetActive(false);

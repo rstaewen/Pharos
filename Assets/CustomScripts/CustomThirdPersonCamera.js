@@ -71,6 +71,7 @@ function Awake ()
 	mouseLookScript = cameraTransform.GetComponent("CustomMouseLook");
 	mouseLookScript.SendMessage("SetNeckTransform", neckTransform);
 	mouseLookScript.SendMessage("SetShoulderPos", overShoulder);
+	mouseLookScript.SendMessage("SetPlayerTransform", transform);
 	interactionScript = GetComponent("PlayerInteraction");
 		
 	if (_target)
