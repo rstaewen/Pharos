@@ -5,9 +5,12 @@ public class hornInstantiate : MonoBehaviour {
 	
 	public GameObject spawn;
 	public GameObject horn;
+	public GameObject camera;
 	private GameObject Pillar1;
 	private GameObject Pillar2;
 	private GameObject Pillar3;
+	private bool instantiated = false;
+	
 	
 	private RotatablePillar RotatablePillar1;
 	private RotatablePillar RotatablePillar2;
@@ -42,9 +45,15 @@ public class hornInstantiate : MonoBehaviour {
 		
 		int three = RotatablePillar3.rotationCount();
 		
-		if (one == 2 && two == 3 && three == 1)
+		if (one == 2 && two == 3 && three == 1 && instantiated == false)
 		{
-			Debug.Log("done");
+			
+			Instantiate(horn,spawn.transform.position, Quaternion.identity);
+			instantiated = true;
+			
+			Instantiate(camera,camera.transform.position, camera.transform.rotation);
+			
+			
 		}
 		
 	}
