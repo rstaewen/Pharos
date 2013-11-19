@@ -2,13 +2,14 @@
 using System.Collections;
 
 public class CutsceneCamera : MonoBehaviour {
-
+	
+	public float TimeToDestroy = 11f;
 	void Start () {
-		Debug.Log ("Calling Destroy Camera");
-		Invoke ("DestroyCamera", 11f);
+		Invoke ("DestroyCamera", TimeToDestroy);
 	}
 	
 	void DestroyCamera(){
-		Debug.Log ("Destroy Camera");
+		Destroy (this.gameObject);
+		
 	}
 }
