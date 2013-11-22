@@ -8,14 +8,16 @@ public class RotatablePillar : ObjectController
 	public float rotationTime = 1f;
 	public PillarStateTypes pillarState;
 	
-	private Vector3 rotation = Vector3.zero;
-	private Vector3 targetRotation = Vector3.zero;
+	protected Vector3 rotation = Vector3.zero;
+	protected Vector3 targetRotation = Vector3.zero;
 	private Vector3 rotationVelocity = Vector3.zero;
 	private int numberRotations = 0;
 	// Use this for initialization
-	void Start ()
+	protected virtual void Awake()
 	{
-	
+	}
+	protected virtual void Start ()
+	{
 	}
 	
 	//return number of rotations.  0= start, 1=90 
@@ -39,7 +41,7 @@ public class RotatablePillar : ObjectController
 		Debug.Log(numberRotations);
 	}
 	
-	private void setPillarState()
+	protected virtual void setPillarState()
 	{
 		pillarState = pillarState +1;
 		if(pillarState == PillarStateTypes.COUNT)
