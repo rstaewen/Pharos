@@ -13,6 +13,8 @@ enum CharacterState {
 	Jumping = 4,
 }
 
+private var playerEffects : MonoBehaviour;
+
 private var _characterState : CharacterState;
 
 // The speed when walking
@@ -90,6 +92,7 @@ function Awake ()
 	moveDirection = transform.TransformDirection(Vector3.forward);
 	_animator = GetComponentInChildren(Animator);
 	_controller = GetComponent(CharacterController);
+	playerEffects = GetComponent("PlayerEffects");
 	TerrainMask = 1<<8;
 }
 
@@ -141,9 +144,7 @@ function UpdateSmoothedMovementDirection ()
 
 	// Are we moving backwards or looking backwards
 	if (v < -0.2)
-	{
 		movingBack = true;
-	}
 	else
 		movingBack = false;
 	
@@ -170,7 +171,7 @@ function UpdateSmoothedMovementDirection ()
 			// If we are really slow, just snap to the target direction
 			if (moveSpeed < walkSpeed * 0.9 && grounded)
 			{
-				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed*3 * Mathf.Deg2Rad * Time.deltaTime, 1000);
+				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection, rotateSpeed * Mathf.Deg2Rad * Time.deltaTime, 10);
 				moveDirection = moveDirection.normalized;
 			}
 			// Otherwise smoothly turn towards it
@@ -178,10 +179,10 @@ function UpdateSmoothedMovementDirection ()
 			{
 				var angle = Quaternion.Angle(Quaternion.LookRotation(targetDirection), Quaternion.LookRotation(moveDirection));
 				var powAngle = 	Mathf.Pow(angle,0.2);
-				var angleTurnSpeed = rotateSpeed*(4/moveSpeed);
+				var angleTurnSpeed = rotateSpeed*(1/moveSpeed);
 				var calcSpeed = angleTurnSpeed*	powAngle;
 				var adjusted = calcSpeed * Mathf.Deg2Rad * Time.deltaTime;
-				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection,  adjusted, 1000);
+				moveDirection = Vector3.RotateTowards(moveDirection, targetDirection,  adjusted, 0.1);
 				moveDirection = moveDirection.normalized;
 			}
 			 
@@ -229,7 +230,10 @@ function UpdateSmoothedMovementDirection ()
 			_characterState = CharacterState.Walking;
 		}
 		
-		moveSpeed = Mathf.Lerp(moveSpeed, targetSpeed, curSmooth);
+		if(isMoving)
+			moveSpeed = Mathf.Lerp(moveSpeed, targetSpeed, curSmooth);
+		else
+			moveSpeed = Mathf.Lerp(moveSpeed, targetSpeed, curSmooth*6);
 		
 		// Reset walk time start when we slow down
 		if (moveSpeed < walkSpeed * 0.3)
@@ -367,7 +371,10 @@ function Update() {
 		if(!IsGrounded())
 			_animator.SetFloat("VerticalSpeed", verticalSpeed);
 		else
+		{
 			_animator.SetFloat("VerticalSpeed", 0f);
+			SendMessage("SetMoveSpeed", moveSpeed);
+		}
 		collisionFlags = _controller.Move(movement);
 		var downRay : Ray = new Ray();
 		downRay.direction = Vector3.down;
@@ -376,6 +383,7 @@ function Update() {
 		var hitGround = Physics.Raycast(downRay, hit, 1f, TerrainMask);
 		if(!jumping&&hitGround)
 			_controller.Move(Vector3(0f, 0.5f*(Terrain.activeTerrain.SampleHeight(transform.position) - transform.position.y), 0f));
+		_animator.SetBool("Jumping", jumping);
 	}
 	else
 	{
@@ -413,6 +421,7 @@ function Update() {
 			{
 				jumping = false;
 				SendMessage("DidLand", SendMessageOptions.DontRequireReceiver);
+				moveSpeed *= 0.2f;
 			}
 		}
 	}
