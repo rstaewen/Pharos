@@ -39,11 +39,19 @@ public class SoundControl : MonoBehaviour
 	
 	public void PlayOnPuzzleCompletion()
 	{
+		
 		onPuzzleCompletionSrc.Play ();
+		Pause_Music();
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	public void Pause_Music()
+	{
+		ambienceSrc.volume = 0;
+		Invoke("_Pause_Music",3f);
+	}
 	
+	private void _Pause_Music()
+	{
+		ambienceSrc.volume = musicVolume;
 	}
 }
