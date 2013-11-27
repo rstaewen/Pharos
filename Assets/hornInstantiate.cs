@@ -6,6 +6,7 @@ public class hornInstantiate : MonoBehaviour {
 	public GameObject spawn;
 	public GameObject horn;
 	public GameObject camera;
+	public AudioClip puzzleComplete;
 	private GameObject Pillar1;
 	private GameObject Pillar2;
 	private GameObject Pillar3;
@@ -50,6 +51,8 @@ public class hornInstantiate : MonoBehaviour {
 			
 			Instantiate(horn,spawn.transform.position, Quaternion.identity);
 			instantiated = true;
+			
+			audio.PlayOneShot(puzzleComplete);
 			
 			Instantiate(camera,camera.transform.position, camera.transform.rotation);
 			
