@@ -4,7 +4,7 @@ using System.Collections;
 public abstract class ObjectController : MonoBehaviour
 {
 	protected bool lit = false;
-	public virtual bool IsLit {get {return lit; } set {lit = value; CancelInvoke("resetLight"); Invoke("resetLight", 1f);}}
+	public virtual bool IsLit {get {return lit; } set {lit = value;}}
 	
 	protected virtual void resetLight()
 	{

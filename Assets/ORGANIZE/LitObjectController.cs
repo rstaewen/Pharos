@@ -5,27 +5,22 @@ using System.Collections.Generic;
 public class LitObjectController : MonoBehaviour
 {
 	public List<ObjectController> litObjects = new List<ObjectController>();
-	// Use this for initialization
-	void Start ()
-	{
-		
-	}
 	
 	void OnTriggerEnter(Collider enteringCollider)
 	{
 		ObjectController objControl = enteringCollider.GetComponent<ObjectController>();
 		if (objControl)
-		{
-				objControl.IsLit = true;
-		}
+			objControl.IsLit = true;
 		else
-		{
 			Physics.IgnoreCollision(collider, enteringCollider);
-		}
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+	void OnTriggerExit(Collider exitingCollider)
 	{
+		ObjectController objControl = exitingCollider.GetComponent<ObjectController>();
+		if (objControl)
+			objControl.IsLit = false;
+		else
+			Physics.IgnoreCollision(collider, exitingCollider);
 	}
 }

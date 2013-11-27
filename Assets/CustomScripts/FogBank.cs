@@ -12,8 +12,8 @@ public class FogBank : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		if(centerTransform)
-			positionOffset = transform.position - centerTransform.position;
+//		if(centerTransform)
+//			positionOffset = transform.position - centerTransform.position;
 		for(int i = 0; i<transform.childCount; i++)
 		{
 			if(transform.GetChild(i).name.Contains("fog"))
