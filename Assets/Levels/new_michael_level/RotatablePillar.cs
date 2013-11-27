@@ -7,6 +7,7 @@ public class RotatablePillar : ObjectController
 	public float angleToRotateOnClick = 90;
 	public float rotationTime = 1f;
 	public PillarStateTypes pillarState;
+	public AudioClip pillarNoise;
 	
 	protected Vector3 rotation = Vector3.zero;
 	protected Vector3 targetRotation = Vector3.zero;
@@ -39,6 +40,7 @@ public class RotatablePillar : ObjectController
 		Invoke("setPillarState", rotationTime);
 		numberRotations++;
 		Debug.Log(numberRotations);
+		audio.PlayOneShot(pillarNoise);
 	}
 	
 	protected virtual void setPillarState()
