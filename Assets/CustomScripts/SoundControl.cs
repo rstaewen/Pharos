@@ -29,12 +29,12 @@ public class SoundControl : MonoBehaviour
 	
 	public void StartMusic()
 	{
-			musicSrc.Play();
+		musicSrc.Play();
 	}
 	
 	public void StopMusic()
 	{
-			musicSrc.SetScheduledEndTime(2f);
+		musicSrc.SetScheduledEndTime(2f);
 	}
 	
 	public void PlayOnPuzzleCompletion()

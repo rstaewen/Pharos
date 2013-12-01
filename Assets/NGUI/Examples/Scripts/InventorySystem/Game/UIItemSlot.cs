@@ -56,32 +56,11 @@ public abstract class UIItemSlot : MonoBehaviour
 
 			if (bi != null)
 			{
-				string t = "[" + NGUITools.EncodeColor(item.color) + "]" + item.name + "[-]\n";
+				string t = "[" + NGUITools.EncodeColor(item.color) + "]" + bi.name + "[-]\n";
 
-				//t += "[AFAFAF]Level " + item.itemLevel + " " + bi.slot;
+				//t += "[AFAFAF]" + bi.slot + "[-]\n";
 
-				List<InvStat> stats = item.CalculateStats();
-
-//				for (int i = 0, imax = stats.Count; i < imax; ++i)
-//				{
-//					InvStat stat = stats[i];
-//					if (stat.amount == 0) continue;
-//
-//					if (stat.amount < 0)
-//					{
-//						t += "\n[FF0000]" + stat.amount;
-//					}
-//					else
-//					{
-//						t += "\n[00FF00]+" + stat.amount;
-//					}
-//
-//					if (stat.modifier == InvStat.Modifier.Percent) t += "%";
-//					t += " " + stat.id;
-//					t += "[-]";
-//				}
-
-				if (!string.IsNullOrEmpty(bi.description)) t += "\n[FF9900]" + bi.description;
+				if (!string.IsNullOrEmpty(bi.description)) t += "[FF9900]" + bi.description;
 				UITooltip.ShowText(t);
 				return;
 			}

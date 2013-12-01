@@ -17,6 +17,7 @@ public class InvBaseItem
 		LeftHand,			// All the following elements are yours to customize -- edit, add or remove as you desire
 		RightHand,
 		EitherHand,
+		Head,
 		CombinablePiece,
 		CombinableBase,
 		Junk,
@@ -73,10 +74,13 @@ public class InvBaseItem
 	
 	public GameObject _combinations {get {return _combos;} set 
 		{
-			_combos = value; 
-			networkScript = (value as GameObject).GetComponent<CombineNetwork>(); 
-			combinableNetwork = networkScript.combinableNetwork;
-			finalItem = networkScript.finalItem;
+			if(value != null)
+			{
+				_combos = value; 
+				networkScript = (value as GameObject).GetComponent<CombineNetwork>(); 
+				combinableNetwork = networkScript.combinableNetwork;
+				finalItem = networkScript.finalItem;
+			}
 		}}
 	protected GameObject _combos;
 	protected CombineNetwork networkScript;

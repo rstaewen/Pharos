@@ -7,6 +7,9 @@ public class RotatableNodePuzzle : MonoBehaviour
 	public RotatableNode entryNode;
 	List<RotatableNode> I_nodes = new List<RotatableNode>();
 	public List<RotatableNode> AllNodes = new List<RotatableNode>();
+
+	public GameObject torchLight;
+	public GameObject torchFlame;
 	
 	void Start()
 	{

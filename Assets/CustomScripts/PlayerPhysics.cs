@@ -14,8 +14,7 @@ public class PlayerPhysics : MonoBehaviour {
 	{
 		if(pushPosition != Vector3.zero)
 		{
-			Debug.Log("testPush");
-			transform.position = (pushPosition - transform.position)*0.005f + transform.position;
+			transform.position = (pushPosition - transform.position)*0.02f + transform.position;
 		}
 	}
 	

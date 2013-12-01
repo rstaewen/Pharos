@@ -102,6 +102,13 @@ public class Level1Door : TriggeredDoor
 	private Color baseColor;
 	public GameObject fakeTranspBarrier;
 	private Material fakeTranspMaterial;
+	public InvEquipment playerEquip;
+	[System.Serializable] public class UnlockItem
+	{
+		public string ItemName;
+		public InvBaseItem.Slot ItemSlot;
+	}
+	public UnlockItem requiredItem;
 	bool fading = false;
 	bool active = false;
 	
@@ -112,9 +119,15 @@ public class Level1Door : TriggeredDoor
 		baseColor = fakeTranspMaterial.color;
 		currentAlpha = baseColor.a;
 	}
-	
+
 	protected override void openDoor(Collider _collider)
 	{
+		if(requiredItem == null || requiredItem.ItemName=="" ||
+		   playerEquip.equippedItems == null || playerEquip.equippedItems[(int)requiredItem.ItemSlot-1] == null ||
+		   playerEquip.equippedItems[(int)requiredItem.ItemSlot-1].baseItem == null)
+			return;
+		if(playerEquip.equippedItems[(int)requiredItem.ItemSlot-1].baseItem.name != requiredItem.ItemName)
+			return;
 		if (_collider == characterController.collider && !active)
 			Invoke("startWallFade", 5f);
 	}
