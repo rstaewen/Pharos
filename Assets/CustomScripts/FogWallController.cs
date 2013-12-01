@@ -39,6 +39,12 @@ public class FogWallController : ObjectController
 		targetRGB = new Vector3(baseColor.r, baseColor.g, baseColor.b);
 		currentRGB = targetRGB;
 	}
+
+	void OnTriggerStay(Collider other)
+	{
+		if(other.GetComponent<CharacterController>())
+			other.transform.position += transform.forward*0.1f;
+	}
 	
 	public void UnlightColliders()
 	{

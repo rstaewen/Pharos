@@ -25,7 +25,7 @@ public class CameraPhysics : MonoBehaviour {
 			rigidbody.velocity = Vector3.zero;
 			Physics.IgnoreCollision(collider, other);
 		}
-		else if (cameraController)
+		else if (cameraController && !other.isTrigger)
 		{
 			rigidbody.velocity = Vector3.zero;
 			cameraController.Invoke("RetractDistance",0f);
