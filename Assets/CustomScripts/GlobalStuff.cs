@@ -25,7 +25,6 @@ public class GlobalStuff : MonoBehaviour
 			GetComponent<SoundControl>().StartMusic();
 		if(playSound)
 			GetComponent<SoundControl>().PlayOnPuzzleCompletion();
-			
 	}
 	
 	// Update is called once per frame

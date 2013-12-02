@@ -21,6 +21,15 @@ public class PlayerEffects : MonoBehaviour
 	public AudioClip jumpingSFX;
 	public float footstepRunVolume = 1.0f;
 	public float footstepWalkVolume = 0.6f;
+	public ParticleSystem breathParticles;
+	private float breathParticleEmission;
+	private float playParticles = 1f;
+
+	void Awake()
+	{
+		breathParticleEmission = breathParticles.emissionRate;
+		Invoke("breathe", 1f);
+	}
 
 	void Reset()
 	{
@@ -51,6 +60,14 @@ public class PlayerEffects : MonoBehaviour
 	void SetMoveSpeed(float moveSpeed)
 	{
 		this.moveSpeed = moveSpeed;
+		breathParticles.emissionRate = ((moveSpeed/6f)+0.5f)*breathParticleEmission*playParticles;
+		Debug.Log("emission: "+breathParticles.emissionRate.ToString());
+	}
+
+	void breathe()
+	{
+		playParticles = playParticles==0f ? 1f : 0f;
+		Invoke("breathe", (playParticles==1f)?1f:3f/(moveSpeed+1f));
 	}
 
 	public void PlayRunFootstep(int foot){ playFootstep(foot, footstepRunVolume); }
@@ -58,8 +75,6 @@ public class PlayerEffects : MonoBehaviour
 
 	void playFootstep(int foot, float volume)
 	{
-		if(isJumping)
-			return;
 		int index = Random.Range(0,footstepEffectCollection[(int)currentFootsteps].footstepSFX.Count-1);
 		footstepAudioSource.PlayOneShot(footstepEffectCollection[(int)currentFootsteps].footstepSFX[index], volume);
 		
