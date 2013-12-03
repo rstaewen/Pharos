@@ -15,14 +15,14 @@ public class FogWallController : ObjectController
 	public override bool IsLit {get {return isLit;} set{if(!isLit) {colorVelocity = Vector3.zero;} isLit = value;}}
 	
 	// Use this for initialization
-	void Start ()
+	void Awake ()
 	{
 		for(int i =0; i< transform.childCount; i++)
 		{
-			if(transform.GetChild(i).name == "fogCylinder2")
+			if(transform.GetChild(i).name == "fogCylinder")
 			{
 				Material m = transform.GetChild(i).GetComponent<MeshRenderer>().material;
-				baseColor = m.GetColor("_TintColor");
+				baseColor = m.GetColor("_Emission");
 				fogWallMaterialCollection.Add(transform.GetChild(i).GetComponent<MeshRenderer>().material);
 			}
 			else if (transform.GetChild(i).name == "LightColliders")
@@ -38,12 +38,6 @@ public class FogWallController : ObjectController
 		InvokeRepeating("newColorTarget", colorAdjustTime, colorAdjustTime);
 		targetRGB = new Vector3(baseColor.r, baseColor.g, baseColor.b);
 		currentRGB = targetRGB;
-	}
-
-	void OnTriggerStay(Collider other)
-	{
-		if(other.GetComponent<CharacterController>())
-			other.transform.position += transform.forward*0.1f;
 	}
 	
 	public void UnlightColliders()
@@ -61,7 +55,8 @@ public class FogWallController : ObjectController
 			foreach(Material m in fogWallMaterialCollection)
 			{
 				currentRGB = Vector3.SmoothDamp(currentRGB, targetRGB, ref colorVelocity, colorAdjustTime);
-				m.SetColor("_TintColor", new Color(currentRGB.x, currentRGB.y, currentRGB.z, 0f));
+				m.SetColor("_Emission", new Color(currentRGB.x, currentRGB.y, currentRGB.z, 0f));
+				m.SetColor("_Color", new Color(currentRGB.x, currentRGB.y, currentRGB.z, currentRGB.x));
 			}
 		}
 		else
@@ -71,12 +66,11 @@ public class FogWallController : ObjectController
 				OnCompletion(true, false, "fog wall escaped");
 				Destroy(gameObject);
 			}
-			else
-				foreach(Material m in fogWallMaterialCollection)
-				{
-					currentRGB = Vector3.SmoothDamp(currentRGB, Vector3.zero, ref colorVelocity, 3f);
-					m.SetColor("_TintColor", new Color(currentRGB.x, currentRGB.y, currentRGB.z, 0f));
-				}
+			else foreach(Material m in fogWallMaterialCollection)
+			{
+				currentRGB = Vector3.SmoothDamp(currentRGB, Vector3.zero, ref colorVelocity, 3f);
+				m.SetColor("_Color", new Color(currentRGB.x, currentRGB.y, currentRGB.z, currentRGB.x));
+			}
 		}
 	}
 	

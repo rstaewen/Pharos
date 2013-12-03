@@ -45,6 +45,7 @@ public var neckTransform : Transform;
 private var retracted = false;
 private var resettingDistance = false;
 private var lastTarget;
+private var doZoom = false;
 
 function Start()
 {
@@ -105,7 +106,14 @@ function AngleDistance (a : float, b : float)
 	
 	return Mathf.Abs(b - a);
 }
-
+function EnterZoom()
+{
+	if (Input.GetButton("Fire2"))
+	{
+		doZoom = true;
+		//on mobile, do vibration. on computer... do visual feedback?
+	}
+}
 function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 {
 	// Early out if we don't have a target
@@ -125,23 +133,28 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 	var currentRotation;
 	// When pressing Fire2 (alt) the camera will snap to the target direction real quick.
 	// It will stop snapping when it reaches the target
-	if (Input.GetButtonDown("Fire2"))
+	if (Input.GetButtonDown("Fire2") && !doZoom && !snap && !mouseLookScript.enabled)
+	{
 		snap = true;
+		CancelInvoke("enterZoom");
+		Invoke("EnterZoom", 0.4f);
+	}
 	
-	if (snap)
+	if (snap||doZoom)
 	{
 		distance = Mathf.SmoothDamp(distance, targetDistance, distanceVelocity, 0.3f);
 		// We are close to the target, so we can stop snapping now!
 		if (AngleDistance (currentAngle, originalTargetAngle) < 3.0)
 		{
-			if (Input.GetButton("Fire2"))
+			if (doZoom)
 			{
 				mouseLookScript.enabled = true;
 				mouseLookScript.Invoke("StartZoom", 0);
 				snap = false;
+				doZoom = false;
 				return;
 			}
-			else
+			else if (!Input.GetButton("Fire2"))
 				snap = false;
 		}
 		currentAngle = Mathf.SmoothDampAngle(currentAngle, targetAngle, angleVelocity, snapSmoothLag, snapMaxAngleSpeed);
@@ -152,8 +165,9 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 	// Normal camera motion
 	else if (mouseLookScript.enabled && IsAwake)
 	{
-		if (!Input.GetButton("Fire2"))
+		if (Input.GetButtonDown("Fire2"))
 		{
+			doZoom = false;
 			interactionScript.enabled = false;
 			cameraTransform.parent = null;
 			mouseLookScript.Invoke("Reset", 0);
@@ -221,8 +235,16 @@ function Apply (dummyTarget : Transform, dummyCenter : Vector3)
 	
 	if (transform.localRotation.y!=lastTarget && retracted && !resettingDistance)
 	{
-		Invoke("resetDistance",2f);
-		resettingDistance = true;
+		var behindRay : Ray = new Ray();
+		behindRay.direction = -cameraTransform.forward;
+		behindRay.origin = cameraTransform.position;
+		var hit : RaycastHit;
+		var hitObject = Physics.Raycast(behindRay, hit, 1f);
+		if(!(hitObject && !hit.collider.isTrigger))
+		{
+			Invoke("resetDistance",2f);
+			resettingDistance = true;
+		}
 	}
 	lastTarget = transform.localRotation.y;
 }

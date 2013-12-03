@@ -251,11 +251,12 @@ function UpdateSmoothedMovementDirection ()
 		if (isMoving)
 			inAirVelocity += targetDirection.normalized * Time.deltaTime * inAirControlAcceleration;
 	}
-	
-
-		
 }
 
+function StartLevel()
+{
+	_animator.SetBool("StartGame", true);
+}
 
 function ApplyJumping ()
 {

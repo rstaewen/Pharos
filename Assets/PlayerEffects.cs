@@ -61,13 +61,12 @@ public class PlayerEffects : MonoBehaviour
 	{
 		this.moveSpeed = moveSpeed;
 		breathParticles.emissionRate = ((moveSpeed/6f)+0.5f)*breathParticleEmission*playParticles;
-		Debug.Log("emission: "+breathParticles.emissionRate.ToString());
 	}
 
 	void breathe()
 	{
 		playParticles = playParticles==0f ? 1f : 0f;
-		Invoke("breathe", (playParticles==1f)?1f:3f/(moveSpeed+1f));
+		Invoke("breathe", (playParticles==1f)?(0.75f-(moveSpeed/12f)):3f/(moveSpeed+1f));
 	}
 
 	public void PlayRunFootstep(int foot){ playFootstep(foot, footstepRunVolume); }
