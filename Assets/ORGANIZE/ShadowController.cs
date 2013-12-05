@@ -27,6 +27,7 @@ public abstract class ObjectController : MonoBehaviour
 
 public class ShadowController : ObjectController
 {
+	public bool bodyInvisible = true;
 	private Animator _animator;
 	private List<Material> fadeMaterials = new List<Material>();
 	private List<Color> transpColors = new List<Color>();
@@ -62,7 +63,8 @@ public class ShadowController : ObjectController
 		{
 			currAlpha = Mathf.SmoothDamp(currAlpha, (IsLit&&!killed)?1f:0f, ref alphaVelocity, fadeTime);
 			transpColors[i] = new Color(transpColors[i].r, transpColors[i].g, transpColors[i].b, currAlpha);
-			m.color = transpColors[i];
+			if(bodyInvisible)
+				m.color = transpColors[i];
 			i++;
 		}
 		if((1f - currAlpha) < 0.05f)

@@ -94,6 +94,8 @@ function Awake ()
 	_controller = GetComponent(CharacterController);
 	playerEffects = GetComponent("PlayerEffects");
 	TerrainMask = 1<<8;
+	if(!GetComponent("PauseDuringCutscene"))
+		StartLevel();
 }
 
 function Drown()

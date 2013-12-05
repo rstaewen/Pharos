@@ -1,5 +1,6 @@
 ﻿#pragma strict
 
+var spin : float = 0;
 var maxUpAndDown         : float = 1;        // amount of meters going up and down
 var speed             : float = 50;        // up and down speed
  
@@ -18,7 +19,6 @@ startHeight = transform.localPosition.y;
 function Update () {
 angle += speed * Time.deltaTime;
     if (angle > 270) angle -= 360;
-    Debug.Log(maxUpAndDown * Mathf.Sin(angle * toDegrees));
     transform.localPosition.y = startHeight + maxUpAndDown * (1 + Mathf.Sin(angle * toDegrees)) / 2;
-
+transform.localRotation.eulerAngles = (transform.localRotation.eulerAngles + new Vector3(0f, angle/360f, 0f));
 }

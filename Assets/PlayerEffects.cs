@@ -1,20 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-[System.Serializable] public class FootstepEffect
-{
-	public string name;
-	public ParticleSystem rightDustParticles;
-	public ParticleSystem leftDustParticles;
-	public List<AudioClip> footstepSFX = new List<AudioClip>();
-}
 
 public class PlayerEffects : MonoBehaviour
 {
-	public List<FootstepEffect> footstepEffectCollection = new List<FootstepEffect>();
-	public enum FootstepGroundTypes {grass, dirt, sand, wood, stone, COUNT}
-	public FootstepGroundTypes currentFootsteps;
+	public List<FootstepEffect> footstepEffectCollection;
+	private LevelSettings.LevelAmbientTemperature temperature;
+	public LevelSettings.FootstepGroundTypes currentFootsteps;
 	public AudioSource footstepAudioSource;
+	public Transform leftFootTransform;
+	public Transform rightFootTransform;
 	float moveSpeed = 0f;
 	bool isJumping = false;
 	public AudioClip landingSFX;
@@ -22,22 +17,53 @@ public class PlayerEffects : MonoBehaviour
 	public float footstepRunVolume = 1.0f;
 	public float footstepWalkVolume = 0.6f;
 	public ParticleSystem breathParticles;
-	private float breathParticleEmission;
+	public float breathParticleEmission;
 	private float playParticles = 1f;
 
 	void Awake()
 	{
-		breathParticleEmission = breathParticles.emissionRate;
-		Invoke("breathe", 1f);
+		if(breathParticleEmission!=0f)
+			Invoke("breathe", 1f);
 	}
 
-	void Reset()
+	public void SetFootsteps( List<FootstepEffect> footstepEffectCollection)
 	{
-		for(int i = 0; i<(int)(FootstepGroundTypes.COUNT); i++)
+		Debug.Log("setting footsteps...");
+		this.footstepEffectCollection = footstepEffectCollection;
+		foreach(FootstepEffect effect in footstepEffectCollection)
 		{
-			FootstepEffect effect = new FootstepEffect();
-			effect.name = ((FootstepGroundTypes)i).ToString();
-			footstepEffectCollection.Add(effect);
+			for(int i = 0; i<leftFootTransform.childCount; i++)
+				if(leftFootTransform.GetChild(i).name.ToLower() == effect.particlesName.ToLower())
+					effect.leftDustParticles = leftFootTransform.GetChild(i).GetComponent<ParticleSystem>();
+			for(int i = 0; i<rightFootTransform.childCount; i++)
+				if(rightFootTransform.GetChild(i).name.ToLower() == effect.particlesName.ToLower())
+					effect.rightDustParticles = rightFootTransform.GetChild(i).GetComponent<ParticleSystem>();
+		}
+	}
+
+	public void SetTemperature (LevelSettings.LevelAmbientTemperature levelAmbientTemperature)
+	{
+		Debug.Log("setting temperature...");
+		temperature = levelAmbientTemperature;
+		setBreath();
+	}
+
+	void setBreath()
+	{
+		switch(temperature)
+		{
+		case LevelSettings.LevelAmbientTemperature.Freezing:
+			breathParticleEmission = breathParticles.emissionRate;
+			break;
+		case LevelSettings.LevelAmbientTemperature.Cold:
+			breathParticleEmission = breathParticles.emissionRate*0.5f;
+			break;
+		case LevelSettings.LevelAmbientTemperature.Normal:
+			breathParticleEmission = 0f;
+			break;
+		case LevelSettings.LevelAmbientTemperature.Hot:
+			breathParticleEmission = 0f;
+			break;
 		}
 	}
 
