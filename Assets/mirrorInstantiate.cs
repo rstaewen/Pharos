@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class hornInstantiate : MonoBehaviour {
+public class mirrorInstantiate : MonoBehaviour {
 	
-	public GameObject spawn;
-	public GameObject horn;
+	public GameObject mirrorSpawn;
+	public GameObject mirror;
 	public GameObject camera;
-	public AudioClip puzzleComplete;
+	//public AudioClip puzzleComplete;
 	private GameObject Pillar1;
 	private GameObject Pillar2;
 	private GameObject Pillar3;
@@ -49,10 +49,10 @@ public class hornInstantiate : MonoBehaviour {
 		if (one == 2 && two == 3 && three == 1 && instantiated == false)
 		{
 			
-			Instantiate(horn,spawn.transform.position, Quaternion.identity);
+			Instantiate(mirror,mirrorSpawn.transform.position, Quaternion.identity);
 			instantiated = true;
 			
-			audio.PlayOneShot(puzzleComplete);
+			//audio.PlayOneShot(puzzleComplete);
 			
 			Instantiate(camera,camera.transform.position, camera.transform.rotation);
 			
