@@ -3,13 +3,20 @@ using System.Collections.Generic;
 
 public class PauseDuringCutscene : MonoBehaviour
 {
-	public bool StartWithCustcene = true;
 	public List<Component> controlComponents;
+	Animator animator;
 
 	void Awake ()
 	{
-		if(StartWithCustcene)
+		animator = GetComponent<Animator>();
+		if(enabled)
 			Invoke ("PauseControl", 1f);
+		else
+			animator.SetBool("StartGame", true);
+	}
+
+	void Update()
+	{
 	}
 
 	public void PauseControl()
@@ -22,6 +29,7 @@ public class PauseDuringCutscene : MonoBehaviour
 	{
 		foreach(MonoBehaviour c in controlComponents)
 			c.enabled = true;
+		animator.SetBool("StartGame", true);
 		SendMessage("StartLevel");
 	}
 }

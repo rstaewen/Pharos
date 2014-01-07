@@ -94,8 +94,6 @@ function Awake ()
 	_controller = GetComponent(CharacterController);
 	playerEffects = GetComponent("PlayerEffects");
 	TerrainMask = 1<<8;
-	if(!GetComponent("PauseDuringCutscene"))
-		StartLevel();
 }
 
 function Drown()
@@ -253,11 +251,6 @@ function UpdateSmoothedMovementDirection ()
 		if (isMoving)
 			inAirVelocity += targetDirection.normalized * Time.deltaTime * inAirControlAcceleration;
 	}
-}
-
-function StartLevel()
-{
-	_animator.SetBool("StartGame", true);
 }
 
 function ApplyJumping ()

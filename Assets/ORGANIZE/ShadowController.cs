@@ -50,34 +50,40 @@ public class ShadowController : ObjectController
 			fadeMaterials.Add(m);
 			transpColors.Add(m.color);
 		}
-		maxEmissionRate = smoke.emissionRate;
-		smoke.emissionRate = 0f;
+		if(smoke)
+		{
+			maxEmissionRate = smoke.emissionRate;
+			smoke.emissionRate = 0f;
+		}
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		_animator.SetBool("IsAfraid", IsLit);
-		int i = 0;
-		foreach(Material m in fadeMaterials)
+		if(smoke)
 		{
-			currAlpha = Mathf.SmoothDamp(currAlpha, (IsLit&&!killed)?1f:0f, ref alphaVelocity, fadeTime);
-			transpColors[i] = new Color(transpColors[i].r, transpColors[i].g, transpColors[i].b, currAlpha);
-			if(bodyInvisible)
-				m.color = transpColors[i];
-			i++;
-		}
-		if((1f - currAlpha) < 0.05f)
-		{
-			if(!isVisible)
-				smoke.emissionRate = maxEmissionRate;
-			isVisible = true;
-		}
-		else
-		{
-			if(isVisible)
-				smoke.emissionRate = 0f;
-			isVisible = false;
+			_animator.SetBool("IsAfraid", IsLit);
+			int i = 0;
+			foreach(Material m in fadeMaterials)
+			{
+				currAlpha = Mathf.SmoothDamp(currAlpha, (IsLit&&!killed)?1f:0f, ref alphaVelocity, fadeTime);
+				transpColors[i] = new Color(transpColors[i].r, transpColors[i].g, transpColors[i].b, currAlpha);
+				if(bodyInvisible)
+					m.color = transpColors[i];
+				i++;
+			}
+			if((1f - currAlpha) < 0.05f)
+			{
+				if(!isVisible)
+					smoke.emissionRate = maxEmissionRate;
+				isVisible = true;
+			}
+			else
+			{
+				if(isVisible)
+					smoke.emissionRate = 0f;
+				isVisible = false;
+			}
 		}
 	}
 
