@@ -96,7 +96,7 @@ public class AI : MonoBehaviour
 					if(Physics.Raycast(transform.position, (transform.forward - transform.right).normalized, 2))
 						direction = -transform.forward; 
 				}
-				transform.rotation = Quaternion.Slerp(Transform.rotation, Quaternion.LookRotation (direction), Time.deltaTime * turnSpeed);
+				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation (direction), Time.deltaTime * turnSpeed);
 			}
     }
 }
@@ -107,8 +107,6 @@ public enum AIState
 	AStarWander,
 	Wander
 
-} ;
+}
 
-
-
-	
+};
