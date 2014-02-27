@@ -1,37 +1,21 @@
 fileFormatVersion: 2
-guid: 877ff1ed0e231b54ea80678aa0d7af7c
+guid: 9916ddddaeeabaa41a4ca7118c4ad393
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
-    100000: (null)
-    100002: (null)_MeshPart0
-    100004: (null)_MeshPart1
-    100006: (null)_MeshPart2
-    100008: (null)_MeshPart3
-    100010: (null)_MeshPart4
-    100012: //RootNode
-    400000: (null)
-    400002: (null)_MeshPart0
-    400004: (null)_MeshPart1
-    400006: (null)_MeshPart2
-    400008: (null)_MeshPart3
-    400010: (null)_MeshPart4
-    400012: //RootNode
-    2300000: (null)_MeshPart0
-    2300002: (null)_MeshPart1
-    2300004: (null)_MeshPart2
-    2300006: (null)_MeshPart3
-    2300008: (null)_MeshPart4
-    3300000: (null)_MeshPart0
-    3300002: (null)_MeshPart1
-    3300004: (null)_MeshPart2
-    3300006: (null)_MeshPart3
-    3300008: (null)_MeshPart4
-    4300000: (null)_MeshPart0
-    4300002: (null)_MeshPart1
-    4300004: (null)_MeshPart2
-    4300006: (null)_MeshPart3
-    4300008: (null)_MeshPart4
+    100000: ghost04
+    100002: //RootNode
+    100004: Omni02
+    100006: Particle View 01
+    100008: Wind
+    400000: ghost04
+    400002: //RootNode
+    400004: Omni02
+    400006: Particle View 01
+    400008: Wind
+    2300000: ghost04
+    3300000: ghost04
+    4300000: ghost04
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -51,7 +35,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -84,4 +68,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  additionalBone: 0
   userData: 
