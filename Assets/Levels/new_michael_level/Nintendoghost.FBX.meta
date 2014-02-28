@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Levels/new_michael_level/Nintendoghost.FBX.meta
+guid: 371943391436e1a4e80af86196b89610
+=======
 guid: 9916ddddaeeabaa41a4ca7118c4ad393
+>>>>>>> b6f63096b1c0a04e65bfa59e588b81a52a1493cd:Assets/Levels/new_michael_level/Nintendoghost.FBX.meta
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:

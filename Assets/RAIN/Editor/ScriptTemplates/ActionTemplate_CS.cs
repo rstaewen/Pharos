@@ -12,7 +12,7 @@ public class ActionTemplate_CS : RAINAction
         actionName = "ActionTemplate_CS";
     }
 
-    public override void Start(RAIN.Core.AI ai)
+	public override void Start(RAIN.Core.AI ai)
     {
         base.Start(ai);
     }
