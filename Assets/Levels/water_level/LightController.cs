@@ -23,17 +23,38 @@ public class LightController : MonoBehaviour {
 		currenttime = Time.time;
 		if (((currenttime - starttimer) > allowedtime)&& started == true) {
 			ResetLights();	
-
 		}
 
-		
+		if (checkFinish () == true) {
+			makeLightsMove();
+		}
 	}
+
+	void makeLightsMove() {
+		foreach (GameObject light in Lights) {
+			LightDetector lightDetector = light.GetComponent<LightDetector>();
+			lightDetector.setMove(true);
+		}
+		enabled = false;
+	}
+
+	bool checkFinish() {
+		foreach (GameObject light in Lights) {
+			LightDetector lightDetector = light.GetComponent<LightDetector>();
+			if(lightDetector.isActivated == false)
+				return false;
+		}
+		return true;
+	}
+
 	void ResetLights (){
 		InitializeCheckArray ();
 		for (int i =0; i < Lights.Length; i++) {
 			Light mylight;
 			mylight = Lights[i].GetComponent<Light> ();	
 			mylight.color = startcolor;
+			LightDetector lightDetector = Lights[i].GetComponent<LightDetector>();
+			lightDetector.isActivated = false;
 		}
 		started = false;
 
@@ -48,6 +69,8 @@ public class LightController : MonoBehaviour {
 		mylight = light.GetComponent<Light> ();
 		//mylight.enabled = !mylight.enabled;
 		mylight.color = Color.white;
+		LightDetector lightDetector = mylight.GetComponent<LightDetector>();
+		lightDetector.isActivated = true;
 
 	}
 	public bool Check ( int index){
