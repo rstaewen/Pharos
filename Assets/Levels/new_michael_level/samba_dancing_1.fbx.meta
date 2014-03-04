@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: dff183297c64d4948b7d78b869e3f65b
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: Body_Geo
     100002: Hair_Geo
@@ -164,7 +164,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -1147,4 +1147,5 @@ ModelImporter:
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: ac6b6d8fac4f92a44902c222aa8d7ff3,
     type: 3}
   animationType: 3
+  additionalBone: 0
   userData: 

@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PauseMenu.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\chestDoor.cs">
     <Files>
-      <File FileName="Assets\PauseMenu.cs" Line="12" Column="22" />
+      <File FileName="Assets\chestDoor.cs" Line="6" Column="15" />
+      <File FileName="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UIStorageSlot.cs" Line="32" Column="42" />
+      <File FileName="Assets\Levels\new_michael_level\RotatablePillar.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
