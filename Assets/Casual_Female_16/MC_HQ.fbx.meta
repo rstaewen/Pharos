@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: ac6b6d8fac4f92a44902c222aa8d7ff3
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: CWom0017-M3-CS:Bip01
     100002: CWom0017-M3-CS:Bip01 Footsteps
@@ -569,10 +569,10 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 85
+    normalSmoothAngle: 180
     splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -660,8 +660,8 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 L Clavicle
       humanName: LeftShoulder
       limit:
-        min: {x: 0, y: -15.000001, z: -15.000001}
-        max: {x: 0, y: 15.000001, z: 30.0000019}
+        min: {x: 0, y: -15.000001, z: -39.3243256}
+        max: {x: 0, y: 15.000001, z: 8.10811234}
         value: {x: .102556951, y: 0, z: .0512784757}
         length: .128196225
         modified: 1
@@ -740,8 +740,8 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 L Finger0
       humanName: Left Thumb Proximal
       limit:
-        min: {x: 0, y: -25, z: -20}
-        max: {x: 0, y: 25, z: 20}
+        min: {x: 0, y: -25, z: -48.421051}
+        max: {x: 0, y: 25, z: 0}
         value: {x: .0324545316, y: 0, z: .0162272658}
         length: .0405681804
         modified: 1
@@ -764,7 +764,7 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 L Finger1
       humanName: Left Index Proximal
       limit:
-        min: {x: 0, y: -20, z: -50}
+        min: {x: 0, y: -20, z: -68.9473724}
         max: {x: 0, y: 20, z: 50}
         value: {x: .0301168673, y: 0, z: .0150584336}
         length: .0376460925
@@ -772,7 +772,7 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 L Finger11
       humanName: Left Index Intermediate
       limit:
-        min: {x: 0, y: 0, z: -45}
+        min: {x: 0, y: 0, z: -42.2932358}
         max: {x: 0, y: 0, z: 45}
         value: {x: .0161538217, y: 0, z: .00807691086}
         length: .020192286
@@ -788,7 +788,7 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 L Finger2
       humanName: Left Middle Proximal
       limit:
-        min: {x: 0, y: -7.50000048, z: -50}
+        min: {x: 0, y: -7.50000048, z: -74.3609009}
         max: {x: 0, y: 7.50000048, z: 50}
         value: {x: .0344949923, y: 0, z: .0172474962}
         length: .04311876
@@ -812,7 +812,7 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 L Finger3
       humanName: Left Ring Proximal
       limit:
-        min: {x: 0, y: -7.50000048, z: -50}
+        min: {x: 0, y: -7.50000048, z: -66.2406006}
         max: {x: 0, y: 7.50000048, z: 50}
         value: {x: .0323331058, y: 0, z: .0161665529}
         length: .0404164009
@@ -860,8 +860,8 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 R Finger0
       humanName: Right Thumb Proximal
       limit:
-        min: {x: 0, y: -25, z: -20}
-        max: {x: 0, y: 25, z: 20}
+        min: {x: 0, y: -25, z: -44.6616516}
+        max: {x: 0, y: 25, z: 21.654129}
         value: {x: .0324545652, y: 0, z: .0162272826}
         length: .0405682251
         modified: 1
@@ -908,16 +908,16 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 R Finger2
       humanName: Right Middle Proximal
       limit:
-        min: {x: 0, y: -7.50000048, z: -50}
-        max: {x: 0, y: 7.50000048, z: 50}
+        min: {x: 0, y: -7.50000048, z: -60.8270683}
+        max: {x: 0, y: 7.50000048, z: 50.0000038}
         value: {x: .0344952792, y: 0, z: .0172476396}
         length: .0431191176
         modified: 1
     - boneName: CWom0017-M3-CS:Bip01 R Finger21
       humanName: Right Middle Intermediate
       limit:
-        min: {x: 0, y: 0, z: -45}
-        max: {x: 0, y: 0, z: 45}
+        min: {x: 0, y: 0, z: -55.8270683}
+        max: {x: 0, y: 0, z: 45.0000038}
         value: {x: .0221398026, y: 0, z: .0110699013}
         length: .0276747625
         modified: 1
@@ -932,7 +932,7 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 R Finger3
       humanName: Right Ring Proximal
       limit:
-        min: {x: 0, y: -7.50000048, z: -50}
+        min: {x: 0, y: -7.50000048, z: -58.1203003}
         max: {x: 0, y: 7.50000048, z: 50}
         value: {x: .0323330574, y: 0, z: .0161665287}
         length: .0404163413
@@ -940,8 +940,8 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 R Finger31
       humanName: Right Ring Intermediate
       limit:
-        min: {x: 0, y: 0, z: -45}
-        max: {x: 0, y: 0, z: 45}
+        min: {x: 0, y: 0, z: -77.8195343}
+        max: {x: 0, y: 0, z: 54.1353455}
         value: {x: .0200519692, y: 0, z: .0100259846}
         length: .0250649713
         modified: 1
@@ -956,7 +956,7 @@ ModelImporter:
     - boneName: CWom0017-M3-CS:Bip01 R Finger4
       humanName: Right Little Proximal
       limit:
-        min: {x: 0, y: -20, z: -50}
+        min: {x: 0, y: -20, z: -63.5338364}
         max: {x: 0, y: 20, z: 50}
         value: {x: .0193869229, y: 0, z: .00969346147}
         length: .0242336635
@@ -1333,4 +1333,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 3
+  additionalBone: 0
   userData: 

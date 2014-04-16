@@ -386,7 +386,8 @@ function Update() {
 		moveSpeed = 0;
 		_animator.SetFloat("Speed", moveSpeed);
 		_animator.SetFloat("VerticalSpeed", 0f);
-		collisionFlags = _controller.Move(Vector3(0f, Terrain.activeTerrain.SampleHeight(transform.position) - transform.position.y - 0.1f, 0f));
+		if(Terrain.activeTerrain)
+			collisionFlags = _controller.Move(Vector3(0f, Terrain.activeTerrain.SampleHeight(transform.position) - transform.position.y - 0.1f, 0f));
 	}
 	//"glue" the player to the terrain.
 	
