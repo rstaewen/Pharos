@@ -10,11 +10,4 @@ public class warptoAir : MonoBehaviour {
 		}
 		Application.LoadLevel ("new_michael_level 1");
 	}
-
-	void OnGUI() {
-		if(Application.isLoadingLevel)
-		{
-			GUI.Button(new Rect(Screen.width/4, Screen.height/4, Screen.width/2, Screen.height/2), "Loading...");
-		}
-	}
 }
